@@ -1,0 +1,164 @@
+﻿<Window x:Class="MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter.MainWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:diag="http://mindfusion.eu/diagramming/wpf"
+	xmlns:f="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+	xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+	Title="MindFusion.Diagramming Sample: Flowchart Designer"
+	Height="768" Width="1024" WindowState="Maximized" Icon="/App.ico">
+
+	<DockPanel>
+		<Menu Height="22" Name="menu1" DockPanel.Dock="Top">
+			<MenuItem Name="mIFile" Header="_File">
+				<MenuItem Name="mIFNew" Header="_New" Click="mIFNew_Click" />
+				<MenuItem Name="mIFOpen" Header="_Open..." Click="mIFOpen_Click"/>
+				<MenuItem Name="mIFSave"  Header="_Save..." Click="mIFSave_Click" />
+				<Separator />
+				<MenuItem Name="mIFPreview" Header="Pre_view..." Click="mIFPreview_Click"/>
+				<MenuItem Name="mIFPrint" Header="_Print..." Click="mIFPrint_Click"/>
+				<Separator />
+				<MenuItem Name="mIExit" Header="E_xit" Click="mIExit_Click"/>
+			</MenuItem>
+			<MenuItem Name="mIEdit" Header="_Edit" Click="mIEdit_Click">
+				<MenuItem Name="mIEUndo" Click="mIEUndo_Click" Header="_Undo" />
+				<MenuItem Name="mIERedo" Click="mIERedo_Click" Header="_Redo"/>
+			</MenuItem>
+			<MenuItem Name="mITools" Header="_Tools">
+				<MenuItem Name="mITOptions" Header="_Options" Click="mITOptions_Click" />
+			</MenuItem>
+		</Menu>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+
+			<diag:Ruler Unit="Millimeter" ProjectionColor="#30000000">
+				<diag:DiagramView
+					x:Name="diagramView"
+					Behavior="DrawLinks"
+					AllowInplaceEdit="True"
+					AllowDrop="True"
+					DragDrop.DragOver="diagram_DragOver"
+					DragDrop.Drop="diagram_Drop">
+
+					<diag:Diagram
+						x:Name="diagram"
+						MeasureUnit="Millimeter"
+						ShowAnchors="Auto"
+						BackBrush="White"
+						AlignToGrid="True"
+						GridOffsetX="0"
+						GridOffsetY="0"
+						GridSizeX="5"
+						GridSizeY="5"
+						ShapeHandlesStyle="HatchHandles3"
+						AdjustmentHandlesSize="2.5"
+						ShowGrid="True" 
+						ShapeBrush="LightSteelBlue"
+						NodeActivated="diagram_NodeActivated"
+						NodeDeactivated="diagram_NodeDeactivated"
+						NodeClicked="diagram_NodeClicked"
+						LinkClicked="diagram_LinkClicked">
+
+						<diag:Diagram.GridPen>
+							<Pen Brush="Black" Thickness="1" />
+						</diag:Diagram.GridPen>
+						<diag:Diagram.ShapeNodeStyle>
+							<Style TargetType="{x:Type diag:ShapeNode}">
+								<Setter Property="Brush" Value="LightSteelBlue" />
+								<Setter Property="StrokeThickness" Value="0.2" />
+								<Setter Property="FontSize" Value="4" />
+							</Style>
+						</diag:Diagram.ShapeNodeStyle>
+						<diag:Diagram.TableNodeStyle>
+							<Style TargetType="{x:Type diag:TableNode}">
+								<Setter Property="StrokeThickness" Value="0.2" />
+								<Setter Property="FontSize" Value="4" />
+							</Style>
+						</diag:Diagram.TableNodeStyle>
+						<diag:Diagram.ContainerNodeStyle>
+							<Style TargetType="{x:Type diag:ContainerNode}">
+								<Setter Property="StrokeThickness" Value="0.2" />
+								<Setter Property="FontSize" Value="4" />
+							</Style>
+						</diag:Diagram.ContainerNodeStyle>
+						<diag:Diagram.DiagramLinkStyle>
+							<Style TargetType="{x:Type diag:DiagramLink}">
+								<Setter Property="Stroke" Value="#FF000000" />
+								<Setter Property="StrokeThickness" Value="0.2" />
+								<Setter Property="HeadStrokeThickness" Value="0.2" />
+								<Setter Property="Brush" Value="#FFFFFFFF" />
+								<Setter Property="FontSize" Value="4" />
+							</Style>
+						</diag:Diagram.DiagramLinkStyle>
+					</diag:Diagram>
+				</diag:DiagramView>
+			</diag:Ruler>
+
+			<Grid Grid.Column="1" Width="180">
+				<Grid.RowDefinitions>
+					<RowDefinition />
+					<RowDefinition Height="130" />
+				</Grid.RowDefinitions>
+				<TabControl>
+					<TabItem Header="Nodes">
+						<diag:NodeListView Name="nodeListView">
+							<diag:ShapeNode Shape="Alternative" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="Alternative" />
+							<diag:ShapeNode Shape="PunchedCard" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="PunchedCard" />
+							<diag:ShapeNode Shape="Decision" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="Decision" />
+							<diag:ShapeNode Shape="Delay" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="Delay" />
+							<diag:ShapeNode Shape="DirectAccessStorage" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="DirectAccessStorage" />
+							<diag:ShapeNode Shape="DiskStorage" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="DiskStorage" />
+							<diag:ShapeNode Shape="Display" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="Display" />
+							<diag:ShapeNode Shape="DividedEvent" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="DividedEvent" />
+							<diag:ShapeNode Shape="DividedProcess" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="DividedProcess" />
+							<diag:ShapeNode Shape="Document" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="Document" />
+							<diag:ShapeNode Shape="InternalStorage" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="InternalStorage" />
+							<diag:ShapeNode Shape="BeginLoop" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="BeginLoop" />
+							<diag:ShapeNode Shape="Input" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="Input" />
+							<diag:ShapeNode Shape="ManualOperation" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="ManualOperation" />
+							<diag:ShapeNode Shape="MessageFromUser" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="MessageFromUser" />
+							<diag:ShapeNode Shape="MessageToUser" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="MessageToUser" />
+							<diag:ShapeNode Shape="MultiDocument" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="MultiDocument" />
+							<diag:ShapeNode Shape="Microform" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="Microform" />
+							<diag:ShapeNode Shape="PrimitiveFromCall" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="PrimitiveFromCall" />
+							<diag:ShapeNode Shape="PrimitiveToCall" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="PrimitiveToCall" />
+							<diag:ShapeNode Shape="Procedure" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="Procedure" />
+							<diag:ShapeNode Shape="Start" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="Start" />
+							<diag:ShapeNode Shape="Tape" Bounds="0,0,20,20" Brush="LightSteelBlue" diag:NodeListView.Label="Tape" />
+							<diag:TableNode Bounds="0,0,20,20" RowCount="2" ColumnCount="2" Brush="White" diag:NodeListView.Label="Table 2x2" CellFrameStyle="Simple" CaptionHeight="8" />
+							<diag:TableNode Bounds="0,0,20,20" RowCount="3" ColumnCount="3" Brush="White" diag:NodeListView.Label="Table 3x3" CellFrameStyle="Simple" CaptionHeight="8" />
+							<diag:ContainerNode Bounds="0,0, 25, 25" Brush="Wheat" diag:NodeListView.Label="ContainerNode" CaptionHeight="8" />
+						</diag:NodeListView>
+					</TabItem>
+					<TabItem Header="Connectors">
+						<Grid Margin="0, 0, 0, 0">
+							<ListBox Name="_connectorList" Margin="0, 0, 0, 25" SelectionChanged="_connectorList_SelectionChanged">
+							</ListBox>
+							<ComboBox Name="_connectorTypeCombo" Height="20" VerticalAlignment="Bottom" SelectedIndex="0"
+                      SelectionChanged="_connectorTypeCombo_SelectionChanged">
+								<ComboBoxItem>Polyline</ComboBoxItem>
+								<ComboBoxItem>Bezier</ComboBoxItem>
+								<ComboBoxItem>Perpendicular</ComboBoxItem>
+							</ComboBox>
+						</Grid>
+					</TabItem>
+				</TabControl>
+				<Grid Grid.Row="1" Height="130" Background="AliceBlue">
+					<wfi:WindowsFormsHost Name="windowsFormsHost" 
+                                Margin="0,0,0,0" 
+                                Background="Black">
+						<f:PropertyGrid Margin="0,0,0,0" x:Name="_propertyGrid"
+                            ToolbarVisible="False"
+                            UseCompatibleTextRendering="False"
+                            HelpVisible="False" LargeButtons="False"
+                            CommandsVisibleIfAvailable="True"
+                            PropertyValueChanged="_propertyGrid_PropertyValueChanged" />
+					</wfi:WindowsFormsHost>
+				</Grid>
+			</Grid>
+		</Grid>
+	</DockPanel>
+
+</Window>

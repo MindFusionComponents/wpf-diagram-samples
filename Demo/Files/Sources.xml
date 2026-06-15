@@ -1,0 +1,1574 @@
+<?xml version="1.0"?>
+<sources>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.FlowChart.cs">// This sample demonstrates how to create
+// simple diagram elements and how to
+// adjust their visualization properties
+
+// Create a new shape node
+ShapeNode node = diagram.Factory.CreateShapeNode(10, 10, 140, 35);
+
+// Specify the node's shape
+node.Shape = Shapes.Ellipse;
+
+// Modify the text displayed within the node and the font
+// used to render the text
+node.Text = "Start";
+node.FontFamily = new FontFamily("Arial");
+node.FontSize = 12.5;
+
+// Modify the brush used to paint the node's interior
+// and the pen used to draw its outline
+node.Brush = new LinearGradientBrush(
+	Color.FromArgb(0xff, 0xff, 0xff, 0xc0),
+	Color.FromArgb(0xff, 0xbf, 0xbf, 0x90), 90);
+node.StrokeDashStyle = new DashStyle(new double[] { 0, 1, 2.9 }, 1.5);
+node.StrokeThickness = 1.5;</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.FlowChart.vb">' This sample demonstrates how to create
+' simple diagram elements and how to
+' adjust their visualization properties
+
+' Create a new shape node
+Dim node As ShapeNode = diagram.Factory.CreateShapeNode(10, 10, 140, 35)
+
+' Specify the node's shape
+node.Shape = Shapes.Ellipse
+
+' Modify the text displayed within the node and the font
+' used to render the text
+node.Text = "Start"
+node.FontFamily = New FontFamily("Arial")
+node.FontSize = 12.5
+
+' Modify the brush used to paint the node's interior
+' and the pen used to draw its outline
+node.Brush = New LinearGradientBrush( _
+	Color.FromArgb(255, 255, 255, 192), _
+	Color.FromArgb(255, 191, 191, 144), 90)
+node.StrokeDashStyle = New DashStyle(New Double() {0, 1, 2.9}, 1.5)
+node.StrokeThickness = 1.5</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.LaneDiagram.cs">// This sample demonstrates how to make a
+// node on the diagram resizing only horizontally
+
+// Create a new shape node
+ShapeNode node = diagram.Factory.CreateShapeNode(38.4, 38.4, 80, 40);
+
+// Set the node's handles, so that only
+// horizontal manipulations are possible
+node.EnabledHandles = AdjustmentHandles.Move |
+	AdjustmentHandles.ResizeMiddleLeft | AdjustmentHandles.ResizeMiddleRight;
+
+// Optionally, hide the disabled handles
+diagram.ShowDisabledHandles = false;</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.LaneDiagram.vb">' This sample demonstrates how to make a
+' node on the diagram resizing only horizontally
+
+' Create a new shape node
+Dim node As ShapeNode = diagram.Factory.CreateShapeNode(10, 10, 80, 40)
+
+' Set the node's handles, so that only
+' horizontal manipulations are possible
+node.EnabledHandles = AdjustmentHandles.Move + _
+	AdjustmentHandles.ResizeMiddleLeft + AdjustmentHandles.ResizeMiddleRight
+
+' Optionally, hide the disabled handles
+diagram.ShowDisabledHandles = False</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.DialogueChart.cs">// This sample demonstrates how to access the
+// active (selected) element in a diagram and
+// how to perform basic navigation in the graph
+
+// The active diagram element is obtained via the
+// ActiveItem property of the Diagram class
+DiagramItem activeObj = diagram.ActiveItem;
+
+// It is wise to check whether the object is null.
+// This might happen when there is no selected object
+if (activeObj == null)
+	return;
+
+// Make sure the selected object is a DiagramNode
+if (!(activeObj is DiagramNode))
+	return;
+
+DiagramNode activeNode = activeObj as DiagramNode;
+
+// Now it is possible to access the direct relatives of the active node
+ArrayList relatives = new ArrayList();
+
+foreach (DiagramLink link in activeNode.OutgoingLinks)
+	relatives.Add(link.Destination);
+
+foreach (DiagramLink link in activeNode.IncomingLinks)
+	relatives.Add(link.Origin);</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.DialogueChart.vb">' This sample demonstrates how to access the
+' active (selected) element in a diagram and
+' how to perform basic navigation in the graph
+
+' The active diagram element is obtained via the
+' ActiveItem property of the Diagram object
+Dim activeObj As DiagramItem = diagram.ActiveItem
+
+' It is wise to check whether the object is Nothing.
+' This might happen when there is no selected object
+If activeObj Is Nothing Then
+	Return
+End If
+
+' Make sure the selected object is a DiagramNode
+If Not TypeOf activeObj Is DiagramNode Then
+	Return
+End If
+
+Dim activeNode As DiagramNode = CType(activeObj, DiagramNode)
+
+' Now it is possible to access the direct relatives of the active node
+Dim relatives As ArrayList = New ArrayList()
+
+For Each link As DiagramLink In activeNode.OutgoingLinks
+	relatives.Add(link.Destination)
+Next
+
+For Each link As DiagramLink In activeNode.IncomingLinks
+	relatives.Add(link.Origin)
+Next</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.HierarchyChart.cs">// This sample demonstrates how to create groups
+
+// Create two ShapeNode objects
+ShapeNode master = diagram.Factory.CreateShapeNode(10, 10, 80, 35);
+ShapeNode subordinate = diagram.Factory.CreateShapeNode(10, 100, 80, 35);
+
+// Create the group, using the first ShapeNode as a master
+Group group = diagram.Factory.CreateGroup(master);
+
+// Now attach the second ShapeNode to the newly created group
+group.AttachToCorner(subordinate, 0);</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.HierarchyChart.vb">' This sample demonstrates how to create groups
+
+' Create two ShapeNode objects
+Dim master As ShapeNode = diagram.Factory.CreateShapeNode(10, 10, 80, 35)
+Dim subordinate As ShapeNode = diagram.Factory.CreateShapeNode(10, 100, 80, 35)
+
+' Create the group, using the first ShapeNode as a master
+Dim group As Group = diagram.Factory.CreateGroup(master)
+
+' Now attach the second ShapeNode to the newly created group
+group.AttachToCorner(subordinate, 0)</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.ChemicalSynthesisTree.cs">// This sample demonstrates how to
+// assign styled text to a ShapeNode
+
+// Create a new ShapeNode
+ShapeNode node = diagram.Factory.CreateShapeNode(10, 10, 200, 50);
+
+// Set the node's style to, say, rectangle
+node.Shape = Shapes.Rectangle;
+
+// In order to use styled texts, two properties
+// of the node need to be set - EnableStyledText
+// and PolygonalTextLayout
+node.EnableStyledText = true;
+node.PolygonalTextLayout = true;
+
+// Now assign the formatted text to the node
+node.Text = "&lt;color=#ff0000=""&gt; HCl&lt;/color&gt; + NaOH = H&lt;sub&gt; 2&lt;/sub&gt; O + NaCl";</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.ChemicalSynthesisTree.vb">' This sample demonstrates how to
+' assign styled text to a ShapeNode
+
+' Create a new ShapeNode
+Dim node As ShapeNode = diagram.Factory.CreateShapeNode(10, 10, 200, 50)
+
+' Set the node's style to, say, rectangle
+node.Shape = Shapes.Rectangle
+
+' In order to use styled texts, two properties
+' of the node need to be set - EnableStyledText
+' and PolygonalTextLayout
+node.EnableStyledText = True
+node.PolygonalTextLayout = True
+
+' Now assign the formatted text to the node
+node.Text = "&lt;color=#ff0000=""&gt; HCl&lt;/color&gt; + NaOH = H&lt;sub&gt; 2&lt;/sub&gt; O + NaCl"</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.ClassificationChart.cs">// This sample demonstrates how nodes can be
+// linked together with links and how to
+// enable expanding or collapsing nodes
+
+// Setting the default property NodesExpandable
+// of the Diagram object indicates that all
+// subsequently created shape nodes will be expandable
+diagram.NodesExpandable = true;
+
+// Create two ShapeNode objects
+ShapeNode parent = diagram.Factory.CreateShapeNode(10, 10, 80, 35);
+ShapeNode child = diagram.Factory.CreateShapeNode(10, 100, 80, 35);
+
+// Link the ShapeNode objects together by creating a new
+// link from the parent ShapeNode to the child ShapeNode
+diagram.Factory.CreateDiagramLink(parent, child);</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.ClassificationChart.vb">' This sample demonstrates how nodes can be
+' linked together with links and how to
+' enable expanding or collapsing nodes
+
+' Setting the default property NodesExpandable
+' of the Diagram object indicates that all
+' subsequently created shape nodes will be expandable
+diagram.NodesExpandable = True
+
+' Create two ShapeNode objects
+Dim parent As ShapeNode = diagram.Factory.CreateShapeNode(10, 10, 80, 35)
+Dim child As ShapeNode = diagram.Factory.CreateShapeNode(10, 100, 80, 35)
+
+' Link the ShapeNodes together by creating a new
+' link from the parent ShapeNode to the child ShapeNode
+diagram.Factory.CreateDiagramLink(parent, child)</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.GenealogyTree.cs">// This sample demonstrates how to apply
+// custom drawing code to ShapeNode objects in WpfDiagram
+
+// ... initialization ...
+
+// Attach new event handler to the Diagram.DrawNode
+// event. All of the custom drawing should be placed
+// in that handler
+diagram.DrawNode += OnDrawNode;
+
+// Create a sample ShapeNode and enable custom drawing
+ShapeNode node = diagram.Factory.CreateShapeNode(40, 40, 160, 120);
+node.CustomDraw = CustomDraw.Additional;
+
+// ... more initialization ...
+
+// Custom drawing event handler
+private void OnDrawNode(object sender, DrawNodeEventArgs e)
+{
+    // Draw big red ellipse in the center of the ShapeNode
+
+    Pen redPen = new Pen(Brushes.Red, 2);
+
+    Rect nodeBounds = new Rect(e.Node.Bounds.Size);
+    Point ptCenter = new Point(nodeBounds.Left + nodeBounds.Width / 2, nodeBounds.Top + 
+        nodeBounds.Height / 2);
+    nodeBounds.Inflate(-nodeBounds.Width / 4, -nodeBounds.Height / 4);
+    e.Graphics.DrawEllipse(Brushes.LightGray, redPen, ptCenter, nodeBounds.Width / 2, 
+        nodeBounds.Height / 2); 
+}</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.GenealogyTree.vb">' This sample demonstrates how to apply
+' custom drawing code to ShapeNode objects in WpfDiagram
+
+' ... initialization ...
+
+' Attach new event handler to the Diagram.DrawNode
+' event. All of the custom drawing should be placed
+' in that handler
+AddHandler diagram.DrawNode, AddressOf OnDrawNode
+
+' Create a sample ShapeNode and enable custom drawing
+Dim node As ShapeNode = diagram.Factory.CreateShapeNode(40, 40, 160, 120)
+node.CustomDraw = CustomDraw.Additional
+
+' ... more initialization ...
+
+' Custom drawing event handler
+Private Sub OnDrawNode(sender As Object, e As DrawNodeEventArgs)
+
+	' Draw big red ellipse in the center of the ShapeNode
+
+	Dim redPen As Pen = New Pen(Brushes.Red, 2)
+
+	Dim nodeBounds As Rect = New Rect(e.Node.Bounds.Size)
+	Dim ptCenter As Point = New Point(nodeBounds.Left + nodeBounds.Width / 2, nodeBounds.Top + _
+		nodeBounds.Height / 2)
+
+	nodeBounds.Inflate(-nodeBounds.Width / 4, -nodeBounds.Height / 4)
+	e.Graphics.DrawEllipse(Brushes.LightGray, redPen, ptCenter, nodeBounds.Width / 2, _
+		nodeBounds.Height / 2)
+
+End Sub</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.ErmDiagram.cs">// This sample demonstrates how to
+// associate anchor patterns with table rows
+
+// Create a sample table first
+TableNode table = diagram.Factory.CreateTableNode(40, 40, 160, 100);
+
+// Modify the number of rows and columns
+table.RowCount = 2;
+table.ColumnCount = 3;
+
+// Adjust the table columns
+table.Columns[0].Width = 40;
+table.Columns[1].Width = 80;
+table.Columns[2].Width = 40;
+table.Columns[0].ColumnStyle = ColumnStyle.FixedWidth;
+table.Columns[1].ColumnStyle = ColumnStyle.AutoWidth;
+table.Columns[2].ColumnStyle = ColumnStyle.FixedWidth;
+
+// Create an anchor pattern to be assigned to the table
+AnchorPattern pattern = new AnchorPattern(
+	new AnchorPoint[]
+	{
+		new AnchorPoint(50, 50, true, false, Brushes.Blue, 0),
+		new AnchorPoint(50, 50, false, true, Brushes.Blue, 2)
+	});
+
+// Set the newly created anchor
+// pattern to be used for all rows
+for (int i = 0; i &lt; table.Rows.Count; i++)
+	table.Rows[i].AnchorPattern = pattern;</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.ErmDiagram.vb">' This sample demonstrates how to
+' associate anchor patterns with table rows
+
+' Create a sample table first
+Dim table As TableNode = diagram.Factory.CreateTableNode(10, 10, 160, 100)
+
+' Modify the number of rows and columns
+table.RowCount = 2
+table.ColumnCount = 3
+
+' Adjust the table columns
+table.Columns(0).Width = 40
+table.Columns(1).Width = 80
+table.Columns(2).Width = 40
+table.Columns(0).ColumnStyle = ColumnStyle.FixedWidth
+table.Columns(1).ColumnStyle = ColumnStyle.AutoWidth
+table.Columns(2).ColumnStyle = ColumnStyle.FixedWidth
+
+' Create an anchor pattern to be assigned to the table
+Dim pattern As New AnchorPattern( _
+	New AnchorPoint() _
+	{ _
+		New AnchorPoint(50, 50, True, False, Brushes.Blue, 0), _
+		New AnchorPoint(50, 50, False, True, Brushes.Blue, 2) _
+	})
+
+' Set the newly created anchor
+' pattern to be used for all rows
+For i As Int16 = 0 To table.Rows.Count - 1
+	table.Rows(i).AnchorPattern = pattern
+Next</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.ClassHierarchyDiagram.cs">// This sample demonstrates how to
+// enable scrolling of table rows
+
+// Create and setup a new table
+TableNode table = diagram.Factory.CreateTableNode(40, 40, 120, 180);
+
+table.RedimTable(1, 20);
+for (int i = 0; i &lt; table.RowCount; i++)
+	table[0, i].Text = "Row" + i.ToString();
+
+// Enable scrolling
+table.Scrollable = true;</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.ClassHierarchyDiagram.vb">' This sample demonstrates how to
+' enable scrolling of table rows
+
+' Create and setup a new table
+Dim table As TableNode = diagram.Factory.CreateTableNode(10, 10, 120, 140)
+
+table.RedimTable(1, 20)
+Dim i As Integer
+For i = 0 To table.RowCount - 1
+	table(0, i).Text = "Row" + i.ToString()
+Next
+
+' Enable scrolling
+table.Scrollable = True</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.DatabaseRelationshipDiagram.cs">// This sample demonstrates how to link tables
+// programatically and how to set up links' arrowheads
+
+// Create two related tables
+TableNode t1 = diagram.Factory.CreateTableNode(40, 40, 120, 140);
+TableNode t2 = diagram.Factory.CreateTableNode(280, 40, 120, 140);
+
+// Setup tables
+t1.RedimTable(1, 2);
+t2.RedimTable(1, 2);
+
+// Create a link which connects the tables
+DiagramLink link = diagram.Factory.CreateDiagramLink(t1, 0, t2, 1);
+
+// Set the link style to cascading
+link.SegmentCount = 3;
+link.Shape = LinkShape.Cascading;
+link.CascadeOrientation =
+	MindFusion.Diagramming.Wpf.Orientation.Horizontal;
+
+// Finally modify the link's arrowheads
+link.BaseShape = ArrowHeads.RevTriangle;
+link.BaseShapeSize = 6;
+link.HeadShape = ArrowHeads.Tetragon;
+link.HeadShapeSize = 15;</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.DatabaseRelationshipDiagram.vb">' This sample demonstrates how to link tables
+' programatically and how to set up links' heads
+
+' Create two related tables
+Dim t1 As TableNode = diagram.Factory.CreateTableNode(10, 10, 120, 140)
+Dim t2 As TableNode = diagram.Factory.CreateTableNode(210, 10, 120, 140)
+
+' Setup tables
+t1.RedimTable(1, 2)
+t2.RedimTable(1, 2)
+
+' Create a link which connects the tables
+Dim link As DiagramLink = diagram.Factory.CreateDiagramLink(t1, 0, t2, 1)
+
+' Set the link style to cascading
+link.SegmentCount = 3
+link.Shape = LinkShape.Cascading
+link.CascadeOrientation = _
+	Orientation.Horizontal
+
+' Finally modify the link's arrowheads
+link.BaseShape = ArrowHeads.RevTriangle
+link.BaseShapeSize = 8
+link.HeadShape = ArrowHeads.Tetragon
+link.HeadShapeSize = 20</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.SpanningCells.cs">// This sample demonstrates how to create
+// spanning cells and header rows in a WpfDiagram table
+
+// Create a table
+TableNode table = diagram.Factory.CreateTableNode(40, 40, 120, 160);
+
+// Setup the number of rows and columns in the table
+table.RedimTable(2, 5);
+
+// Mark the first and the fourth rows as headers
+table.Rows[0].Header = true;
+table.Rows[3].Header = true;
+
+// Span the cells in the header rows to cover the entire rows
+table[0, 0].ColumnSpan = 2;
+table[0, 0].Text = "Header 1";
+table[0, 3].ColumnSpan = 2;
+table[0, 3].Text = "Header 2";
+
+// Span the cells from the second column below the first header row
+table[1, 1].RowSpan = 2;
+table[1, 1].Text = "span";
+
+// Offset the header rows, so that the 'expand/collapse'
+// icon is positioned on the left
+table.OffsetHeaderRows = true;</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.SpanningCells.vb">' This sample demonstrates how to create
+' spanning cells and header rows in a WpfDiagram table
+
+' Create a table
+Dim table As TableNode = diagram.Factory.CreateTableNode(10, 10, 120, 160)
+
+' Setup the number of rows and columns in the table
+table.RedimTable(2, 5)
+
+' Mark the first and the fourth rows as headers
+table.Rows(0).Header = True
+table.Rows(3).Header = True
+
+' Span the cells in the header rows to cover the entire rows
+table(0, 0).ColumnSpan = 2
+table(0, 0).Text = "Header 1"
+table(0, 3).ColumnSpan = 2
+table(0, 3).Text = "Header 2"
+
+' Span the cells from the second column below the first header row
+table(1, 1).RowSpan = 2
+table(1, 1).Text = "span"
+
+' Offset the header rows, so that the 'expand/collapse'
+' icon is positioned on the left
+table.OffsetHeaderRows = True</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.TablesPatient.cs">// This sample demonstrates how to create interactive
+// ShapeNode objects, which behave much like buttons
+
+// Create a ShapeNode to be used as a button
+ShapeNode node = diagram.Factory.CreateShapeNode(10, 10, 60, 30);
+node.Shape = Shapes.Rectangle;
+node.Text = "Click me";
+node.Tag = "button";
+
+// Associate an event handler with the
+// Diagram.NodeClicked event
+diagram.NodeClicked += OnNodeClicked;
+
+// ...
+
+// NodeClicked event handler
+private void OnNodeClicked(object sender, NodeEventArgs e)
+{
+    if ((string)e.Node.Tag == "button")
+    {
+        // The button-node has been clicked
+        MessageBox.Show("Click!");
+    }
+}</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.TablesPatient.vb">' This sample demonstrates how to create interactive
+' ShapeNode objects, which behave much like buttons
+
+' Create a ShapeNode to be used as a button
+Dim node As ShapeNode = diagram.Factory.CreateShapeNode(10, 10, 60, 30)
+node.Shape = Shapes.Rectangle
+node.Text = "Click me"
+node.Tag = "button"
+
+' Associate an event handler with the
+' Diagram.NodeClicked event
+AddHandler diagram.NodeClicked, AddressOf OnNodeClicked
+
+' ...
+
+' NodeClicked event handler
+Private Sub OnNodeClicked(sender As Object, e As NodeEventArgs)
+
+	If CType(e.Node.Tag, String) = "button" Then
+
+		' The button-node has been clicked
+		MessageBox.Show("Click!")
+
+	End If
+
+End Sub</source>
+
+	<source id="ControlHostingFormDesigner.cs">
+	</source>
+
+	<source id="ControlHostingFormDesigner.vb">
+	</source>
+
+	<source id="ControlHostingPhotoAlbum.cs">
+	</source>
+
+	<source id="ControlHostingPhotoAlbum.vb">
+	</source>
+
+	<source id="ControlHostingControlDiagram.cs">
+	</source>
+
+	<source id="ControlHostingControlDiagram.vb">
+	</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.Arrowheads.cs">// This sample demonstrates the use of link heads
+
+// Create the two ShapeNode objects to be connected with a link
+ShapeNode startNode, endNode;
+startNode = diagram.Factory.CreateShapeNode(40, 40, 35, 35);
+endNode = diagram.Factory.CreateShapeNode(160, 40, 35, 35);
+
+// Create the link
+DiagramLink link = diagram.Factory.CreateDiagramLink(startNode, endNode);
+
+// Modify the link's head
+link.HeadShape = ArrowHeads.BowArrow;
+link.HeadShapeSize = 24;
+
+// Modify the link's base
+link.BaseShape = ArrowHeads.Circle;
+link.BaseShapeSize = 16;
+
+// Modify the intermediate arrowheads
+link.IntermediateShape = ArrowHeads.PointerArrow;
+link.IntermediateShapeSize = 12;
+
+// Setup head pen
+link.HeadStrokeThickness = 1;</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.Arrowheads.vb">' This sample demonstrates the use of link heads
+
+' Create the two ShapeNode objects to be connected with a link
+Dim startNode, endNode As ShapeNode
+startNode = diagram.Factory.CreateShapeNode(40, 40, 35, 35)
+endNode = diagram.Factory.CreateShapeNode(160, 40, 35, 35)
+
+' Create the link
+Dim link As DiagramLink = diagram.Factory.CreateDiagramLink(startNode, endNode)
+
+' Modify the link's head
+link.HeadShape = ArrowHeads.BowArrow
+link.HeadShapeSize = 24
+
+' Modify the link's base
+link.BaseShape = ArrowHeads.Circle
+link.BaseShapeSize = 16
+
+' Modify the intermediate arrowheads
+link.IntermediateShape = ArrowHeads.PointerArrow
+link.IntermediateShapeSize = 12
+
+' Setup head pen
+link.HeadStrokeThickness = 1</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.Routing.cs">// This sample demonstrates how to route all
+// links on a diagram with a single call
+
+diagram.RouteAllLinks();</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.Routing.vb">' This sample demonstrates how to route all
+' links on a diagram with a single call
+
+diagram.RouteAllLinks()</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.TextOrientation.cs">// This sample demonstrates how to modify
+// the orientation of a link's text
+
+// Create two nodes and a link which connects them
+ShapeNode startNode = diagram.Factory.CreateShapeNode(40, 40, 35, 35);
+ShapeNode endNode = diagram.Factory.CreateShapeNode(240, 100, 32, 32);
+DiagramLink link = diagram.Factory.CreateDiagramLink(startNode, endNode);
+
+// Set the text and font of the link
+link.Text = "some slanted text";
+link.FontFamily = new FontFamily("Arial");
+link.FontSize = 12;
+
+// Finally set the text orientation of the link
+link.TextStyle = LinkTextStyle.Rotate;</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.TextOrientation.vb">' This sample demonstrates how to modify
+' the orientation of a link's text
+
+' Create two nodes and a link which connects them
+Dim startNode As ShapeNode = diagram.Factory.CreateShapeNode(10, 10, 35, 35)
+Dim endNode As ShapeNode = diagram.Factory.CreateShapeNode(180, 100, 35, 35)
+Dim link As DiagramLink = diagram.Factory.CreateDiagramLink(startNode, endNode)
+
+' Set the text and font of the link
+link.Text = "some slanted text"
+link.FontFamily = New FontFamily("Arial")
+link.FontSize = 12
+
+' Finally set the text orientation of the link
+link.TextStyle = LinkTextStyle.Rotate</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.FormPreservation.cs">// This sample demonstrates how to create
+// unconnected links programmatically,
+// how to manipulate individual link points
+// and how to 'tell' a link to preserve its contour
+
+// Create an unconnected link
+DiagramLink link = diagram.Factory.CreateDiagramLink(
+	new Point(40, 80), new Point(200, 80));
+link.Shape = LinkShape.Polyline;
+link.SegmentCount = 4;
+
+// Modify the control points
+Random g = new Random();
+for (int i = 1; i &lt; link.ControlPoints.Count - 1; i++)
+{
+	Point point = link.ControlPoints[i];
+	point.X += g.Next(-4, 4);
+	point.Y += g.Next(-10, 10);
+	link.ControlPoints[i] = point;
+}
+
+// After modifying the control points of a link
+// it is necessary to invoke DiagramLink.UpdateFromPoints
+// method to update the link's arrowheads and various
+// internal variables
+link.UpdateFromPoints();
+
+// Finally make the link persist its contour
+link.RetainForm = true;</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.FormPreservation.vb">' This sample demonstrates how to create
+' unconnected links programmatically,
+' how to manipulate individual link points
+' and how to 'tell' a link to preserve its contour
+
+' Create an unconnected link
+Dim link As DiagramLink = diagram.Factory.CreateDiagramLink( _
+	New Point(40, 80), New Point(200, 80))
+link.Shape = LinkShape.Polyline
+link.SegmentCount = 4
+
+' Modify the control points
+Dim g As New Random()
+Dim i As Integer
+For i = 1 To link.ControlPoints.Count - 2
+
+	Dim point As Point = link.ControlPoints(i)
+	point.X = point.X + g.Next(-4, 4)
+	point.Y = point.Y + g.Next(-10, 10)
+	link.ControlPoints(i) = point
+
+Next
+
+' After modifying the control points of a link
+' it is necessary to invoke DiagramLink.UpdateFromPoints
+' method to update the link's arrowheads and various
+' internal variables
+link.UpdateFromPoints()
+
+' Finally make the link persist its contour
+link.RetainForm = True</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.CustomDrawLinks.cs">// This sample demonstrates how to perform
+// custom drawing on a link
+
+// Create two nodes
+ShapeNode n1 = diagram.Factory.CreateShapeNode(40, 40, 40, 40);
+ShapeNode n2 = diagram.Factory.CreateShapeNode(120, 200, 40, 40);
+
+// Link the nodes with a link
+DiagramLink link = diagram.Factory.CreateDiagramLink(n1, n2);
+
+link.Selected = false;
+
+// Mark the link as custom-drawn
+link.CustomDraw = CustomDraw.Additional;
+
+// Handle the DrawLink event, which gets fired
+// whenever the link is being drawn
+diagram.DrawLink += OnDrawLink;
+
+// ...
+
+private void OnDrawLink(object sender, DrawLinkEventArgs e)
+{
+    // Draw a small rectangle at the base of the link
+    Point a = e.Link.ControlPoints[0];
+    Pen pen = new Pen(Brushes.Black, 0);
+    e.Graphics.DrawRectangle(Brushes.Red, pen, new Rect(a.X - 4, a.Y - 4, 8, 8));
+}</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.CustomDrawLinks.vb">' This sample demonstrates how to perform
+' custom drawing on a link
+
+' Create two nodes
+Dim n1 As ShapeNode = diagram.Factory.CreateShapeNode(40, 40, 40, 40)
+Dim n2 As ShapeNode = diagram.Factory.CreateShapeNode(120, 200, 40, 40)
+
+' Link the nodes with a link
+Dim link As DiagramLink = diagram.Factory.CreateDiagramLink(n1, n2)
+
+link.Selected = False
+
+' Mark the link as custom-drawn
+link.CustomDraw = CustomDraw.Additional
+
+' Handle the DrawLink event, which gets fired
+' whenever the link is being drawn
+AddHandler diagram.DrawLink, AddressOf OnDrawLink
+
+' ...
+
+Private Sub OnDrawLink(sender As Object, e As DrawLinkEventArgs)
+
+	' Draw a small rectangle at the base of the link
+	Dim a As Point = e.Link.ControlPoints(0)
+	Dim pen As New Pen(Brushes.Black, 0)
+	e.Graphics.DrawRectangle(Brushes.Red, pen, New Rect(a.X - 4, a.Y - 4, 8, 8))
+
+End Sub</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.TreeLayoutPage.cs">// This sample demonstrates how to
+// apply tree layout to a diagram
+
+// Create the layouter object
+TreeLayout layout = new TreeLayout();
+
+// Adjust the attributes of the layouter
+layout.LinkStyle = TreeLayoutLinkType.Rounded;
+layout.Type = TreeLayoutType.Centered;
+layout.KeepRootPosition = true;
+
+// Load a sample diagram
+diagram.LoadFromXml("... file ...");
+
+// Perform the actual arrangement
+layout.Arrange(diagram);
+
+// Fit contents within the document
+diagram.ResizeToFitItems(5);</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.TreeLayoutPage.vb">' This sample demonstrates how to
+' apply tree layout to a diagram
+
+' Create the layouter object
+Dim layout As New TreeLayout()
+
+' Adjust the attributes of the layouter
+layout.LinkStyle = TreeLayoutLinkType.Rounded
+layout.Type = TreeLayoutType.Centered
+layout.KeepRootPosition = True
+
+' Load a sample diagram
+diagram.LoadFromXml("... file ...")
+
+' Perform the actual arrangement
+layout.Arrange(diagram)
+
+' Fit contents within the document
+diagram.ResizeToFitItems(5)</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.BigRadialLayoutPage.cs">// This sample demonstrates how to apply
+// radial tree layout to hierarchical
+// data structures (that is, trees)
+
+// Create the layouter object
+TreeLayout layout = new TreeLayout();
+
+// Specify the type of tree layout to apply
+layout.Type = TreeLayoutType.Radial;
+layout.LevelDistance = 60;
+
+// Build a random tree diagram
+ShapeNode root = diagram.Factory.CreateShapeNode(0, 0, 30, 30);
+BuildBranch(root, new Random(), 10);
+
+// Perform the actual arrangement
+layout.Arrange(diagram);
+
+// ...
+
+private void BuildBranch(ShapeNode parent, Random g, int maxSteps)
+{
+    if (maxSteps &lt; 2)
+        return;
+
+    int steps = g.Next(2, maxSteps);
+    for (int i = 0; i &lt; steps; i++)
+    {
+        // Create new node and link it to its parent
+        ShapeNode child = diagram.Factory.CreateShapeNode(0, 0, 30, 30);
+        diagram.Factory.CreateDiagramLink(parent, child);
+
+        // Continue building recursively
+        BuildBranch(child, g, steps - g.Next(1, 2));
+    }
+}</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.BigRadialLayoutPage.vb">' This sample demonstrates how to apply
+' radial tree layout to hierarchical
+' data structures (that is, trees)
+
+' Create the layouter object
+Dim layout As New TreeLayout()
+
+' Specify the type of tree layout to apply
+layout.Type = TreeLayoutType.Radial
+layout.LevelDistance = 60
+
+' Build a random tree diagram
+Dim root As ShapeNode = diagram.Factory.CreateShapeNode(0, 0, 30, 30)
+BuildBranch(root, New Random(), 10)
+
+' Perform the actual arrangement
+layout.Arrange(diagram)
+
+' ...
+
+Private Sub BuildBranch(parent As ShapeNode, g As Random, maxSteps As Integer)
+
+	If maxSteps &lt; 2 Then
+		Return
+	End If
+
+	Dim steps As Integer = g.Next(2, maxSteps)
+	Dim i As Integer
+	For i = 0 To steps - 1
+
+		' Create new node and link it to its parent
+		Dim child As ShapeNode = diagram.Factory.CreateShapeNode(0, 0, 30, 30)
+		diagram.Factory.CreateDiagramLink(parent, child)
+
+		' Continue building recursively
+		BuildBranch(child, g, steps - g.Next(1, 2))
+
+	Next
+
+End Sub</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.SpringLayoutPage.cs">// This sample demonstrates how to
+// apply spring layout to a graph
+
+// Create the layouter object
+SpringLayout layout = new SpringLayout();
+
+// Adjust the attributes of the layouter
+layout.IterationCount = 500;
+layout.MinimizeCrossings = true;
+
+// Load a sample diagram
+diagram.LoadFromXml("... file ...");
+
+// Perform the actual arrangement
+layout.Arrange(diagram);
+
+// Fit contents within the document
+diagram.ResizeToFitItems(5);</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.SpringLayoutPage.vb">' This sample demonstrates how to
+' apply spring layout to a graph
+
+' Create the layouter object
+Dim layout As New SpringLayout()
+
+' Adjust the attributes of the layouter
+layout.IterationCount = 500
+layout.MinimizeCrossings = True
+
+' Load a sample diagram
+diagram.LoadFromXml("... file ...")
+
+' Perform the actual arrangement
+layout.Arrange(diagram)
+
+' Fit contents within the document
+diagram.ResizeToFitItems(5)</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.LayeredLayoutPage.cs">// This sample demonstrates the simplest way
+// to apply layered layout to a graph
+
+// Create the layouter object
+LayeredLayout layout = new LayeredLayout();
+
+// Load a sample diagram
+diagram.LoadFromXml("... file ...");
+
+// Perform the actual arrangement
+layout.Arrange(diagram);
+
+// Fit contents within the document
+diagram.ResizeToFitItems(5);</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.LayeredLayoutPage.vb">' This sample demonstrates the simplest way
+' to apply layered layout to a graph
+
+' Create the layouter object
+Dim layout As New LayeredLayout()
+
+' Load a sample diagram
+diagram.LoadFromXml("... file ...")
+
+' Perform the actual arrangement
+layout.Arrange(diagram)
+
+' Fit contents within the document
+diagram.ResizeToFitItems(5)</source>
+
+
+
+  
+  
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.GridLayoutPage.cs">// This sample demonstrates how to
+// apply grid layout to a graph
+
+// Create the layouter object
+GridLayout layout = new GridLayout();
+
+// Adjust the attributes of the layouter
+layout.Iterations = 1000;
+layout.GridSize = 20;
+
+// Load a sample diagram
+diagram.LoadFromXml("... file ...");
+
+// Perform the actual arrangement
+layout.Arrange(diagram);
+
+// Fit contents within the document
+diagram.ResizeToFitItems(5);</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.GridLayoutPage.vb">' This sample demonstrates how to
+' apply grid layout to a graph
+
+' Create the layouter object
+Dim layout As New GridLayout()
+
+' Adjust the attributes of the layouter
+layout.Iterations = 1000
+layout.GridSize = 20
+
+' Load a sample diagram
+diagram.LoadFromXml("... file ...")
+
+' Perform the actual arrangement
+layout.Arrange(diagram)
+
+' Fit contents within the document
+diagram.ResizeToFitItems(5)</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.ClusteredLayoutPage.cs">// This sample demonstrates how to
+// apply clustered spring layout to a graph
+
+// Create the layouter object
+SpringLayout layout = new SpringLayout();
+
+// Adjust the attributes of the layouter
+layout.IterationCount = 200;
+layout.EnableClusters = true;
+layout.NodeDistance = 32;
+layout.RepulsionFactor = 5;
+layout.MinimizeCrossings = false;
+
+// Load a sample diagram
+diagram.LoadFromXml("... file ...");
+
+// Perform the actual arrangement
+layout.Arrange(diagram);
+
+// Fit contents within the document
+diagram.ResizeToFitItems(5);</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.ClusteredLayoutPage.vb">' This sample demonstrates how to
+' apply clustered spring layout to a graph
+
+' Create the layouter object
+Dim layout As New SpringLayout()
+
+' Adjust the attributes of the layouter
+layout.IterationCount = 200
+layout.EnableClusters = True
+layout.NodeDistance = 40
+layout.RepulsionFactor = 5
+layout.MinimizeCrossings = False
+
+' Load a sample diagram
+diagram.LoadFromXml("... file ...")
+
+' Perform the actual arrangement
+layout.Arrange(diagram)
+
+' Fit contents within the document
+diagram.ResizeToFitItems(5)</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.BasicOperations.cs">// This sample demonstrates how to access
+// all successors (either direct or indirect) of a node
+
+// Load a sample diagram
+diagram.LoadFromXml("... file ...");
+
+// Check if there is an active node in the diagram
+if (!(diagram.ActiveItem is ShapeNode))
+	return;
+
+// A list where the successor nodes will be stored
+ArrayList successors = new ArrayList();
+
+// A temporary queue containing nodes which are yet to be visited
+Queue remaining = new Queue();
+
+remaining.Enqueue(diagram.ActiveItem as ShapeNode);
+
+while (remaining.Count &gt; 0)
+{
+	ShapeNode node = remaining.Dequeue() as ShapeNode;
+
+	// Traverse all outgoing links and add their
+	// destination nodes to the successor list
+	foreach (DiagramLink link in node.OutgoingLinks)
+	{
+		if (!successors.Contains(link.Destination))
+		{
+			successors.Add(link.Destination);
+			remaining.Enqueue(link.Destination);
+		}
+	}
+}
+
+// Color the successor nodes
+foreach (ShapeNode node in successors)
+	node.Brush = new SolidColorBrush(Colors.LightGreen);</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.BasicOperations.vb">' This sample demonstrates how to access
+' all successors (either direct or indirect) of a node
+
+' Load a sample diagram
+diagram.LoadFromXml("... file ...")
+
+' Check if there is an active node in the diagram
+If Not TypeOf diagram.ActiveItem Is ShapeNode Then
+    Return
+
+End If
+' A list where the successor nodes will be stored
+Dim successors As New ArrayList()
+
+' A temporary queue containing nodes which are yet to be visited
+Dim remaining As New Queue()
+
+remaining.Enqueue(CType(diagram.ActiveItem, ShapeNode))
+
+While remaining.Count &gt; 0
+
+    Dim node As ShapeNode = CType(remaining.Dequeue(), ShapeNode)
+
+    ' Traverse all outgoing links and add their
+    ' destination nodes to the successor list
+    For Each link As DiagramLink In node.OutgoingLinks
+
+        If Not successors.Contains(link.Destination) Then
+
+            successors.Add(link.Destination)
+            remaining.Enqueue(link.Destination)
+
+        End If
+
+    Next
+
+End While
+
+' Color the successor nodes
+For Each node As ShapeNode in successors
+    node.Brush = Brushes.LightGreen
+Next</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.PathfindingPage.cs">// This sample demonstrates how easy it is
+// to find paths in WpfDiagram graphs
+
+// Load a sample diagram
+diagram.LoadFromXml("... file ...");
+
+// Make sure there are at least two nodes in the diagram
+if (diagram.Nodes.Count &lt; 2)
+	return;
+
+// Use the MindFusion.Diagramming.PathFinder class
+// to find paths and cycles in any graph
+PathFinder pathFinder = new PathFinder(diagram);
+MindFusion.Diagramming.Wpf.Path p = pathFinder.FindShortestPath(diagram.Nodes[0],
+	diagram.Nodes[diagram.Nodes.Count - 1]);
+
+// If the returned reference is null, no path
+// has been found
+if (p == null)
+{
+	MessageBox.Show("No path found!");
+	return;
+}
+
+// Brush the path
+foreach (ShapeNode node in p.Nodes)
+{
+	node.Brush = Brushes.Yellow;
+	node.Stroke = Brushes.Red;
+}
+
+foreach (DiagramLink link in p.Links)
+	link.Stroke = Brushes.Red;</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.PathfindingPage.vb">' This sample demonstrates how easy it is
+' to find paths in WpfDiagram graphs
+
+' Load a sample diagram
+diagram.LoadFromXml("... file ...")
+
+' Make sure there are at least two nodes in the diagram
+If diagram.Nodes.Count &lt; 2 Then
+	Return
+End If
+
+' Use the MindFusion.Diagramming.PathFinder class
+' to find paths and cycles in any graph
+Dim pathFinder As New PathFinder(diagram)
+Dim p As Path = pathFinder.FindShortestPath(diagram.Nodes(0), _
+	diagram.Nodes(diagram.Nodes.Count - 1))
+
+' If the returned reference is Nothing, no path
+' has been found
+If p Is Nothing Then
+
+	MessageBox.Show("No path found!")
+	Return
+
+End If
+
+' Color the path
+For Each node As ShapeNode In p.Nodes
+
+	node.Brush = Brushes.Yellow
+	node.Stroke = Brushes.Red
+
+Next
+
+For Each link As DiagramLink In p.Links
+	link.Stroke = Brushes.Red
+Next</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.Rotation.cs">// This sample demonstrates how to rotate
+// nodes at arbitrary angles
+
+// Create a ShapeNode
+ShapeNode node = diagram.Factory.CreateShapeNode(30, 30, 100, 100);
+
+// Only ShapeNode objects can be rotated
+node.Shape = Shapes.Decision;
+
+// Rotate the node now at 30 degrees
+node.RotationAngle = 30;
+
+// Set some text in the node and make the text rotate as well
+node.Text = "Rotated node";
+node.FontFamily = new FontFamily("Arial");
+node.FontSize = 12;
+node.RotateText = true;</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.Rotation.vb">' This sample demonstrates how to rotate
+' nodes at arbitrary angles
+
+' Create a ShapeNode
+Dim node As ShapeNode = diagram.Factory.CreateShapeNode(10, 10, 100, 100)
+
+' Only ShapeNode objects can be rotated
+node.Shape = Shapes.Decision
+
+' Rotate the node now at 30 degrees
+node.RotationAngle = 30
+
+' Set some text in the node and make the text rotate as well
+node.Text = "Rotated node"
+node.FontFamily = New FontFamily("Arial")
+node.FontSize = 12
+node.RotateText = True</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.Grouping.cs">// This sample demonstrates how to proportionally attach
+// nodes to each other using WpfDiagram groups
+
+// Create a TableNode and a ShapeNode
+TableNode master = diagram.Factory.CreateTableNode(40, 40, 80, 160);
+ShapeNode subordinate = diagram.Factory.CreateShapeNode(40, 200, 80, 35);
+
+// Create a group, using the table as a master
+Group group = diagram.Factory.CreateGroup(master);
+
+// Attach the box to the newly created group
+group.AttachProportional(subordinate, 0, 100, 100, 120);</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.Grouping.vb">' This sample demonstrates how to proportionally attach
+' nodes to each other using WpfDiagram groups
+
+' Create a TableNode and a ShapeNode
+Dim master As TableNode = diagram.Factory.CreateTableNode(40, 40, 80, 160)
+Dim subordinate As ShapeNode = diagram.Factory.CreateShapeNode(40, 200, 80, 35)
+
+' Create a group, using the table as a master
+Dim group As Group = diagram.Factory.CreateGroup(master)
+
+' Attach the box to the newly created group
+group.AttachProportional(subordinate, 0, 100, 100, 120)</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.DragAndDrop.cs">// Don't forget that in order to use WpfDiagram
+// as a target of a drag-and-drop operation
+// you need to explicitly specify so
+
+diagram.AllowDrop = true;
+diagram.DocumentPlane.AllowDrop = true;</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.DragAndDrop.vb">' Don't forget that in order to use WpfDiagram
+' as a target of a drag-and-drop operation
+' you need to explicitly specify so
+
+diagramView.AllowDrop = True
+diagram.DocumentPlane.AllowDrop = True</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.NodeShapes.cs">// This sample illustrates how to define
+// your own node shapes via the Shape class
+
+// Create a new shape objects
+Shape shape = new Shape(
+	new ElementTemplate[]
+	{
+		new ArcTemplate(0, 0, 100, 100, 0, 360)
+	},
+	new ElementTemplate[]
+	{
+		new ArcTemplate(25, 30, 15, 15, 180, 180),
+		new ArcTemplate(60, 30, 15, 15, 180, 180),
+		new ArcTemplate(30, 60, 40, 15, 0, 180)
+	},
+	null,
+	FillRule.Nonzero,
+	"Happy");
+
+// Create a node and assign the shape to it
+ShapeNode node = diagram.Factory.CreateShapeNode(10, 10, 120, 80);
+node.Shape = Shape.FromId("Happy");</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.NodeShapes.vb">' This sample illustrates how to define
+' your own node shapes via the Shape class
+
+' Create a new shape objects
+Dim shape As New Shape( _
+	New ElementTemplate() _
+	{ _
+		New ArcTemplate(0, 0, 100, 100, 0, 360) _
+	}, _
+	New ElementTemplate() _
+	{ _
+		New ArcTemplate(25, 30, 15, 15, 180, 180), _
+		New ArcTemplate(60, 30, 15, 15, 180, 180), _
+		New ArcTemplate(30, 60, 40, 15, 0, 180) _
+	}, _
+	Nothing, _
+	FillRule.EvenOdd, _
+	"Happy")
+
+' Create a node and assign the shape to it
+Dim node As ShapeNode = diagram.Factory.CreateShapeNode(10, 10, 120, 80)
+node.Shape = shape.FromId("Happy")</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.MiscOwnerDraw.cs">// This sample demonstrates a way to implement
+// visual effects using custom drawing
+
+// Create a custom-drawn ShapeNode
+ShapeNode box = diagram.Factory.CreateShapeNode(30, 30, 100, 100);
+box.CustomDraw = CustomDraw.Additional;
+
+// Associate event handler
+diagram.DrawNode += OnDrawNode;
+
+// ...
+
+private void OnDrawNode(object sender, DrawNodeEventArgs e)
+{
+	Rect rc = e.Node.Bounds;
+	rc.X = 0;
+	rc.Y = 0;
+
+	rc.X += 20;
+	rc.Width -= 20;
+
+	for (int i = 0; i &lt; 10; i++)
+	{
+		Brush brush = new SolidColorBrush(Color.FromArgb((byte)(255 - i * 25), 255, 0, 0));
+		Pen pen = new Pen(new SolidColorBrush(Color.FromArgb((byte)((255 - i * 25) / 2), 0, 0, 0)), 0.9);
+
+		e.Graphics.DrawEllipse(brush, pen, new Point(rc.X + rc.Width / 2, rc.Y + rc.Height / 2), rc.Width / 2, rc.Height / 2);
+
+		rc.Offset(-2, 0);
+	}
+}</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.MiscOwnerDraw.vb">' This sample demonstrates a way to implement
+' visual effects using custom drawing
+
+' Create a custom-drawn ShapeNode
+Dim box As ShapeNode = diagram.Factory.CreateShapeNode(30, 30, 100, 100)
+box.CustomDraw = CustomDraw.Additional
+
+' Associate event handler
+AddHandler diagram.DrawNode, AddressOf OnDrawNode
+
+' ...
+
+Private Sub OnDrawNode(sender As Object, e As DrawNodeEventArgs)
+
+	Dim rc As Rect = e.Node.Bounds
+	rc.X = 0
+	rc.Y = 0
+	rc.X += 20
+	rc.Width -= 20
+
+	For i As Integer = 0 To 10
+
+		Dim brush As New SolidColorBrush(Color.FromArgb(CByte(255 - i * 25), 255, 0, 0))
+		Dim pen As New Pen(New SolidColorBrush(Color.FromArgb(CByte((255 - i * 25) / 2), 0, 0, 0)), 0.9)
+
+		e.Graphics.DrawEllipse(brush, pen, New Point(rc.X + rc.Width / 2, rc.Y + rc.Height / 2), rc.Width / 2, rc.Height / 2)
+
+		rc.Offset(-2, 0)
+
+	Next
+
+End Sub</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.ReadyDiagram.cs">// This sample demonstrates how to set
+// transparent icons on WpfDiagram nodes
+
+// Create new ShapeNode
+ShapeNode node = diagram.Factory.CreateShapeNode(10, 10, 40, 40);
+
+// Assign an icon to the node
+node.Image = new BitmapImage(new Uri("... image file ..."));
+node.ImageAlign = ImageAlign.Stretch;
+
+// Make the node transparent,
+// so that only the icon is visible
+node.Transparent = true;</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.ReadyDiagram.vb">' This sample demonstrates how to set
+' transparent icons on WpfDiagram nodes
+
+' Create new ShapeNode
+Dim node As ShapeNode = diagram.Factory.CreateShapeNode(10, 10, 12, 12)
+
+' Assign an icon to the node
+node.Image = New BitmapImage(New Uri("... image file ..."))
+node.ImageAlign = ImageAlign.Stretch
+
+' Make the node transparent,
+' so that only the icon is visible
+node.Transparent = True</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.NetSample.cs">// This sample demonstrates how to override
+// the standard WpfDiagram item drawing
+// behavior through event handling
+
+// Disable interactive node creation
+diagram.Behavior = Behavior.Modify;
+
+// Then create new event handler and associate
+// it with the Diagram.DoubleClicked event
+diagram.DoubleClicked += OnDoubleClicked;
+
+// Doing so we would create new nodes
+// when the document is double-clicked
+// rather than when the user click-and-drags
+// with the mouse
+
+// ...
+
+// Double-click event handler
+private void OnDoubleClicked(object sender, DiagramEventArgs e)
+{
+    // Create new ShapeNode
+    diagram.Factory.CreateShapeNode(e.MousePosition.X - 20,
+        e.MousePosition.Y - 20, 40, 40);
+}</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.NetSample.vb">' This sample demonstrates how to override
+' the standard WpfDiagram item drawing
+' behavior through event handling
+
+' Disable interactive node creation
+diagram.Behavior = Behavior.Modify
+
+' Then create new event handler and associate
+' it with the Diagram.DoubleClicked event
+AddHandler diagram.DoubleClicked, AddressOf OnDoubleClicked
+
+' Doing so we would create new nodes
+' when the document is double-clicked
+' rather than when the user click-and-drags
+' with the mouse
+
+' ...
+
+' Double-click event handler
+Private Sub OnDoubleClicked(sender As Object, e As DiagramEventArgs)
+
+	' Create new ShapeNode
+	diagram.Factory.CreateShapeNode(e.MousePosition.X - 20, _
+		e.MousePosition.Y - 20, 40, 40)
+
+End Sub</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.VisualXMLSample.cs">// The sample illustrates the method used
+// in this step to visualize XML contents
+
+// Load the XML document, assuming that
+// the path is a valid path to a XML file
+System.Xml.XmlDocument doc = new System.Xml.XmlDocument();
+doc.Load(path);
+
+// Set the link style
+diagram.LinkShape = LinkShape.Cascading;
+diagram.LinkSegments = 2;
+diagram.LinkCascadeOrientation = MindFusion.Diagramming.Wpf.Orientation.Vertical;
+
+// Process the XML document
+int yIndent = 30;
+Process(30, ref yIndent, null, doc);
+
+// ...
+
+private void Process(int xIndent, ref int yIndent,
+   ShapeNode parent, System.Xml.XmlNode node)
+{
+	if (node == null)
+		return;
+
+	// Create a child node for this node
+	ShapeNode childNode = diagram.Factory.CreateShapeNode(xIndent, yIndent, 80, 25);
+	if (node.NodeType == System.Xml.XmlNodeType.Text)
+	{
+		childNode.Text = node.Value.ToString();
+		childNode.Brush = Brushes.LightYellow;
+	}
+	else
+	{
+		childNode.Text = node.Name;
+		childNode.Brush = Brushes.BurlyWood;
+	}
+
+	yIndent += 45;
+
+	// Link this child node with its parent
+	if (parent != null)
+		diagram.Factory.CreateDiagramLink(parent, childNode);
+
+	// Process the children
+	foreach (System.Xml.XmlNode child in node.ChildNodes)
+		Process(xIndent + 100, ref yIndent, childNode, child);
+}</source>
+
+	<source id="MindFusion.Diagramming.Wpf.Samples.CS.Demo.VisualXMLSample.vb">' The sample illustrates the method used
+' in this step to visualize XML contents
+
+' Load the XML document, assuming that
+' the path is a valid path to a XML file
+Dim doc As New System.Xml.XmlDocument()
+doc.Load(Path)
+
+' Set the link style
+diagram.LinkShape = LinkShape.Cascading
+diagram.LinkSegments = 2
+diagram.LinkCascadeOrientation = MindFusion.Diagramming.Wpf.Orientation.Vertical
+
+' Process the XML document
+Dim yIndent As Integer = 30
+Process(30, yIndent, Nothing, doc)
+
+' ...
+
+Private Sub Process(xIndent As Integer, ByRef yIndent As Integer, _
+	parent As ShapeNode, node As System.Xml.XmlNode)
+
+	If node Is Nothing Then
+		Return
+	End If
+
+	' Create a child node for this node
+	Dim childNode As ShapeNode = diagram.Factory.CreateShapeNode(xIndent, yIndent, 80, 25)
+	If node.NodeType = System.Xml.XmlNodeType.Text Then
+
+		childNode.Text = node.Value.ToString()
+		childNode.Brush = Brushes.LightYellow
+
+	Else
+
+		childNode.Text = node.Name
+		childNode.Brush = Brushes.BurlyWood
+
+	End If
+
+	yIndent += 45
+
+	' Link this child node with its parent
+	If Not parent Is Nothing Then
+		diagram.Factory.CreateDiagramLink(parent, childNode)
+	End If
+
+	' Process the children
+	For Each child As System.Xml.XmlNode In node.ChildNodes
+		Process(xIndent + 100, yIndent, childNode, child)
+	Next
+
+End Sub</source>
+
+</sources>

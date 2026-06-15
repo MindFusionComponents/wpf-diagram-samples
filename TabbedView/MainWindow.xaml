@@ -1,0 +1,58 @@
+﻿<Window x:Class="MindFusion.Diagramming.Wpf.Samples.CS.TabbedView.MainWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:diag="http://mindfusion.eu/diagramming/wpf"
+	Title="MindFusion.Diagramming Sample: Tabbed View"
+	Height="768" Width="1024" Icon="/App.ico">
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" MinHeight="21" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition Width="200" />
+		</Grid.ColumnDefinitions>
+
+		<Menu Grid.ColumnSpan="2">
+			<MenuItem Name="fileMenuItem" Header="_File">
+				<MenuItem Name="openMenuItem" Header="_Open..." Click="openMenuItem_Click" />
+				<MenuItem Name="saveMenuItem" Header="_Save..." Click="saveMenuItem_Click"  />
+				<Separator />
+				<MenuItem Name="printPreviewMenuItem" Header="Print Pre_view..." Click="printPreviewMenuItem_Click" />
+				<MenuItem Name="printMenuItem" Header="_Print..." Click="printMenuItem_Click" />
+				<Separator />
+				<MenuItem Name="exitMenuItem" Header="E_xit" Click="exitMenuItem_Click"  />
+			</MenuItem>
+		</Menu>
+
+		<diag:TabbedDiagramView x:Name="tabbedDiagramView" Grid.Column="0" Grid.Row="1" TabAlignment="Bottom" PageAdded="tabbedDiagramView_PageAdded" PageRemoving="tabbedDiagramView_PageRemoving">
+			<diag:DiagramDocument x:Name="diagramDocument">
+				<diag:DiagramPage Title="diagram1" />
+			</diag:DiagramDocument>
+		</diag:TabbedDiagramView>
+
+		<StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" Margin="4">
+			<GroupBox Header="Show Tabs" Margin="0,0,0,5">
+				<StackPanel Orientation="Vertical" RadioButton.Click="OnShowTabsChanged">
+					<RadioButton Name="radioNever" Content="Never" />
+					<RadioButton Name="radioLeft" Content="Left-aligned" />
+					<RadioButton Name="radioTop" Content="Top-aligned" />
+					<RadioButton Name="radioRight" Content="Right-aligned" />
+					<RadioButton Name="radioBottom" Content="Bottom-aligned" IsChecked="True" />
+				</StackPanel>
+			</GroupBox>
+			<GroupBox Header="Options" Margin="0,0,0,5">
+				<StackPanel Orientation="Vertical">
+					<CheckBox Name="checkAllowReorder" Content="Allow reorder" IsChecked="{Binding AllowTabReorder, ElementName=tabbedDiagramView, Mode=TwoWay}" />
+					<CheckBox Name="checkShowCreateNewButton" Content="Show 'Create new' button" IsChecked="{Binding ShowCreateNewTab, ElementName=tabbedDiagramView, Mode=TwoWay}" />
+					<CheckBox Name="checkShowCloseButtons" Content="Show close buttons" IsChecked="{Binding ShowTabCloseButtons, ElementName=tabbedDiagramView, Mode=TwoWay}" />
+					<CheckBox Name="checkShowNavigationButtons" Content="Show navigation buttons" IsChecked="{Binding ShowTabNavigationButtons, ElementName=tabbedDiagramView, Mode=TwoWay}" />
+				</StackPanel>
+			</GroupBox>
+            <diag:Overview x:Name="overview" DiagramView="{Binding Path=DiagramView, ElementName=tabbedDiagramView}" Height="200" />
+		</StackPanel>
+	</Grid>
+
+</Window>

@@ -1,0 +1,107 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:MindFusion.Diagramming.Wpf.Samples.CS.Demo"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+
+	<Style TargetType="{x:Type local:SourceCodeViewer}">
+		<Setter Property="FontFamily" Value="Consolas" />
+		<Setter Property="FontSize" Value="12" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type local:SourceCodeViewer}">
+					<Border Background="{TemplateBinding Background}">
+						<FlowDocumentScrollViewer x:Name="PART_Viewer" Foreground="{TemplateBinding Foreground}" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+
+
+
+
+
+
+
+
+
+
+    <ObjectDataProvider MethodName="GetType"
+            ObjectType="{x:Type sys:Type}" x:Key="colorsTypeOdp">
+        <ObjectDataProvider.MethodParameters>
+            <sys:String>System.Windows.Media.Colors, PresentationCore,
+                    Version=3.0.0.0, Culture=neutral,
+	                PublicKeyToken=31bf3856ad364e35
+            </sys:String>
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
+
+
+    <ObjectDataProvider ObjectInstance="{StaticResource colorsTypeOdp}"
+            MethodName="GetProperties" x:Key="colorPropertiesOdp">
+    </ObjectDataProvider>
+
+    <GeometryDrawing x:Key="TriangleDrawing"
+            Geometry="M0,0 L50,0 L50,50 L0,50 
+                         L50,50 L50,100 L100,100 L100,50 0,50Z" Brush="#44000000">
+        <GeometryDrawing.Pen>
+            <Pen Thickness="0" Brush="Black" MiterLimit="0" />
+        </GeometryDrawing.Pen>
+    </GeometryDrawing>
+
+    <LinearGradientBrush x:Key="Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <!--<GradientStop Color="#FFBFDBFF" Offset="0" />-->
+        <GradientStop Color="#FF88AEE0" Offset="0" />
+        <GradientStop Color="#FF88AEE0" Offset="1" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="PartBackground" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFCDDCF0" Offset="0" />
+        <GradientStop Color="#FFE7F2FF" Offset="1" />
+    </LinearGradientBrush>
+
+
+
+
+    <!--<Style TargetType="{x:Type TreeViewItem}">
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Name="img"
+                            Width="16"
+                            Height="16"
+                            Stretch="Fill"
+                            Source="Images/topicplus.png"/>
+                        <TextBlock Text="{Binding}" Margin="5,0" />
+                    </StackPanel>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+
+
+    <!--ComboBox Panel Style-->
+    <Style TargetType="Button" x:Key="BackgroundButton">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <ContentPresenter
+                            x:Name="contentPresenter"
+                            Content="{TemplateBinding Content}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            Margin="{TemplateBinding Padding}">
+                        </ContentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

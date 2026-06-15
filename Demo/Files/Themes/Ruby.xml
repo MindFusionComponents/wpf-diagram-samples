@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<Theme Version="1">
+  <Style TargetType="std:Diagram" Class="std:DiagramStyle" Version="1">
+    <Property Name="BackBrush">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#FFE3E3E3</Color>
+        </Brush>
+      </Value>
+    </Property>
+  </Style>
+  <Style TargetType="std:DiagramLink" Class="std:DiagramLinkStyle" Version="1">
+    <Property Name="Brush">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#FFDDEEEE</Color>
+        </Brush>
+      </Value>
+    </Property>
+  </Style>
+  <Style TargetType="std:ShapeNode" Class="std:ShapeNodeStyle" Version="1">
+    <Property Name="Brush">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#FFFF2D3B</Color>
+        </Brush>
+      </Value>
+    </Property>
+    <Property Name="Effects">
+      <Value Type="105">
+        <List>
+          <Item>
+            <Value Type="103">
+              <Effect Class="std:GlassEffect" Version="1">
+                <Type>0</Type>
+                <GlowColor>#FFF8D9DA</GlowColor>
+                <UsePenAsGlow>False</UsePenAsGlow>
+                <ReflectionColor>#FFFAEBD7</ReflectionColor>
+              </Effect>
+            </Value>
+          </Item>
+        </List>
+      </Value>
+    </Property>
+  </Style>
+  <Style TargetType="std:TableNode" Class="std:TableNodeStyle" Version="1">
+    <Property Name="Brush">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#FFFF2D3B</Color>
+        </Brush>
+      </Value>
+    </Property>
+    <Property Name="Effects">
+      <Value Type="105">
+        <List>
+          <Item>
+            <Value Type="103">
+              <Effect Class="std:GlassEffect" Version="1">
+                <Type>0</Type>
+                <GlowColor>#FFF8D9DA</GlowColor>
+                <UsePenAsGlow>False</UsePenAsGlow>
+                <ReflectionColor>#FFFAEBD7</ReflectionColor>
+              </Effect>
+            </Value>
+          </Item>
+        </List>
+      </Value>
+    </Property>
+  </Style>
+  <Style TargetType="std:TreeViewNode" Class="std:TreeViewNodeStyle" Version="1">
+    <Property Name="Brush">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#FFFF2D3B</Color>
+        </Brush>
+      </Value>
+    </Property>
+    <Property Name="Effects">
+      <Value Type="105">
+        <List>
+          <Item>
+            <Value Type="103">
+              <Effect Class="std:GlassEffect" Version="1">
+                <Type>0</Type>
+                <GlowColor>#FFF8D9DA</GlowColor>
+                <UsePenAsGlow>False</UsePenAsGlow>
+                <ReflectionColor>#FFFAEBD7</ReflectionColor>
+              </Effect>
+            </Value>
+          </Item>
+        </List>
+      </Value>
+    </Property>
+  </Style>
+  <Style TargetType="std:ContainerNode" Class="std:ContainerNodeStyle" Version="1">
+    <Property Name="Brush">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#FFF8E9E9</Color>
+        </Brush>
+      </Value>
+    </Property>
+    <Property Name="Effects">
+      <Value Type="105">
+        <List>
+          <Item>
+            <Value Type="103">
+              <Effect Class="std:GlassEffect" Version="1">
+                <Type>1</Type>
+                <GlowColor>#FFFFFFFF</GlowColor>
+                <UsePenAsGlow>False</UsePenAsGlow>
+                <ReflectionColor>#FFFFFFFF</ReflectionColor>
+              </Effect>
+            </Value>
+          </Item>
+        </List>
+      </Value>
+    </Property>
+  </Style>
+</Theme>

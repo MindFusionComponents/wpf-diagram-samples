@@ -1,0 +1,114 @@
+﻿<Window x:Class="MindFusion.Diagramming.Wpf.Samples.CS.Effects.MainWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:diag="http://mindfusion.eu/diagramming/wpf"
+	xmlns:local="clr-namespace:MindFusion.Diagramming.Wpf.Samples.CS.Effects"
+	Title="MindFusion.Diagramming Sample: Effects"
+	Height="768" Width="1024" Icon="/App.ico">
+
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition Width="250" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition Height="90" />
+		</Grid.RowDefinitions>
+
+		<diag:DiagramView>
+			<diag:Diagram x:Name="diagram" />
+		</diag:DiagramView>
+
+		<Grid Grid.Row="1" Margin="5">
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5,0" Grid.Row="0">Diagram background:</TextBlock>
+			<TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5,0" Grid.Row="1">Shapes border:</TextBlock>
+			<TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5,0" Grid.Row="2">Shapes background:</TextBlock>
+			<local:ColorPicker x:Name="backgroundColor" Grid.Column="1" Grid.Row="0" Margin="2" Width="80" Height="22" />
+			<local:ColorPicker x:Name="shapesBorderColor" Grid.Column="1" Grid.Row="1" Margin="2" Width="80" Height="22" />
+			<local:ColorPicker x:Name="shapesBackgroundColor" Grid.Column="1" Grid.Row="2" Margin="2" Width="80" Height="22" />
+			<StackPanel Orientation="Horizontal" Margin="2" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center">
+				<CheckBox Name="gradientCheck" Margin="0,0,5,0" VerticalAlignment="Center" Click="gradientCheck_Click" />
+				<local:ColorPicker x:Name="shapesBackground2Color" Width="80" Height="22" IsEnabled="{Binding IsChecked, ElementName=gradientCheck}" />
+			</StackPanel> 
+		</Grid>
+
+		<StackPanel Orientation="Vertical" Margin="10" Grid.Column="1" Grid.RowSpan="2">
+			<TextBlock Margin="0,0,0,2">Presets:</TextBlock>
+			<ListBox Name="presetsList" Height="200" Margin="0,0,0,10" SelectionChanged="presetsList_SelectionChanged">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Text="{Binding PublicName}" />
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+			<StackPanel Margin="0,0,0,10">
+				<Border Grid.ColumnSpan="2" Background="{x:Static SystemColors.GradientActiveCaptionBrush}">
+					<CheckBox Name="glassEffectCheck" Margin="5" Click="glassEffectCheck_Click">Glass Effect</CheckBox>
+				</Border>
+				<Border Background="{x:Static SystemColors.GradientInactiveCaptionBrush}" IsEnabled="{Binding IsChecked, ElementName=glassEffectCheck}">
+					<Grid Margin="5">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition />
+							<ColumnDefinition />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto" />
+							<RowDefinition Height="Auto" />
+							<RowDefinition Height="Auto" />
+							<RowDefinition Height="Auto" />
+						</Grid.RowDefinitions>
+						<TextBlock Margin="2" VerticalAlignment="Center">Type:</TextBlock>
+						<ComboBox Name="glassTypeCombo" Grid.Column="1" Margin="2" SelectionChanged="glassTypeCombo_SelectionChanged">
+							<ComboBoxItem>Type1</ComboBoxItem>
+							<ComboBoxItem>Type2</ComboBoxItem>
+							<ComboBoxItem>Type3</ComboBoxItem>
+							<ComboBoxItem>Type4</ComboBoxItem>
+						</ComboBox>
+						<CheckBox Name="usePenAsGlowCheck" Grid.Row="1" Grid.Column="1" Margin="2" Click="usePenAsGlowCheck_Click">Use Pen as Glow</CheckBox>
+						<TextBlock Margin="2" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2">Glow color:</TextBlock>
+						<local:ColorPicker x:Name="glowColor" Grid.Column="1" Grid.Row="2" Margin="2" Height="22" Width="80" HorizontalAlignment="Left" />
+						<TextBlock Margin="2" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3">Reflection Color:</TextBlock>
+						<local:ColorPicker x:Name="reflectionColor" Grid.Column="1" Grid.Row="3" Margin="2" Height="22" Width="80" HorizontalAlignment="Left" />
+					</Grid>
+				</Border>
+			</StackPanel>
+			<StackPanel>
+				<Border Grid.ColumnSpan="2" Background="{x:Static SystemColors.GradientActiveCaptionBrush}">
+					<CheckBox Name="aeroEffectCheck" Margin="5" Click="aeroEffectCheck_Click">Aero Effect</CheckBox>
+				</Border>
+				<Border Background="{x:Static SystemColors.GradientInactiveCaptionBrush}" IsEnabled="{Binding IsChecked, ElementName=aeroEffectCheck}">
+					<Grid Margin="5">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition />
+							<ColumnDefinition />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto" />
+							<RowDefinition Height="Auto" />
+							<RowDefinition Height="Auto" />
+						</Grid.RowDefinitions>
+						<TextBlock Margin="2" VerticalAlignment="Center">Opacity (%):</TextBlock>
+						<Slider Name="aeroOpacity" Grid.Column="1" Margin="2" Minimum="0" Maximum="1" ValueChanged="aeroOpacity_ValueChanged" />
+						<TextBlock Margin="2" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">Inner outline color:</TextBlock>
+						<local:ColorPicker x:Name="innerOutlineColor" Grid.Column="1" Grid.Row="1" Margin="2" Height="22" Width="80" HorizontalAlignment="Left" />
+						<TextBlock Margin="2" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2">Shade color:</TextBlock>
+						<local:ColorPicker x:Name="shadeColor" Grid.Column="1" Grid.Row="2" Margin="2" Height="22" Width="80" HorizontalAlignment="Left" />
+					</Grid>
+				</Border>
+			</StackPanel>
+		</StackPanel>
+
+	</Grid>
+
+</Window>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="MindFusion.Diagramming.Wpf.Samples.CS.ProcessLayout.MainWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:diag="http://mindfusion.eu/diagramming/wpf"
+	Title="MindFusion.Diagramming Sample: Process Layout"
+	Height="768" Width="1024" Icon="/App.ico" WindowState="Maximized">
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<diag:Ruler>
+			<diag:DiagramView x:Name="diagramView">
+				<diag:Diagram x:Name="diagram" NodeCreated="diagram_NodeCreated" />
+			</diag:DiagramView>
+		</diag:Ruler>
+		<Grid Grid.Row="1" Height="40">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<Border Margin="2" BorderBrush="Gray" BorderThickness="1">
+				<TextBlock Margin="2" TextWrapping="Wrap">This example demonstrates the SwimlaneLayout class, which can be used to arrange process diagrams.</TextBlock>
+			</Border>
+			<StackPanel Grid.Column="1" Margin="5" Orientation="Horizontal">
+				<Button Name="randomizeButton" Content="Randomize" Margin="0,0,5,0" Width="100" Click="randomizeButton_Click" />
+				<Button Name="arrangeButton" Content="Arrange" Width="100" Click="arrangeButton_Click" />
+			</StackPanel>
+		</Grid>
+	</Grid>
+
+</Window>

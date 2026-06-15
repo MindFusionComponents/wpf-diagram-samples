@@ -1,0 +1,101 @@
+This program demonstrates various WpfDiagram features. Click on the 'Next' button to the left to browse through the samples illustrated in the demo. Have fun with WpfDiagram!
+
+This diagram defines a dialogue that can be conducted by automated system, such as an IVR system. You can define your own nodes in the dialogue. Pressing the 'Take a tour' button will run a simulation of the dialogue. You can choose your answers by double-clicking. 
+
+This diagram demonstrates hierarchical grouping and collapsing/expanding subtrees in the hierarchy. Try it:
+ Select and move any node with attached children, the children will move too.
+ Click the +/- button on the right of a node. Its children will show/hide respectively.
+
+Cascading-style links are demonstrated here. You can also see that links can have different arrowhead shapes and sizes. Collapsing/expanding of subtrees in a hierarchical diagram are also demonstrated - just click the +/- button on the right of a node.
+
+This sample genealogy tree demonstrates the visual splendor that can be achieved by loading images into diagram nodes and harnessing custom-painting to add various effects. The textured frames are an example of the cdAdditional custom-painting mode. Note also that the text boxes are attached to the photo-boxes.
+
+WpfDiagram provides table/grid objects that can hold unlimited number of columns and rows. In this sample such tables are used to represent classes in a class hierarchy. Some rows are defined as headers and allow expanding or collapsing the non-header rows below them. The table rows can be scrolled up or down by clicking the links at the upper-right corner.
+
+You can use WpfDiagram to display database entity-relationship diagrams, as shown below. The diagram also demonstrates perpendicular- style links and using link base and arrowhead shapes of different sizes.
+
+Click on a patient name on the left. Event handler is invoked that shows a hidden node with user-defined shape. Clicking the green + box fires another event, whose handler adds new row to the log table.
+
+You can draw network diagrams here. The nodes are not created by dragging (the usual WpfDiagram way) but by clicking, which demonstrates how you can override default behavior by using proper event handling. The sample also shows how you can attach text to objects. The simple WpfDiagram objects can hold text only in their interior, but a simple trick is used here - transparent nodes containing text are attached to the primary nodes.
+
+This diagram was drawn in the 'NetSample' step. Several link styles and arrowhead shapes are exhibited here.
+
+The PathFinder class allows finding shortest, longest or all paths in a graph and detecting cycles. Try the various function by clicking the buttons below. Use Ctrl + click to select more nodes at once when needed.
+
+Select a circle and try the various buttons below. They demonstrate how to access objects connected to another objects.
+
+Try the 'Show sample' button to see how XML files can be displayed as a tree of links and nodes. Use the 'Load XML' button to display your own file.
+
+You can control how WpfDiagram responds to drag-and-drop operations by handling several events. In this sample, dropping image or text data objects creates new nodes containing them.
+
+These are the predefined polygon shapes. WpfDiagram is highly customizable and allows you to define your own shapes or to use custom-painting of nodes by plugging your own drawing code in the rendering process.
+
+Several types of custom-painting are demonstrated here.
+-cdAdditional invokes your drawing code after the standard painting is done
+-cdFull does not perform any standard painting, just invokes your code
+-cdShadowOnly use standard painting for objects and custom painting for shadows
+
+This quick introduction to the rich functionality of WpfDiagram has come to an end. There is still a lot more to learn and see. As your next steps we suggest you to take a look at the developer's guide and check the samples installed with the control. Then build a test application to try the properties and methods you are most interested in. Having your own licensed WpfDiagram copy means not only you get all the features of the component at once. It means you have the MindFusion support team at your side to assist you. Welcome to our big family! For any questions or suggestion you might have, please contact us at support@mindfusion.org
+
+WpfDiagram provides a method to arrange diagram elements in tree-like hierarchies. You may customize the layout in various ways, including direction of the tree, alignment of the items, the links styles, the spacing between the items and the tree levels, and more.
+
+ShapeNodes can display custom shapes composed of series of lines, arcs and Bezier splines. In addition, the control provides many predefined shapes, listed below together with their string identifiers.
+
+Spring-Embedder is force-directed layout algorithm. It simulates a physical system in which nodes repulse each other, and the links between them act as confining springs. Graphs processed by Spring-Embedder have their nodes distributed uniformly across the diagram area. Press the Layout button to have the Spring-Embedder algorithm applied on the graph below.
+
+WpfDiagram supports attaching and grouping of objects in a number of ways. Grouping can be applied to any basic WpfDiagram object type (links, shapes and tables) to build more complex constructions. Hierarchies of groups can be formed where modification of the main object modifies all its dependants.
+The scheme below, composed of attached links, shapes and tables, illustrates the WpfDiagram grouping functionality. Select one of the links and drag its manipulation handles to see how grouping works.
+
+This sample creates a diagram of the directory structure of your hard drive and applies radial layout to it.
+
+The sample below uses decorated tables to display diagram entities. Tables have anchor points associated with each row, defining where incoming and outgoing connections dock to tables. There are also nodes attached to the bottom of each table that act as buttons - try clicking any of those!
+
+Links have an AutoRoute property that enables or disables automatic routing of a link. Routed links avoid nodes by finding the shortest path between their origin and destination that does not cross any other nodes. The number and orientation of segments of routed links are automatically updated when nodes are moved around. Try that by moving or resizing any node below.
+
+Links can have various arrowhead shapes as shown below. It is also possible to associate such shapes with links origins and segment centers. The color and size of arrowheads can be changed too.
+
+Links control points can maintain their relative position one to another while nodes are moved around. Try this below.
+
+Link's text can be either centered or rotated to have the same orientation as the middle segment of a link. Move links' control points below to check how the position and orientation of text change.
+
+The DiagramNodeAdapter class derived from DiagramNode allows using any WPF control as a node in a WpfDiagram 
+diagram. The sample below uses ControlHost nodes to implement a simple form editor. Select a control type from the combo-box and draw in the form area. When your form is ready, try it with the 'Test Form' button.
+
+ControlHost nodes can also host user and custom controls. Clicking the 'Create record' button adds two nodes to the diagram and groups them. Try adding an image to the left node by double clicking the picture box. Clicking the + button allows adding new records to the 'album' on the right.
+
+As other Node-derived classes, ControlHosts can be linked with links. The diagram below allows editing RTF text in hosted RichText controls and browsing in a hosted IE control. To select and move a hosted control, click near its border. Try also tabbing between nodes - hosted controls are part of the form and participate in its TAB-order.
+
+The Layered layout algorithm arranges diagram nodes in layers, according to several criteria. Most important criteria are: connected nodes must be placed close together; links must flow in one direction if possible; links must cross as few layers as possible; links must not cross other links. To apply the layout to a diagram, create a LayeredLayout instance, set its members and invoke the Arrange method.
+
+The diagram below demonstrates various attributes applied to text. WpfDiagram is able to format text as italic, bold, subscript, etc. either as stand-alone styles or combined with other styles. Formatting can be defined in HTML-like syntax by embedding tags in raw text. This sample also shows how nodes can be attached to links or other nodes.
+
+The GridLayout algorithm arranges diagram nodes in a grid, keeping connected nodes close together. It also strives to achieve a small number of link crossings. The algorithm is based on an iterative process whose initial steps shuffle the grid nodes randomly. That leads to very different results each time the layout is applied to a diagram.
+
+The EnableClusters property of SpringLayout makes diagrams laid out in distinct clusters as shown below.
+
+Custom painting of links is demonstrated below. Links can be either entirely custom-painted, or an additional painting code can be executed along the standard one. In this sample, each link is animated to show the progress of some process. Click the 'Animate' button to see that.
+
+The nodes in this diagram are constrained to move only horizontally via the Constraints property of the Node class. In addition, only the movement and left and right - resize selection handles are enabled, so users cannot move a node outside of its lane. This is done using the EnabledHandles property of nodes.
+ The lanes are locked ShapeNode instances at the bottom of the Z order. The lane labels on the left are locked nodes whose RotationAngle property is set to 270.
+
+The table cells, represented by the Cell class, provide RowSpan and ColumnSpan properties. These properties let you create cells that span several rows and columns. The cells that contain photos in the diagram below span three rows. The label cells span two columns.
+
+The traffic diagram below shows several rotated nodes containing metafile images. Nodes can be rotated interactively by dragging their round rotation handle. The RotationAngle property lets you rotate nodes programmatically. The RotateContents property specifies whether the nodes' images and text should rotate together with the node shape.
+
+The AnnealLayout class implements a Simulated Annealing graph layout algorithm that can be used to arrange WpfDiagram diagrams. Simulated Annealing is a general-purpose optimization method used to solve large-scale combinatorial problems by simulating the process of heating and cooling of metal to achieve freedom from defects. Finding a nice arrangement of a graph is a combinatorial problem that can be reduced to assigning costs to graph configurations and finding the minimum cost configuration. In that case, a cost is assigned to a graph configuration by evaluating different aesthetic criteria such as distance between nodes, length of links and the number of link crossings.
+
+The OrthogonalLayout class implements an orthogonal graph layout algorithm. Each link is drawn as a chain of alternating horizontal and vertical segments. Nodes are placed in a way that facilitates few links bends and crossings.
+
+The CircularLayout class implements a circular graph layout algorithm. Nodes are distributed evenly on the circumference of a circle at positions that result in as few link crossing as possible.
+
+The TreeViewNode class represents nodes that can display hierarchical data. The root items displayed in the node can be accessed through the RootItems property. New items can be added to and removed from the returned collection. The root items can have child items on their own and so on. For more information, refer to the TreeViewItem class.
+
+If the underlying graph if acyclic, TopologicalLayout  arranges the nodes linearly in such a way that each node comes before all  destination nodes of its outgoing links. The links are drawn as curves above the  chain of nodes, with their height proportional to the distance between the  nodes. If the graph is not acyclic, the layout algorithm finds an ordering with  a minimal number of back links, and draws the back links below the chain of  nodes.
+
+The one-way layout ensures that links enter into nodes from the same general direction and exit them from the opposite side. If the graph contains cycles, some links bend around the nodes to keep the enter/exit direction consistent. The algorithm aims to minimize the number of such links.
+
+The theme is a set of styles, each associated with specific diagram or item type. When the theme is applied to a diagram, the styles registered in the theme affect all objects of their associated type. This sample demonstrates several ready-to-use themes. Try applying them to the diagram by selecting them from the list box below.
+
+The VisioNode class can be used to present shapes from Visio stencils inside WpfDiagram diagrams. The content of the node is specified as a VisioContent object assigned to the Content property.
+
+The SvgNode class represents nodes that can display SVG drawings in addition to the rendering provided by its base ShapeNode class. The SVG drawing is rendered after the associated Image and just before the DrawNode event is raised with CustomDraw.Additional. The SVG drawing of the node is specified through its Content property. The SVG graphics are loaded and associated with the node through a MindFusion.Svg.SvgContent object, which should be initialized and then assigned to Content.

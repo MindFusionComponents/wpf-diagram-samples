@@ -1,0 +1,32 @@
+﻿<Window x:Class="StressTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StressTest"
+		xmlns:diag="http://mindfusion.eu/diagramming/wpf"
+        mc:Ignorable="d"
+        Title="MindFusion.Diagramming Sample: Stress Test"
+		Width="900" Height="600" Icon="/App.ico" >
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<diag:DiagramView x:Name="diagramView" Grid.Row="1" />
+
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Button Content="Create items" Click="OnCreateItems" Padding="10" />
+			<Border BorderThickness="1" BorderBrush="LightGray" Grid.Column="1">
+				<TextBlock Padding="10" TextWrapping="Wrap">
+					Click the button to create 20000 nodes and links in total. Diagram's spatial indexing allows for fast hit-test and viewport queries during rendering and user interactions.
+				</TextBlock>
+			</Border>
+		</Grid>
+	</Grid>
+</Window>

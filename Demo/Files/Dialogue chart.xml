@@ -1,0 +1,1873 @@
+<Diagram Version="16">
+  <Nodes>
+    <Node Class="std:ShapeNode" Version="1" Id="0">
+      <Bounds>228.479995727539, 28.7999992370605, 172.800003051758, 57.5999984741211</Bounds>
+      <ZIndex>0</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="0" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>Welcome to our tutorial section. What do you wish to know?</Text>
+      <TextColor>#FF400000</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <TextAlignment>2</TextAlignment>
+      <TextVerticalAlignment>1</TextVerticalAlignment>
+      <TextTrimming>0</TextTrimming>
+      <TextWrapping>2</TextWrapping>
+      <Stroke Id="1" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Constraints>
+        <Constraint Type="0">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="1">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="2">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="3">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="4">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="5">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="6">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="7">
+          <Value>False</Value>
+        </Constraint>
+      </Constraints>
+      <Obstacle>True</Obstacle>
+      <AllowIncomingLinks>True</AllowIncomingLinks>
+      <AllowOutgoingLinks>True</AllowOutgoingLinks>
+      <EnabledHandles>-513</EnabledHandles>
+      <Expanded>True</Expanded>
+      <Expandable>False</Expandable>
+      <HandlesStyle>1</HandlesStyle>
+      <Effects />
+      <Shape Id="RoundRect" />
+      <ShapeOrientation>0</ShapeOrientation>
+      <PolygonalTextLayout>False</PolygonalTextLayout>
+      <EnableStyledText>True</EnableStyledText>
+      <ImageAlign>1</ImageAlign>
+      <RotateImage>False</RotateImage>
+      <RotateText>False</RotateText>
+      <Transparent>False</Transparent>
+      <CustomDraw>0</CustomDraw>
+      <ClipImage>True</ClipImage>
+    </Node>
+    <Node Class="std:ShapeNode" Version="1" Id="1">
+      <Bounds>21.1200008392334, 155.520004272461, 241.919998168945, 92.1600036621094</Bounds>
+      <ZIndex>1</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="0" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>Generally &lt;u&gt;&lt;color=#ff0000&gt;WpfDiagram&lt;/color&gt;&lt;/u&gt; is a .NET component. It is used to create, modify and present various kinds of flowchart diagrams, workflow processes, algorithms, entity-relationship diagrams and much more.</Text>
+      <TextColor>#FF400000</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <TextAlignment>2</TextAlignment>
+      <TextVerticalAlignment>1</TextVerticalAlignment>
+      <TextTrimming>0</TextTrimming>
+      <TextWrapping>2</TextWrapping>
+      <Stroke Id="2" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Constraints>
+        <Constraint Type="0">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="1">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="2">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="3">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="4">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="5">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="6">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="7">
+          <Value>False</Value>
+        </Constraint>
+      </Constraints>
+      <Obstacle>True</Obstacle>
+      <AllowIncomingLinks>True</AllowIncomingLinks>
+      <AllowOutgoingLinks>True</AllowOutgoingLinks>
+      <EnabledHandles>-513</EnabledHandles>
+      <Expanded>True</Expanded>
+      <Expandable>False</Expandable>
+      <HandlesStyle>1</HandlesStyle>
+      <Effects />
+      <Shape Id="RoundRect" />
+      <ShapeOrientation>0</ShapeOrientation>
+      <PolygonalTextLayout>True</PolygonalTextLayout>
+      <EnableStyledText>True</EnableStyledText>
+      <ImageAlign>1</ImageAlign>
+      <RotateImage>False</RotateImage>
+      <RotateText>False</RotateText>
+      <Transparent>False</Transparent>
+      <CustomDraw>0</CustomDraw>
+      <ClipImage>True</ClipImage>
+    </Node>
+    <Node Class="std:ShapeNode" Version="1" Id="2">
+      <Bounds>493.440002441406, 155.520004272461, 115.199996948242, 80.6399993896484</Bounds>
+      <ZIndex>2</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="3" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>Have a nice day. Feel free to visit this section any time.</Text>
+      <TextColor>#FF400000</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <TextAlignment>2</TextAlignment>
+      <TextVerticalAlignment>1</TextVerticalAlignment>
+      <TextTrimming>0</TextTrimming>
+      <TextWrapping>2</TextWrapping>
+      <Stroke Id="4" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Constraints>
+        <Constraint Type="0">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="1">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="2">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="3">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="4">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="5">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="6">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="7">
+          <Value>False</Value>
+        </Constraint>
+      </Constraints>
+      <Obstacle>True</Obstacle>
+      <AllowIncomingLinks>True</AllowIncomingLinks>
+      <AllowOutgoingLinks>True</AllowOutgoingLinks>
+      <EnabledHandles>-513</EnabledHandles>
+      <Expanded>True</Expanded>
+      <Expandable>False</Expandable>
+      <HandlesStyle>1</HandlesStyle>
+      <Effects />
+      <Shape Id="Rectangle" />
+      <ShapeOrientation>0</ShapeOrientation>
+      <PolygonalTextLayout>False</PolygonalTextLayout>
+      <EnableStyledText>True</EnableStyledText>
+      <ImageAlign>1</ImageAlign>
+      <RotateImage>False</RotateImage>
+      <RotateText>False</RotateText>
+      <Transparent>False</Transparent>
+      <CustomDraw>0</CustomDraw>
+      <ClipImage>True</ClipImage>
+    </Node>
+    <Node Class="std:ShapeNode" Version="1" Id="6">
+      <Bounds>153.657592773438, 298.252838134766, 271.2578125, 106.118362426758</Bounds>
+      <ZIndex>6</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="0" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>&lt;u&gt;&lt;color=#ff0000&gt;WpfDiagram&lt;/color&gt;&lt;/u&gt; exposes numerous advanced features. Among them is hierarchical grouping of objects, more than 60 predefined box shapes, table/grid objects with unlimited number of rows and columns, scrolling, zooming, printing, enhanced visual effects and many, many more.</Text>
+      <TextColor>#FF400000</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <TextAlignment>2</TextAlignment>
+      <TextVerticalAlignment>1</TextVerticalAlignment>
+      <TextTrimming>0</TextTrimming>
+      <TextWrapping>2</TextWrapping>
+      <Stroke Id="5" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Constraints>
+        <Constraint Type="0">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="1">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="2">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="3">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="4">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="5">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="6">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="7">
+          <Value>False</Value>
+        </Constraint>
+      </Constraints>
+      <Obstacle>True</Obstacle>
+      <AllowIncomingLinks>True</AllowIncomingLinks>
+      <AllowOutgoingLinks>True</AllowOutgoingLinks>
+      <EnabledHandles>-513</EnabledHandles>
+      <Expanded>True</Expanded>
+      <Expandable>False</Expandable>
+      <HandlesStyle>1</HandlesStyle>
+      <Effects />
+      <Shape Id="RoundRect" />
+      <ShapeOrientation>0</ShapeOrientation>
+      <PolygonalTextLayout>True</PolygonalTextLayout>
+      <EnableStyledText>True</EnableStyledText>
+      <ImageAlign>1</ImageAlign>
+      <RotateImage>False</RotateImage>
+      <RotateText>False</RotateText>
+      <Transparent>False</Transparent>
+      <CustomDraw>0</CustomDraw>
+      <ClipImage>True</ClipImage>
+    </Node>
+    <Node Class="std:ShapeNode" Version="1" Id="8">
+      <Bounds>24.1487922668457, 514.121459960938, 242.214416503906, 149.702407836914</Bounds>
+      <ZIndex>8</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="0" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>Simply put, this is the ability to create groups of objects. One of the objects is considered a group master. Manipulating the group master will cause the other objects of the group to follow. So if you move the master, the attached objects move as well. You can attach masters themselves to other objects, thus creating whole hierarchies of attached grouped objects.</Text>
+      <TextColor>#FF400000</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <TextAlignment>2</TextAlignment>
+      <TextVerticalAlignment>1</TextVerticalAlignment>
+      <TextTrimming>0</TextTrimming>
+      <TextWrapping>2</TextWrapping>
+      <Stroke Id="6" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Constraints>
+        <Constraint Type="0">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="1">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="2">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="3">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="4">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="5">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="6">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="7">
+          <Value>False</Value>
+        </Constraint>
+      </Constraints>
+      <Obstacle>True</Obstacle>
+      <AllowIncomingLinks>True</AllowIncomingLinks>
+      <AllowOutgoingLinks>True</AllowOutgoingLinks>
+      <EnabledHandles>-513</EnabledHandles>
+      <Expanded>True</Expanded>
+      <Expandable>False</Expandable>
+      <HandlesStyle>1</HandlesStyle>
+      <Effects />
+      <Shape Id="RoundRect" />
+      <ShapeOrientation>0</ShapeOrientation>
+      <PolygonalTextLayout>False</PolygonalTextLayout>
+      <EnableStyledText>True</EnableStyledText>
+      <ImageAlign>1</ImageAlign>
+      <RotateImage>False</RotateImage>
+      <RotateText>False</RotateText>
+      <Transparent>False</Transparent>
+      <CustomDraw>0</CustomDraw>
+      <ClipImage>True</ClipImage>
+    </Node>
+    <Node Class="std:ShapeNode" Version="1" Id="10">
+      <Bounds>341.465637207031, 507.859222412109, 245.465576171875, 64.2112121582031</Bounds>
+      <ZIndex>10</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="0" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>Using &lt;u&gt;&lt;color=#ff0000&gt;WpfDiagram&lt;/color&gt;&lt;/u&gt; you can easily add as much shapes to your document, as you like. Harness your imagination.</Text>
+      <TextColor>#FF400000</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <TextAlignment>2</TextAlignment>
+      <TextVerticalAlignment>1</TextVerticalAlignment>
+      <TextTrimming>0</TextTrimming>
+      <TextWrapping>2</TextWrapping>
+      <Stroke Id="7" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Constraints>
+        <Constraint Type="0">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="1">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="2">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="3">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="4">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="5">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="6">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="7">
+          <Value>False</Value>
+        </Constraint>
+      </Constraints>
+      <Obstacle>True</Obstacle>
+      <AllowIncomingLinks>True</AllowIncomingLinks>
+      <AllowOutgoingLinks>True</AllowOutgoingLinks>
+      <EnabledHandles>-513</EnabledHandles>
+      <Expanded>True</Expanded>
+      <Expandable>False</Expandable>
+      <HandlesStyle>1</HandlesStyle>
+      <Effects />
+      <Shape Id="RoundRect" />
+      <ShapeOrientation>0</ShapeOrientation>
+      <PolygonalTextLayout>True</PolygonalTextLayout>
+      <EnableStyledText>True</EnableStyledText>
+      <ImageAlign>1</ImageAlign>
+      <RotateImage>False</RotateImage>
+      <RotateText>False</RotateText>
+      <Transparent>False</Transparent>
+      <CustomDraw>0</CustomDraw>
+      <ClipImage>True</ClipImage>
+    </Node>
+    <Node Class="std:ShapeNode" Version="1" Id="12">
+      <Bounds>309.766357421875, 660.409729003906, 247.091217041016, 147.929656982422</Bounds>
+      <ZIndex>12</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="0" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>Along with the initial purchase, you can order the whole source code of the component, written entirely in C#, using the latest software design technologies. You receive vast documentation, explaining every single feature of the control, rich samples set and the source code of this demo program. Furthermore there is 6 months free upgrades period and the entire &lt;color=#0000ff&gt;&lt;i&gt;MindFusion&lt;/i&gt;&lt;/color&gt; team at your disposal.</Text>
+      <TextColor>#FF400000</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <TextAlignment>2</TextAlignment>
+      <TextVerticalAlignment>1</TextVerticalAlignment>
+      <TextTrimming>0</TextTrimming>
+      <TextWrapping>2</TextWrapping>
+      <Stroke Id="8" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Constraints>
+        <Constraint Type="0">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="1">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="2">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="3">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="4">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="5">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="6">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="7">
+          <Value>False</Value>
+        </Constraint>
+      </Constraints>
+      <Obstacle>True</Obstacle>
+      <AllowIncomingLinks>True</AllowIncomingLinks>
+      <AllowOutgoingLinks>True</AllowOutgoingLinks>
+      <EnabledHandles>-513</EnabledHandles>
+      <Expanded>True</Expanded>
+      <Expandable>False</Expandable>
+      <HandlesStyle>1</HandlesStyle>
+      <Effects />
+      <Shape Id="RoundRect" />
+      <ShapeOrientation>0</ShapeOrientation>
+      <PolygonalTextLayout>True</PolygonalTextLayout>
+      <EnableStyledText>True</EnableStyledText>
+      <ImageAlign>1</ImageAlign>
+      <RotateImage>False</RotateImage>
+      <RotateText>False</RotateText>
+      <Transparent>False</Transparent>
+      <CustomDraw>0</CustomDraw>
+      <ClipImage>True</ClipImage>
+    </Node>
+    <Node Class="std:ShapeNode" Version="1" Id="16">
+      <Bounds>146.976013183594, 875.263916015625, 199.135986328125, 112.166358947754</Bounds>
+      <ZIndex>16</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="3" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>What we can do is to offer you our services. What you can do is to save yourself a lot of efforts, money and time. And if you trust us you will see that sometimes there could be no catch at all.</Text>
+      <TextColor>#FF400000</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <TextAlignment>2</TextAlignment>
+      <TextVerticalAlignment>1</TextVerticalAlignment>
+      <TextTrimming>0</TextTrimming>
+      <TextWrapping>2</TextWrapping>
+      <Stroke Id="9" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Constraints>
+        <Constraint Type="0">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="1">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="2">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="3">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="4">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="5">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="6">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="7">
+          <Value>False</Value>
+        </Constraint>
+      </Constraints>
+      <Obstacle>True</Obstacle>
+      <AllowIncomingLinks>True</AllowIncomingLinks>
+      <AllowOutgoingLinks>True</AllowOutgoingLinks>
+      <EnabledHandles>-513</EnabledHandles>
+      <Expanded>True</Expanded>
+      <Expandable>False</Expandable>
+      <HandlesStyle>1</HandlesStyle>
+      <Effects />
+      <Shape Id="Rectangle" />
+      <ShapeOrientation>0</ShapeOrientation>
+      <PolygonalTextLayout>False</PolygonalTextLayout>
+      <EnableStyledText>True</EnableStyledText>
+      <ImageAlign>1</ImageAlign>
+      <RotateImage>False</RotateImage>
+      <RotateText>False</RotateText>
+      <Transparent>False</Transparent>
+      <CustomDraw>0</CustomDraw>
+      <ClipImage>True</ClipImage>
+    </Node>
+    <Node Class="std:ShapeNode" Version="1" Id="18">
+      <Bounds>400.303863525391, 876.019226074219, 287.527954101563, 112.166320800781</Bounds>
+      <ZIndex>18</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="3" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>In order to purchase &lt;u&gt;&lt;color=#ff0000&gt;WpfDiagram&lt;/color&gt;&lt;/u&gt; you have to visit &lt;color=#0000ff&gt;&lt;u&gt;https://mindfusion.eu/buy-wpf-diagram.html&lt;/color&gt;&lt;/u&gt;</Text>
+      <TextColor>#FF400000</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <TextAlignment>2</TextAlignment>
+      <TextVerticalAlignment>1</TextVerticalAlignment>
+      <TextTrimming>0</TextTrimming>
+      <TextWrapping>2</TextWrapping>
+      <Stroke Id="10" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Constraints>
+        <Constraint Type="0">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="1">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="2">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="3">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="4">
+          <Value>0</Value>
+        </Constraint>
+        <Constraint Type="5">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="6">
+          <Value>False</Value>
+        </Constraint>
+        <Constraint Type="7">
+          <Value>False</Value>
+        </Constraint>
+      </Constraints>
+      <Obstacle>True</Obstacle>
+      <AllowIncomingLinks>True</AllowIncomingLinks>
+      <AllowOutgoingLinks>True</AllowOutgoingLinks>
+      <EnabledHandles>-513</EnabledHandles>
+      <Expanded>True</Expanded>
+      <Expandable>False</Expandable>
+      <HandlesStyle>1</HandlesStyle>
+      <Effects />
+      <Shape Id="Rectangle" />
+      <ShapeOrientation>0</ShapeOrientation>
+      <PolygonalTextLayout>True</PolygonalTextLayout>
+      <EnableStyledText>True</EnableStyledText>
+      <ImageAlign>1</ImageAlign>
+      <RotateImage>False</RotateImage>
+      <RotateText>False</RotateText>
+      <Transparent>False</Transparent>
+      <CustomDraw>0</CustomDraw>
+      <ClipImage>True</ClipImage>
+    </Node>
+  </Nodes>
+  <Links>
+    <Link Class="std:DiagramLink" Version="2" Id="3">
+      <Bounds>140.160001831055, 83.9039974975586, 133.439990844727, 73.5360067749023</Bounds>
+      <ZIndex>3</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="11" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>Can you tell me more about your product?</Text>
+      <TextColor>#FFFFFFFF</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <Stroke Id="12" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Origin Id="0" ClassId="std:ShapeNode" Version="1" />
+      <OriginRelative>25, 99</OriginRelative>
+      <OriginAnchor>-1</OriginAnchor>
+      <Destination Id="1" ClassId="std:ShapeNode" Version="1" />
+      <DestinationRelative>50, 0</DestinationRelative>
+      <DestinationAnchor>-1</DestinationAnchor>
+      <Shape>2</Shape>
+      <SegmentCount>3</SegmentCount>
+      <Points>
+        <Point>271.679992675781, 85.8239974975586</Point>
+        <Point>271.679992675781, 105</Point>
+        <Point>142.080001831055, 105</Point>
+        <Point>142.080001831055, 155.520004272461</Point>
+      </Points>
+      <Dynamic>False</Dynamic>
+      <RetainForm>False</RetainForm>
+      <AutoRoute>False</AutoRoute>
+      <AutoSnapToNode>False</AutoSnapToNode>
+      <CascadeOrientation>2</CascadeOrientation>
+      <CascadeStartHorizontal>False</CascadeStartHorizontal>
+      <TextStyle>0</TextStyle>
+      <CustomDraw>0</CustomDraw>
+      <DrawCrossings>True</DrawCrossings>
+      <HandlesStyle>1</HandlesStyle>
+      <AllowMoveStart>True</AllowMoveStart>
+      <AllowMoveEnd>True</AllowMoveEnd>
+      <HeadPen>
+        <Brush Id="13" />
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1.91999995708466</Width>
+      </HeadPen>
+      <BaseShapeSize>19.2000007629395</BaseShapeSize>
+      <IntermediateShapeSize>19.2000007629395</IntermediateShapeSize>
+      <HeadShape Id="Quill" />
+      <HeadShapeSize>15.3599996566772</HeadShapeSize>
+    </Link>
+    <Link Class="std:DiagramLink" Version="2" Id="4">
+      <Bounds>359.616010742187, 82.7519970703125, 193.343967285156, 74.6880072021484</Bounds>
+      <ZIndex>4</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="11" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>Oops, I think I've got lost. Excuse me.</Text>
+      <TextColor>#FFFFFFFF</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <Stroke Id="14" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Origin Id="0" ClassId="std:ShapeNode" Version="1" />
+      <OriginRelative>77, 97</OriginRelative>
+      <OriginAnchor>-1</OriginAnchor>
+      <Destination Id="2" ClassId="std:ShapeNode" Version="1" />
+      <DestinationRelative>50, 0</DestinationRelative>
+      <DestinationAnchor>-1</DestinationAnchor>
+      <Shape>2</Shape>
+      <SegmentCount>3</SegmentCount>
+      <Points>
+        <Point>361.536010742188, 84.6719970703125</Point>
+        <Point>361.536010742188, 108</Point>
+        <Point>551.039978027344, 108</Point>
+        <Point>551.039978027344, 155.520004272461</Point>
+      </Points>
+      <Dynamic>False</Dynamic>
+      <RetainForm>False</RetainForm>
+      <AutoRoute>False</AutoRoute>
+      <AutoSnapToNode>False</AutoSnapToNode>
+      <CascadeOrientation>2</CascadeOrientation>
+      <CascadeStartHorizontal>False</CascadeStartHorizontal>
+      <TextStyle>0</TextStyle>
+      <CustomDraw>0</CustomDraw>
+      <DrawCrossings>True</DrawCrossings>
+      <HandlesStyle>1</HandlesStyle>
+      <AllowMoveStart>True</AllowMoveStart>
+      <AllowMoveEnd>True</AllowMoveEnd>
+      <HeadPen>
+        <Brush Id="15" />
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1.91999995708466</Width>
+      </HeadPen>
+      <BaseShapeSize>19.2000007629395</BaseShapeSize>
+      <IntermediateShapeSize>19.2000007629395</IntermediateShapeSize>
+      <HeadShape Id="Quill" />
+      <HeadShapeSize>15.3599996566772</HeadShapeSize>
+    </Link>
+    <Link Class="std:DiagramLink" Version="2" Id="5">
+      <Bounds>261.120008544922, 139.08, 234.239993896484, 66.84</Bounds>
+      <ZIndex>5</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="11" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>Boooring, get me out of here.</Text>
+      <TextColor>#FFFFFFFF</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <Stroke Id="16" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Origin Id="1" ClassId="std:ShapeNode" Version="1" />
+      <OriginRelative>100, 48</OriginRelative>
+      <OriginAnchor>-1</OriginAnchor>
+      <Destination Id="2" ClassId="std:ShapeNode" Version="1" />
+      <DestinationRelative>0, 51</DestinationRelative>
+      <DestinationAnchor>-1</DestinationAnchor>
+      <Shape>0</Shape>
+      <SegmentCount>1</SegmentCount>
+      <Points>
+        <Point>263.040008544922, 199.756805419922</Point>
+        <Point>411.179992675781, 204</Point>
+        <Point>347.179992675781, 141</Point>
+        <Point>493.440002441406, 196.646392822266</Point>
+      </Points>
+      <Dynamic>False</Dynamic>
+      <RetainForm>False</RetainForm>
+      <AutoRoute>False</AutoRoute>
+      <AutoSnapToNode>False</AutoSnapToNode>
+      <CascadeOrientation>1</CascadeOrientation>
+      <CascadeStartHorizontal>True</CascadeStartHorizontal>
+      <TextStyle>0</TextStyle>
+      <CustomDraw>0</CustomDraw>
+      <DrawCrossings>True</DrawCrossings>
+      <HandlesStyle>1</HandlesStyle>
+      <AllowMoveStart>True</AllowMoveStart>
+      <AllowMoveEnd>True</AllowMoveEnd>
+      <HeadPen>
+        <Brush Id="17" />
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1.91999995708466</Width>
+      </HeadPen>
+      <BaseShapeSize>19.2000007629395</BaseShapeSize>
+      <IntermediateShapeSize>19.2000007629395</IntermediateShapeSize>
+      <HeadShape Id="Quill" />
+      <HeadShapeSize>15.3599996566772</HeadShapeSize>
+    </Link>
+    <Link Class="std:DiagramLink" Version="2" Id="7">
+      <Bounds>140.160001831055, 245.759992675781, 148.333911743164, 54.4128454589844</Bounds>
+      <ZIndex>7</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="11" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>Interesting, what main features offers your .NET component.</Text>
+      <TextColor>#FFFFFFFF</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <Stroke Id="18" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Origin Id="1" ClassId="std:ShapeNode" Version="1" />
+      <OriginRelative>50, 100</OriginRelative>
+      <OriginAnchor>-1</OriginAnchor>
+      <Destination Id="6" ClassId="std:ShapeNode" Version="1" />
+      <DestinationRelative>49, 0</DestinationRelative>
+      <DestinationAnchor>-1</DestinationAnchor>
+      <Shape>2</Shape>
+      <SegmentCount>3</SegmentCount>
+      <Points>
+        <Point>142.080001831055, 247.679992675781</Point>
+        <Point>142.080001831055, 268</Point>
+        <Point>286.573913574219, 268</Point>
+        <Point>286.573913574219, 298.252838134766</Point>
+      </Points>
+      <Dynamic>False</Dynamic>
+      <RetainForm>False</RetainForm>
+      <AutoRoute>False</AutoRoute>
+      <AutoSnapToNode>False</AutoSnapToNode>
+      <CascadeOrientation>2</CascadeOrientation>
+      <CascadeStartHorizontal>False</CascadeStartHorizontal>
+      <TextStyle>0</TextStyle>
+      <CustomDraw>0</CustomDraw>
+      <DrawCrossings>True</DrawCrossings>
+      <HandlesStyle>1</HandlesStyle>
+      <AllowMoveStart>True</AllowMoveStart>
+      <AllowMoveEnd>True</AllowMoveEnd>
+      <HeadPen>
+        <Brush Id="19" />
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1.91999995708466</Width>
+      </HeadPen>
+      <BaseShapeSize>19.2000007629395</BaseShapeSize>
+      <IntermediateShapeSize>19.2000007629395</IntermediateShapeSize>
+      <HeadShape Id="Quill" />
+      <HeadShapeSize>15.3599996566772</HeadShapeSize>
+    </Link>
+    <Link Class="std:DiagramLink" Version="2" Id="9">
+      <Bounds>184.51244934082, 402.451215820312, 68.7179602050781, 113.590244140625</Bounds>
+      <ZIndex>9</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="11" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>I can't understand what is hierarchical grouping. Please, explain!</Text>
+      <TextColor>#FFFFFFFF</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <Stroke Id="20" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Origin Id="6" ClassId="std:ShapeNode" Version="1" />
+      <OriginRelative>36, 100</OriginRelative>
+      <OriginAnchor>-1</OriginAnchor>
+      <Destination Id="8" ClassId="std:ShapeNode" Version="1" />
+      <DestinationRelative>67, 0</DestinationRelative>
+      <DestinationAnchor>-1</DestinationAnchor>
+      <Shape>2</Shape>
+      <SegmentCount>3</SegmentCount>
+      <Points>
+        <Point>251.310409545898, 404.371215820313</Point>
+        <Point>251.310409545898, 442</Point>
+        <Point>186.43244934082, 442</Point>
+        <Point>186.43244934082, 514.121459960938</Point>
+      </Points>
+      <Dynamic>False</Dynamic>
+      <RetainForm>False</RetainForm>
+      <AutoRoute>False</AutoRoute>
+      <AutoSnapToNode>False</AutoSnapToNode>
+      <CascadeOrientation>2</CascadeOrientation>
+      <CascadeStartHorizontal>False</CascadeStartHorizontal>
+      <TextStyle>0</TextStyle>
+      <CustomDraw>0</CustomDraw>
+      <DrawCrossings>True</DrawCrossings>
+      <HandlesStyle>1</HandlesStyle>
+      <AllowMoveStart>True</AllowMoveStart>
+      <AllowMoveEnd>True</AllowMoveEnd>
+      <HeadPen>
+        <Brush Id="21" />
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1.91999995708466</Width>
+      </HeadPen>
+      <BaseShapeSize>19.2000007629395</BaseShapeSize>
+      <IntermediateShapeSize>19.2000007629395</IntermediateShapeSize>
+      <HeadShape Id="Quill" />
+      <HeadShapeSize>15.3599996566772</HeadShapeSize>
+    </Link>
+    <Link Class="std:DiagramLink" Version="2" Id="11">
+      <Bounds>336.192915039062, 402.451215820312, 75.9230688476563, 107.328006591797</Bounds>
+      <ZIndex>11</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="11" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>The predefined shapes are fine, but I want more.</Text>
+      <TextColor>#FFFFFFFF</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <Stroke Id="22" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Origin Id="6" ClassId="std:ShapeNode" Version="1" />
+      <OriginRelative>68, 100</OriginRelative>
+      <OriginAnchor>-1</OriginAnchor>
+      <Destination Id="10" ClassId="std:ShapeNode" Version="1" />
+      <DestinationRelative>28, 0</DestinationRelative>
+      <DestinationAnchor>-1</DestinationAnchor>
+      <Shape>2</Shape>
+      <SegmentCount>3</SegmentCount>
+      <Points>
+        <Point>338.112915039063, 404.371215820313</Point>
+        <Point>338.112915039063, 469</Point>
+        <Point>410.195983886719, 469</Point>
+        <Point>410.195983886719, 507.859222412109</Point>
+      </Points>
+      <Dynamic>False</Dynamic>
+      <RetainForm>False</RetainForm>
+      <AutoRoute>False</AutoRoute>
+      <AutoSnapToNode>False</AutoSnapToNode>
+      <CascadeOrientation>2</CascadeOrientation>
+      <CascadeStartHorizontal>False</CascadeStartHorizontal>
+      <TextStyle>0</TextStyle>
+      <CustomDraw>0</CustomDraw>
+      <DrawCrossings>True</DrawCrossings>
+      <HandlesStyle>1</HandlesStyle>
+      <AllowMoveStart>True</AllowMoveStart>
+      <AllowMoveEnd>True</AllowMoveEnd>
+      <HeadPen>
+        <Brush Id="23" />
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1.91999995708466</Width>
+      </HeadPen>
+      <BaseShapeSize>19.2000007629395</BaseShapeSize>
+      <IntermediateShapeSize>19.2000007629395</IntermediateShapeSize>
+      <HeadShape Id="Quill" />
+      <HeadShapeSize>15.3599996566772</HeadShapeSize>
+    </Link>
+    <Link Class="std:DiagramLink" Version="2" Id="13">
+      <Bounds>420.282819824219, 347.08, 210.817172851562, 389.214572753906</Bounds>
+      <ZIndex>13</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="11" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>Great, is there anything else I should know?</Text>
+      <TextColor>#FFFFFFFF</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <Stroke Id="24" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Origin Id="6" ClassId="std:ShapeNode" Version="1" />
+      <OriginRelative>99, 48</OriginRelative>
+      <OriginAnchor>-1</OriginAnchor>
+      <Destination Id="12" ClassId="std:ShapeNode" Version="1" />
+      <DestinationRelative>100, 50</DestinationRelative>
+      <DestinationAnchor>-1</DestinationAnchor>
+      <Shape>2</Shape>
+      <SegmentCount>5</SegmentCount>
+      <Points>
+        <Point>422.202819824219, 349.189666748047</Point>
+        <Point>623.176086425781, 349.189666748047</Point>
+        <Point>623.176086425781, 349</Point>
+        <Point>629.179992675781, 349</Point>
+        <Point>629.179992675781, 734.374572753906</Point>
+        <Point>556.857543945313, 734.374572753906</Point>
+      </Points>
+      <Dynamic>False</Dynamic>
+      <RetainForm>False</RetainForm>
+      <AutoRoute>False</AutoRoute>
+      <AutoSnapToNode>False</AutoSnapToNode>
+      <CascadeOrientation>1</CascadeOrientation>
+      <CascadeStartHorizontal>True</CascadeStartHorizontal>
+      <TextStyle>0</TextStyle>
+      <CustomDraw>0</CustomDraw>
+      <DrawCrossings>True</DrawCrossings>
+      <HandlesStyle>1</HandlesStyle>
+      <AllowMoveStart>True</AllowMoveStart>
+      <AllowMoveEnd>True</AllowMoveEnd>
+      <HeadPen>
+        <Brush Id="25" />
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1.91999995708466</Width>
+      </HeadPen>
+      <BaseShapeSize>19.2000007629395</BaseShapeSize>
+      <IntermediateShapeSize>19.2000007629395</IntermediateShapeSize>
+      <HeadShape Id="Quill" />
+      <HeadShapeSize>15.3599996566772</HeadShapeSize>
+    </Link>
+    <Link Class="std:DiagramLink" Version="2" Id="14">
+      <Bounds>441.275617675781, 570.150434570313, 17.4788244628907, 92.1792944335937</Bounds>
+      <ZIndex>14</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="11" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>Glad to hear it, what else?</Text>
+      <TextColor>#FFFFFFFF</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <Stroke Id="26" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Origin Id="10" ClassId="std:ShapeNode" Version="1" />
+      <OriginRelative>47, 100</OriginRelative>
+      <OriginAnchor>-1</OriginAnchor>
+      <Destination Id="12" ClassId="std:ShapeNode" Version="1" />
+      <DestinationRelative>54, 0</DestinationRelative>
+      <DestinationAnchor>-1</DestinationAnchor>
+      <Shape>2</Shape>
+      <SegmentCount>3</SegmentCount>
+      <Points>
+        <Point>456.834442138672, 572.070434570313</Point>
+        <Point>456.834442138672, 620</Point>
+        <Point>443.195617675781, 620</Point>
+        <Point>443.195617675781, 660.409729003906</Point>
+      </Points>
+      <Dynamic>False</Dynamic>
+      <RetainForm>False</RetainForm>
+      <AutoRoute>False</AutoRoute>
+      <AutoSnapToNode>False</AutoSnapToNode>
+      <CascadeOrientation>2</CascadeOrientation>
+      <CascadeStartHorizontal>False</CascadeStartHorizontal>
+      <TextStyle>0</TextStyle>
+      <CustomDraw>0</CustomDraw>
+      <DrawCrossings>True</DrawCrossings>
+      <HandlesStyle>1</HandlesStyle>
+      <AllowMoveStart>True</AllowMoveStart>
+      <AllowMoveEnd>True</AllowMoveEnd>
+      <HeadPen>
+        <Brush Id="27" />
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1.91999995708466</Width>
+      </HeadPen>
+      <BaseShapeSize>19.2000007629395</BaseShapeSize>
+      <IntermediateShapeSize>19.2000007629395</IntermediateShapeSize>
+      <HeadShape Id="Quill" />
+      <HeadShapeSize>15.3599996566772</HeadShapeSize>
+    </Link>
+    <Link Class="std:DiagramLink" Version="2" Id="15">
+      <Bounds>143.335996704102, 661.903913574219, 168.350360717773, 72.9113500976562</Bounds>
+      <ZIndex>15</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="11" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>I got it! What more?</Text>
+      <TextColor>#FFFFFFFF</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <Stroke Id="28" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Origin Id="8" ClassId="std:ShapeNode" Version="1" />
+      <OriginRelative>50, 100</OriginRelative>
+      <OriginAnchor>-1</OriginAnchor>
+      <Destination Id="12" ClassId="std:ShapeNode" Version="1" />
+      <DestinationRelative>0, 49</DestinationRelative>
+      <DestinationAnchor>-1</DestinationAnchor>
+      <Shape>2</Shape>
+      <SegmentCount>2</SegmentCount>
+      <Points>
+        <Point>145.255996704102, 663.823913574219</Point>
+        <Point>145.255996704102, 732.895263671875</Point>
+        <Point>309.766357421875, 732.895263671875</Point>
+      </Points>
+      <Dynamic>False</Dynamic>
+      <RetainForm>False</RetainForm>
+      <AutoRoute>False</AutoRoute>
+      <AutoSnapToNode>False</AutoSnapToNode>
+      <CascadeOrientation>2</CascadeOrientation>
+      <CascadeStartHorizontal>False</CascadeStartHorizontal>
+      <TextStyle>0</TextStyle>
+      <CustomDraw>0</CustomDraw>
+      <DrawCrossings>True</DrawCrossings>
+      <HandlesStyle>1</HandlesStyle>
+      <AllowMoveStart>True</AllowMoveStart>
+      <AllowMoveEnd>True</AllowMoveEnd>
+      <HeadPen>
+        <Brush Id="29" />
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1.91999995708466</Width>
+      </HeadPen>
+      <BaseShapeSize>19.2000007629395</BaseShapeSize>
+      <IntermediateShapeSize>19.2000007629395</IntermediateShapeSize>
+      <HeadShape Id="Quill" />
+      <HeadShapeSize>15.3599996566772</HeadShapeSize>
+    </Link>
+    <Link Class="std:DiagramLink" Version="2" Id="17">
+      <Bounds>294.408002929687, 806.419416503906, 79.0511511230469, 70.7644995117187</Bounds>
+      <ZIndex>17</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="11" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>What is the catch here?</Text>
+      <TextColor>#FFFFFFFF</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <Stroke Id="30" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Origin Id="12" ClassId="std:ShapeNode" Version="1" />
+      <OriginRelative>25, 100</OriginRelative>
+      <OriginAnchor>-1</OriginAnchor>
+      <Destination Id="16" ClassId="std:ShapeNode" Version="1" />
+      <DestinationRelative>75, 0</DestinationRelative>
+      <DestinationAnchor>-1</DestinationAnchor>
+      <Shape>2</Shape>
+      <SegmentCount>3</SegmentCount>
+      <Points>
+        <Point>371.539154052734, 808.339416503906</Point>
+        <Point>371.539154052734, 844</Point>
+        <Point>296.328002929688, 844</Point>
+        <Point>296.328002929688, 875.263916015625</Point>
+      </Points>
+      <Dynamic>False</Dynamic>
+      <RetainForm>False</RetainForm>
+      <AutoRoute>False</AutoRoute>
+      <AutoSnapToNode>False</AutoSnapToNode>
+      <CascadeOrientation>2</CascadeOrientation>
+      <CascadeStartHorizontal>False</CascadeStartHorizontal>
+      <TextStyle>0</TextStyle>
+      <CustomDraw>0</CustomDraw>
+      <DrawCrossings>True</DrawCrossings>
+      <HandlesStyle>1</HandlesStyle>
+      <AllowMoveStart>True</AllowMoveStart>
+      <AllowMoveEnd>True</AllowMoveEnd>
+      <HeadPen>
+        <Brush Id="31" />
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1.91999995708466</Width>
+      </HeadPen>
+      <BaseShapeSize>19.2000007629395</BaseShapeSize>
+      <IntermediateShapeSize>19.2000007629395</IntermediateShapeSize>
+      <HeadShape Id="Quill" />
+      <HeadShapeSize>15.3599996566772</HeadShapeSize>
+    </Link>
+    <Link Class="std:DiagramLink" Version="2" Id="19">
+      <Bounds>470.926557617187, 806.419416503906, 77.9365576171875, 71.5198095703124</Bounds>
+      <ZIndex>19</ZIndex>
+      <LayerIndex>-1</LayerIndex>
+      <HyperLink>
+      </HyperLink>
+      <Locked>False</Locked>
+      <Visible>True</Visible>
+      <Printable>True</Printable>
+      <Brush Id="11" />
+      <Weight>1</Weight>
+      <IgnoreLayout>False</IgnoreLayout>
+      <Text>Great, I want to purchase!</Text>
+      <TextColor>#FFFFFFFF</TextColor>
+      <FontFamily>Times New Roman</FontFamily>
+      <FontSize>11.3385826771654</FontSize>
+      <FontStyle>Normal</FontStyle>
+      <FontWeight>Bold</FontWeight>
+      <Stroke Id="32" />
+      <StrokeMiterLimit>10</StrokeMiterLimit>
+      <StrokeThickness>1.92</StrokeThickness>
+      <StrokeStartLineCap>0</StrokeStartLineCap>
+      <StrokeEndLineCap>0</StrokeEndLineCap>
+      <StrokeLineJoin>0</StrokeLineJoin>
+      <StrokeDashCap>1</StrokeDashCap>
+      <StrokeDashStyle>Solid</StrokeDashStyle>
+      <Origin Id="12" ClassId="std:ShapeNode" Version="1" />
+      <OriginRelative>66, 100</OriginRelative>
+      <OriginAnchor>-1</OriginAnchor>
+      <Destination Id="18" ClassId="std:ShapeNode" Version="1" />
+      <DestinationRelative>51, 0</DestinationRelative>
+      <DestinationAnchor>-1</DestinationAnchor>
+      <Shape>2</Shape>
+      <SegmentCount>3</SegmentCount>
+      <Points>
+        <Point>472.846557617188, 808.339416503906</Point>
+        <Point>472.846557617188, 843</Point>
+        <Point>546.943115234375, 843</Point>
+        <Point>546.943115234375, 876.019226074219</Point>
+      </Points>
+      <Dynamic>False</Dynamic>
+      <RetainForm>False</RetainForm>
+      <AutoRoute>False</AutoRoute>
+      <AutoSnapToNode>False</AutoSnapToNode>
+      <CascadeOrientation>2</CascadeOrientation>
+      <CascadeStartHorizontal>False</CascadeStartHorizontal>
+      <TextStyle>0</TextStyle>
+      <CustomDraw>0</CustomDraw>
+      <DrawCrossings>True</DrawCrossings>
+      <HandlesStyle>1</HandlesStyle>
+      <AllowMoveStart>True</AllowMoveStart>
+      <AllowMoveEnd>True</AllowMoveEnd>
+      <HeadPen>
+        <Brush Id="33" />
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1.91999995708466</Width>
+      </HeadPen>
+      <BaseShapeSize>19.2000007629395</BaseShapeSize>
+      <IntermediateShapeSize>19.2000007629395</IntermediateShapeSize>
+      <HeadShape Id="Quill" />
+      <HeadShapeSize>15.3599996566772</HeadShapeSize>
+    </Link>
+  </Links>
+  <Properties>
+    <ItemCounter>20</ItemCounter>
+    <LinkHeadShape Id="Quill" />
+    <LinkHeadShapeSize>15.3599996566772</LinkHeadShapeSize>
+    <LinkBaseShapeSize>19.2000007629395</LinkBaseShapeSize>
+    <LinkIntermediateShapeSize>19.2000007629395</LinkIntermediateShapeSize>
+    <AlignToGrid>False</AlignToGrid>
+    <ShowGrid>False</ShowGrid>
+    <GridStyle>0</GridStyle>
+    <GridPen>
+      <Brush Id="34" />
+      <LineJoint>0</LineJoint>
+      <MiterLimit>10</MiterLimit>
+      <Width>1</Width>
+    </GridPen>
+    <GridSizeX>15.3599996566772</GridSizeX>
+    <GridSizeY>15.3599996566772</GridSizeY>
+    <GridOffsetX>NaN</GridOffsetX>
+    <GridOffsetY>NaN</GridOffsetY>
+    <ImageAlign>0</ImageAlign>
+    <TextColor>#FF400000</TextColor>
+    <LinkStyle>2</LinkStyle>
+    <LinkSegments>3</LinkSegments>
+    <Bounds>0, 0, 737.359985351563, 1051.54553222656</Bounds>
+    <TableRowsCount>4</TableRowsCount>
+    <TableColumnsCount>2</TableColumnsCount>
+    <TableColumnWidth>69.120002746582</TableColumnWidth>
+    <TableRowHeight>19.2000007629395</TableRowHeight>
+    <TableCaptionHeight>19.2000007629395</TableCaptionHeight>
+    <TableCaption>Table</TableCaption>
+    <LinkCascadeOrientation>2</LinkCascadeOrientation>
+    <TableCellBorders>2</TableCellBorders>
+    <AutoHighlightRows>False</AutoHighlightRows>
+    <NodesExpandable>False</NodesExpandable>
+    <TablesScrollable>False</TablesScrollable>
+    <DefaultTextFormat>
+      <Alignment>1</Alignment>
+      <Flags>0</Flags>
+      <LineAlignment>1</LineAlignment>
+      <Trimming>1</Trimming>
+    </DefaultTextFormat>
+    <DefaultShape Id="Rectangle" />
+    <ContainerHighlightPen>
+      <Brush Id="35" />
+      <LineJoint>0</LineJoint>
+      <MiterLimit>10</MiterLimit>
+      <Width>0.5</Width>
+    </ContainerHighlightPen>
+    <Brush Id="36" />
+    <ShapeHandlesStyle>1</ShapeHandlesStyle>
+    <TableHandlesStyle>2</TableHandlesStyle>
+    <AllowLinksRepeat>True</AllowLinksRepeat>
+    <PolygonalTextLayout>False</PolygonalTextLayout>
+    <ShapeOrientation>0</ShapeOrientation>
+    <RouteLinks>False</RouteLinks>
+    <LinksRetainForm>False</LinksRetainForm>
+    <LinkTextStyle>0</LinkTextStyle>
+    <TableConnectionStyle>1</TableConnectionStyle>
+    <MeasureUnit>7</MeasureUnit>
+    <MinBounds>0, 0, 702.310241699219, 1051.54553222656</MinBounds>
+    <ExpandBtnPos>0</ExpandBtnPos>
+    <EnableStyledText>True</EnableStyledText>
+    <LinkText>
+    </LinkText>
+    <ShapeText>
+    </ShapeText>
+    <LinkCrossings>0</LinkCrossings>
+    <CrossRadius>1.5</CrossRadius>
+    <AutoSnapLinks>False</AutoSnapLinks>
+    <AutoSnapDistance>60</AutoSnapDistance>
+    <LinkHandlesStyle>1</LinkHandlesStyle>
+    <RoundedLinks>False</RoundedLinks>
+    <RoundedLinksRadius>2</RoundedLinksRadius>
+    <EnableLanes>False</EnableLanes>
+    <Lane>
+      <LeftMargin>0</LeftMargin>
+      <TopMargin>0</TopMargin>
+      <MinHeaderSize>10</MinHeaderSize>
+      <HookHeaders>True</HookHeaders>
+      <HeadersOnTop>True</HeadersOnTop>
+      <AlignCells>True</AlignCells>
+      <RowWidths />
+      <ColumnHeights />
+      <AllowResizeHeaders>True</AllowResizeHeaders>
+      <AllowInplaceEdit>False</AllowInplaceEdit>
+      <Columns>
+        <Width>0</Width>
+        <Height>0</Height>
+        <ResizeType>1</ResizeType>
+        <Title>
+        </Title>
+        <RotateTitle>False</RotateTitle>
+        <TitleColor>#FF000000</TitleColor>
+        <Style>
+          <BackgroundBrush Id="37" />
+          <LeftBorderPen>
+            <Brush Id="38" />
+            <LineJoint>0</LineJoint>
+            <MiterLimit>10</MiterLimit>
+            <Width>0.264583319425583</Width>
+          </LeftBorderPen>
+          <TopBorderPen>
+            <Brush Id="39" />
+            <LineJoint>0</LineJoint>
+            <MiterLimit>10</MiterLimit>
+            <Width>0.264583319425583</Width>
+          </TopBorderPen>
+          <RightBorderPen>
+            <Brush Id="40" />
+            <LineJoint>0</LineJoint>
+            <MiterLimit>10</MiterLimit>
+            <Width>0.264583319425583</Width>
+          </RightBorderPen>
+          <BottomBorderPen>
+            <Brush Id="41" />
+            <LineJoint>0</LineJoint>
+            <MiterLimit>10</MiterLimit>
+            <Width>0.264583319425583</Width>
+          </BottomBorderPen>
+        </Style>
+        <SubHeaders />
+      </Columns>
+      <Rows>
+        <Width>0</Width>
+        <Height>0</Height>
+        <ResizeType>1</ResizeType>
+        <Title>
+        </Title>
+        <RotateTitle>False</RotateTitle>
+        <TitleColor>#FF000000</TitleColor>
+        <Style>
+          <BackgroundBrush Id="37" />
+          <LeftBorderPen>
+            <Brush Id="42" />
+            <LineJoint>0</LineJoint>
+            <MiterLimit>10</MiterLimit>
+            <Width>0.264583319425583</Width>
+          </LeftBorderPen>
+          <TopBorderPen>
+            <Brush Id="43" />
+            <LineJoint>0</LineJoint>
+            <MiterLimit>10</MiterLimit>
+            <Width>0.264583319425583</Width>
+          </TopBorderPen>
+          <RightBorderPen>
+            <Brush Id="44" />
+            <LineJoint>0</LineJoint>
+            <MiterLimit>10</MiterLimit>
+            <Width>0.264583319425583</Width>
+          </RightBorderPen>
+          <BottomBorderPen>
+            <Brush Id="45" />
+            <LineJoint>0</LineJoint>
+            <MiterLimit>10</MiterLimit>
+            <Width>0.264583319425583</Width>
+          </BottomBorderPen>
+        </Style>
+        <SubHeaders />
+      </Rows>
+      <Cells ColumnCount="0" RowCount="0" />
+    </Lane>
+    <ContainerMargin>10</ContainerMargin>
+    <ContainerMinimumSize>50, 40</ContainerMinimumSize>
+    <ContainerCaption>Container</ContainerCaption>
+    <ContainerCaptionHeight>5</ContainerCaptionHeight>
+    <ContainersFoldable>True</ContainersFoldable>
+    <ExpandOnIncoming>False</ExpandOnIncoming>
+    <RecursiveExpand>False</RecursiveExpand>
+    <AdjustmentHandlesSize>7.55905532836914</AdjustmentHandlesSize>
+    <HitTestPriority>1</HitTestPriority>
+    <ActiveItemHandlesStyle>
+      <HandlePen>
+        <Brush Id="46" />
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1</Width>
+      </HandlePen>
+      <HandleBrush Id="47" />
+      <DashPen>
+        <Brush Id="48" />
+        <DashStyle>1;2 2</DashStyle>
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1</Width>
+      </DashPen>
+      <HatchBrush Id="49" />
+      <PatternBrush Id="50" />
+    </ActiveItemHandlesStyle>
+    <SelectedItemHandlesStyle>
+      <HandlePen>
+        <Brush Id="51" />
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1</Width>
+      </HandlePen>
+      <HandleBrush Id="52" />
+      <DashPen>
+        <Brush Id="53" />
+        <DashStyle>1;2 2</DashStyle>
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1</Width>
+      </DashPen>
+      <HatchBrush Id="54" />
+      <PatternBrush Id="55" />
+    </SelectedItemHandlesStyle>
+    <DisabledHandlesStyle>
+      <HandlePen>
+        <Brush Id="56" />
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1</Width>
+      </HandlePen>
+      <HandleBrush Id="57" />
+      <DashPen>
+        <Brush Id="58" />
+        <DashStyle>1;2 2</DashStyle>
+        <LineJoint>0</LineJoint>
+        <MiterLimit>10</MiterLimit>
+        <Width>1</Width>
+      </DashPen>
+      <HatchBrush Id="59" />
+      <PatternBrush Id="60" />
+    </DisabledHandlesStyle>
+  </Properties>
+  <Effects />
+  <Selection>
+    <Item Id="0" ClassId="std:ShapeNode" Version="1" />
+    <ActiveItem Id="0" ClassId="std:ShapeNode" Version="1" />
+  </Selection>
+  <Theme>
+    <Style TargetType="std:DiagramLink" Class="std:DiagramLinkStyle" Version="2">
+      <Property Name="Stroke">
+        <Value Type="100">
+          <Brush Id="61" />
+        </Value>
+      </Property>
+      <Property Name="StrokeThickness">
+        <Value Type="6">1.92</Value>
+      </Property>
+      <Property Name="HeadStrokeThickness">
+        <Value Type="6">1.92</Value>
+      </Property>
+      <Property Name="TextBrush">
+        <Value Type="100">
+          <Brush Id="62" />
+        </Value>
+      </Property>
+      <Property Name="Brush">
+        <Value Type="100">
+          <Brush Id="63" />
+        </Value>
+      </Property>
+      <Property Name="FontFamily">
+        <Value Type="1">Times New Roman</Value>
+      </Property>
+      <Property Name="FontSize">
+        <Value Type="11">11.3000001907349</Value>
+      </Property>
+      <Property Name="FontStyle">
+        <Value Type="a:FontStyle">1</Value>
+      </Property>
+    </Style>
+    <Style TargetType="std:ShapeNode" Class="std:ShapeNodeStyle" Version="1">
+      <Property Name="Stroke">
+        <Value Type="100">
+          <Brush Id="64" />
+        </Value>
+      </Property>
+      <Property Name="Brush">
+        <Value Type="100">
+          <Brush Id="65" />
+        </Value>
+      </Property>
+      <Property Name="TextBrush">
+        <Value Type="100">
+          <Brush Id="66" />
+        </Value>
+      </Property>
+      <Property Name="FontFamily">
+        <Value Type="1">Times New Roman</Value>
+      </Property>
+      <Property Name="FontSize">
+        <Value Type="11">11.3000001907349</Value>
+      </Property>
+      <Property Name="FontStyle">
+        <Value Type="a:FontStyle">1</Value>
+      </Property>
+    </Style>
+  </Theme>
+  <Resources>
+    <Effects />
+    <Brushes>
+      <Brush Index="4" Type="Solid">
+        <Color>#FF2E8B57</Color>
+      </Brush>
+      <Brush Index="49" Type="Solid">
+        <Color>#64FF0000</Color>
+      </Brush>
+      <Brush Index="26" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="21" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="17" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="42" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="25" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="46" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="65" Type="Solid">
+        <Color>#FFF0FFF0</Color>
+      </Brush>
+      <Brush Index="27" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="30" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="32" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="39" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="1" Type="Solid">
+        <Color>#FF000080</Color>
+      </Brush>
+      <Brush Index="51" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="50" Type="Solid">
+        <Color>#64FF0000</Color>
+      </Brush>
+      <Brush Index="7" Type="Solid">
+        <Color>#FF000080</Color>
+      </Brush>
+      <Brush Index="11" Type="Solid">
+        <Color>#FFFF0000</Color>
+      </Brush>
+      <Brush Index="19" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="36" Type="Solid">
+        <Color>#FF8080FF</Color>
+      </Brush>
+      <Brush Index="35" Type="Solid">
+        <Color>#FF87CEFA</Color>
+      </Brush>
+      <Brush Index="33" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="61" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="15" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="6" Type="Solid">
+        <Color>#FF000080</Color>
+      </Brush>
+      <Brush Index="14" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="59" Type="Solid">
+        <Color>#64FF0000</Color>
+      </Brush>
+      <Brush Index="20" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="13" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="3" Type="Solid">
+        <Color>#FFF0FFF0</Color>
+      </Brush>
+      <Brush Index="8" Type="Solid">
+        <Color>#FF000080</Color>
+      </Brush>
+      <Brush Index="47" Type="Solid">
+        <Color>#FFFFFFFF</Color>
+      </Brush>
+      <Brush Index="40" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="22" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="62" Type="Solid">
+        <Color>#FFFFFFFF</Color>
+      </Brush>
+      <Brush Index="10" Type="Solid">
+        <Color>#FF2E8B57</Color>
+      </Brush>
+      <Brush Index="66" Type="Solid">
+        <Color>#FF400000</Color>
+      </Brush>
+      <Brush Index="16" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="63" Type="Solid">
+        <Color>#FFFF0000</Color>
+      </Brush>
+      <Brush Index="23" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="56" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="37" Type="Solid">
+        <Color>#FFFFFFFF</Color>
+      </Brush>
+      <Brush Index="58" Type="Solid">
+        <Color>#FFC80000</Color>
+      </Brush>
+      <Brush Index="64" Type="Solid">
+        <Color>#FF2E8B57</Color>
+      </Brush>
+      <Brush Index="0" Type="Solid">
+        <Color>#FFE0FFFF</Color>
+      </Brush>
+      <Brush Index="53" Type="Solid">
+        <Color>#FFAAAAAA</Color>
+      </Brush>
+      <Brush Index="34" Type="Solid">
+        <Color>#FF8C8C96</Color>
+      </Brush>
+      <Brush Index="44" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="43" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="45" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="60" Type="Solid">
+        <Color>#64FF0000</Color>
+      </Brush>
+      <Brush Index="2" Type="Solid">
+        <Color>#FF000080</Color>
+      </Brush>
+      <Brush Index="29" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="12" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="18" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="55" Type="Solid">
+        <Color>#64FF0000</Color>
+      </Brush>
+      <Brush Index="28" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="54" Type="Solid">
+        <Color>#64FF0000</Color>
+      </Brush>
+      <Brush Index="38" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="5" Type="Solid">
+        <Color>#FF000080</Color>
+      </Brush>
+      <Brush Index="24" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="57" Type="Solid">
+        <Color>#FFC80000</Color>
+      </Brush>
+      <Brush Index="9" Type="Solid">
+        <Color>#FF2E8B57</Color>
+      </Brush>
+      <Brush Index="52" Type="Solid">
+        <Color>#FFAAAAAA</Color>
+      </Brush>
+      <Brush Index="48" Type="Solid">
+        <Color>#FFFFFFFF</Color>
+      </Brush>
+      <Brush Index="41" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+      <Brush Index="31" Type="Solid">
+        <Color>#FF000000</Color>
+      </Brush>
+    </Brushes>
+    <Images Count="0" />
+  </Resources>
+  <Layers ActiveLayer="-1" />
+</Diagram>

@@ -1,0 +1,41 @@
+﻿<Window x:Class="MoleculeViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:MindFusion.Diagramming.Wpf;assembly=MindFusion.Diagramming.Wpf"
+        Title="MindFusion.Diagramming Sample: Molecule Viewer"
+        Height="768" Width="1024" Icon="/App.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <my:DiagramView3D x:Name="view3D" Grid.Row="0" Grid.ColumnSpan="2">
+
+        </my:DiagramView3D>
+
+        <Border Background="LightGray" Grid.ColumnSpan="2" Grid.Row="1">
+
+        </Border>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" Margin="10,0,0,0">
+            <StackPanel Margin="5"  Orientation="Horizontal" HorizontalAlignment="Stretch">
+                <Button x:Name="Ethane" Content="Ethane" Width="100" Click="Button_Click" />
+                <Button x:Name="Benzene" Content="Benzene" Width="100" Click="Button_Click"/>
+            </StackPanel>
+            <StackPanel Margin="5,0,5,5"  Orientation="Horizontal">
+                <Button x:Name="Buckminsterfullerene" Content="Buckminsterfullerene" Width="200" Click="Button_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Border Grid.Column="1" Grid.Row="1" Margin="10" Background="White" BorderThickness="1" BorderBrush="Gray">
+            <TextBlock  x:Name="description" TextWrapping="Wrap" Padding="5" VerticalAlignment="Center" Text="This sample demonstrates the DiagramView3D component. Click a button to load a structural formula of a chemical compound. Drag with the mouse to move the camera across the plane which contains the camera and is parallel to the projection plane. The mouse wheel moves the camera back and forth. Holding CTRL while dragging or using the mouse wheel will rotate the camera.">
+
+            </TextBlock>
+        </Border>
+	</Grid>
+</Window>

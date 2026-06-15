@@ -1,0 +1,2636 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>FlowChart.NET Description</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+
+<script type="text/javascript" language="JavaScript">
+<!--
+function id()
+{
+    if (window.location.search == "")
+		return "0";
+
+	return window.location.search.substring(1);
+}
+var oldEl;
+function navigateTo(url, idx)
+{
+    var element = document.getElementById(idx);
+	if (element == null)
+	{
+	    document.getElementById("0").style.display = "";
+	    oldEl.style.display = "none";
+		return;
+    }
+    else
+        document.getElementById("0").style.display = "none";
+
+	if (oldEl != null)
+        oldEl.style.display = "none";
+    
+      
+	element.style.display = "";
+	oldEl = element;
+}
+
+function load()
+{
+	var idx = id();
+
+    var element = document.getElementById(idx);
+	if (element == null)
+		return;
+
+	oldEl = document.getElementById("0").style.display = "none";
+	element.style.display = "";
+	
+}
+-->
+</script>
+
+</head>
+<body bgcolor='#ffffee' style='margin: 0pt; cursor: default;' >
+
+<!--
+<div style="position: absolute; right: 10px; top: 10px;">
+<img src="logo.png" alt="" />
+</div>
+-->
+
+<div class="code" style="position: absolute; left: 10pt; top: 10pt; right: 10pt; width: 617px;">
+
+<div id="0" style="color: #999999;">
+<p>No source code available.</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.FlowChart.cs" style="display: none;">
+<p><span style='color:green'>
+// This sample demonstrates how to create<br />
+// simple diagram elements and how to<br />
+// adjust their visualization properties</span><br />
+<br />
+<span style='color:green'>// Create a new shape node</span><br />
+<span style='color:#009ACD'>ShapeNode</span> node =
+diagram.Factory.CreateShapeNode(10, 10, 36, 8);<br />
+    <br />
+    <span style='color:green'>//
+Specify the node's shape</span><br />
+node.Shape = <span style='color:#009ACD'>Shapes</span>.Ellipse;<br />
+<br />
+<span style='color:green'>// Modify the text displayed within the node and the
+font<br />
+// used to render the text</span><br />
+node.Text = &quot;Start&quot;;<br />
+node.Font = <span style='color:blue'>new</span> Font(&quot;Arial&quot;, 2.6f,
+GraphicsUnit.World);<br />
+    <br />
+    <span style='color:green'>// Modify the brush used to
+paint the node's interior<br />
+// and the pen used to draw its outline</span><br />
+node.Brush = <span style='color:blue'>new</span>
+MindFusion.Drawing.LinearGradientBrush(<br />
+    &nbsp; &nbsp;
+Color.FromArgb(0xff, 0xff, 0xff, 0xc0),<br />
+    &nbsp; &nbsp;
+Color.FromArgb(0xff, 0xbf, 0xbf, 0x90), 90);<br />
+node.Pen.CompoundArray = <span style='color:blue'>new float</span>[] { 0,
+0.25f, 0.75f, 1 };<br />
+node.Pen.Width = 0.7f;</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.FlowChart.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to create<br />
+    ' simple diagram elements and how to<br />
+    ' adjust their visualization properties</span><br />
+<br />
+<span style='color:green'>' Create a new shape node</span><br />
+    <span style="color: #0000ff">Dim</span> node <span style="color: #0000ff">As</span>
+    <span style='color:#009ACD'>ShapeNode</span> = diagram.Factory.CreateShapeNode(10,
+    10, 36, 8)<br />
+    <br />
+    <span style='color:green'>' Specify the node's shape</span><br />
+node.Shape = <span style='color:#009ACD'>Shapes</span>.Ellipse<br />
+<br />
+<span style='color:green'>' Modify the text displayed within the node and the
+font<br />
+    ' used to render the text</span><br />
+node.Text = "Start"<br />
+node.Font = <span style='color:blue'>New</span> Font(&quot;Arial&quot;, 2.6f, GraphicsUnit.World)<br />
+    <br />
+    <span style='color:green'>' Modify the brush used to
+paint the node's interior<br />
+        ' and the pen used to draw its outline</span><br />
+node.Brush = <span style='color:blue'>New</span>
+MindFusion.Drawing.LinearGradientBrush(
+    _<br />
+    &nbsp; &nbsp; Color.FromArgb(255, 255, 255, 192), _<br />
+    &nbsp; &nbsp; Color.FromArgb(255, 191, 191, 144), 90)<br />
+node.Pen.CompoundArray = <span style='color:blue'>New Single</span>() { 0, 0.25f, 0.75f,
+    1 }<br />
+node.Pen.Width = 0.7f</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.LaneDiagram.cs" style="display: none;">
+<p><span style='color:green'>// This
+sample demonstrates how to make a<br />
+// node on the diagram resizing only horizontally</span><br />
+<br />
+<span style='color:green'>// Create a new shape node</span><br />
+<span style='color:#009ACD'>ShapeNode</span> node =
+diagram.Factory.CreateShapeNode(10, 10, 20, 10);<br />
+<br />
+<span style='color:green'>// Set the node's handles, so that only<br />
+// horizontal manipulations are possible</span><br />
+    node.EnabledHandles = <span style='color:#009ACD'>AdjustmentHandles</span>.Move
+|<br />
+<span style='color:#009ACD'>&nbsp; &nbsp; AdjustmentHandles</span>.ResizeMiddleLeft
+| <span style='color:#009ACD'>AdjustmentHandles</span>.ResizeMiddleRight;<br />
+<br />
+<span style='color:green'>// Optionally, hide the disabled handles</span><br />
+diagram.ShowDisabledHandles = <span style='color:blue'>false</span>;</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.LaneDiagram.vb" style="display: none;">
+<p><span style='color:green'>' This
+sample demonstrates how to make a<br />
+    ' node on the diagram resizing only horizontally</span><br />
+<br />
+<span style='color:green'>' Create a new shape node</span><br /><span style='color:blue'>Dim</span> node <span style='color:blue'>As</span>
+<span style='color:#009ACD'>ShapeNode</span> = diagram.Factory.CreateShapeNode(10, 10, 20, 10)<br />
+<br />
+<span style='color:green'>' Set the node's handles, so that only<br />
+    ' horizontal manipulations are possible</span><br />
+    node.EnabledHandles = <span style='color:#009ACD'>AdjustmentHandles</span>.Move
+    + _<br />
+<span style='color:#009ACD'>&nbsp; &nbsp; AdjustmentHandles</span>.ResizeMiddleLeft
+    + <span style='color:#009ACD'>AdjustmentHandles</span>.ResizeMiddleRight<br />
+<br />
+<span style='color:green'>' Optionally, hide the disabled handles</span><br />
+diagram.ShowDisabledHandles = <span style='color:blue'>False</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.DialogueChart.cs" style="display: none;">
+<p><span style='color:green'>// This
+sample demonstrates how to access the<br />
+// active (selected) element in a diagram and<br />
+// how to perform basic navigation in the graph<br />
+<br />
+// The active diagram element is obtained via the<br />
+// ActiveItem property of the Diagram class</span><br />
+<span style='color:#009ACD'>DiagramItem</span> activeObj = diagram.ActiveItem;<br />
+<br />
+<span style='color:green'>// It is wise to check whether the object is null.<br />
+// This might happen when there is no selected object</span><br />
+<span style='color:blue'>if</span> (activeObj == <span style='color:blue'>null</span>)<br />
+&nbsp; &nbsp; <span style='color:blue'>return</span>;<br />
+<br />
+<span style='color:green'>// Make sure the selected object is a DiagramNode </span><br />
+<span style='color:blue'>if</span> (!(activeObj <span style='color:blue'>is</span>
+<span style='color:#009ACD'>DiagramNode</span>))<br />
+&nbsp; &nbsp; <span style='color:blue'>return</span>;<br />
+<br />
+<span style='color:#009ACD'>DiagramNode</span> activeNode = activeObj <span
+style='color:blue'>as</span> <span style='color:#009ACD'>DiagramNode</span>;<br />
+<br />
+<span style='color:green'>// Now it is possible to access the direct relatives
+of the active node</span><br />
+<span style='color:#009ACD'>ArrayList</span> relatives = new <span
+style='color:#009ACD'>ArrayList</span>();<br />
+<br />
+<span style='color:blue'>foreach</span> (<span style='color:#009ACD'>DiagramLink</span>
+link <span style='color:blue'>in</span> activeNode.OutgoingLinks)<br />
+&nbsp; &nbsp; relatives.Add(link.Destination);<br />
+<br />
+<span style='color:blue'>foreach</span> (<span style='color:#009ACD'>DiagramLink</span>
+link <span style='color:blue'>in</span> activeNode.IncomingLinks)<br />
+&nbsp; &nbsp; relatives.Add(link.Origin);</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.DialogueChart.vb" style="display: none;">
+<p><span style='color:green'>' This
+sample demonstrates how to access the<br />
+' active (selected) element in a diagram and<br />
+' how to perform basic navigation in the graph<br />
+<br />
+' The active diagram element is obtained via the<br />
+' ActiveItem property of the Diagram object</span><br /><span style='color:blue'>Dim</span> activeObj <span style='color:blue'>As</span>
+<span style='color:#009ACD'>DiagramItem</span> = diagram.ActiveItem<br />
+<br />
+<span style='color:green'>' It is wise to check whether the object is Nothing.<br />
+    ' This might happen when there is no selected object</span><br />
+<span style='color:blue'>If</span> activeObj <span style='color:blue'>Is</span> <span style='color:blue'>Nothing</span> <span style='color:blue'>Then</span><br />
+&nbsp; &nbsp; <span style='color:blue'>Return</span><br /><span style='color:blue'>End If</span><br />
+<br />
+<span style='color:green'>// Make sure the selected object is a DiagramNode </span><br />
+<span style='color:blue'>If</span> <span style='color:blue'>Not</span> <span style='color:blue'>
+    Typeof</span> activeObj <span style='color:blue'>Is</span>
+<span style='color:#009ACD'>DiagramNode</span> <span style='color:blue'>Then</span><br />
+&nbsp; &nbsp; <span style='color:blue'>Return</span><br />
+    <span style='color:blue'>End If</span><br />
+<br /><span style='color:blue'>Dim</span> activeNode <span style='color:blue'>As</span>
+<span style='color:#009ACD'>DiagramNode</span> = <span style='color:blue'>CType</span>(activeObj,
+    <span style='color:#009ACD'>DiagramNode</span>)<br />
+<br />
+<span style='color:green'>' Now it is possible to access the direct relatives
+of the active node</span><br /><span style='color:blue'>Dim</span> relatives <span style='color:blue'>As</span>
+<span style='color:#009ACD'>ArrayList</span> = <span style='color:blue'>New</span>
+    <span
+style='color:#009ACD'>ArrayList</span>()<br />
+<br />
+<span style='color:blue'>For Each</span> link <span style='color:blue'>As</span> <span style='color:#009ACD'>DiagramLink</span>
+<span style='color:blue'>In</span> activeNode.OutgoingLinks<br />
+&nbsp; &nbsp; relatives.Add(link.Destination)<br />
+    <span style='color:blue'>Next</span><br />
+<br />
+<span style='color:blue'>For Each</span> link <span style='color:blue'>As</span> <span style='color:#009ACD'>DiagramLink</span>
+<span style='color:blue'>In</span> activeNode.IncomingLinks<br />
+&nbsp; &nbsp; relatives.Add(link.Origin)<br />
+    <span style='color:blue'>Next</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.HierarchyChart.cs" style="display: none;">
+<p><span style='color:green'>// This
+sample demonstrates how to create groups<br />
+<br />
+// Create two ShapeNode objects</span><br />
+<span style='color:#009ACD'>ShapeNode</span> master =
+diagram.Factory.CreateShapeNode(10, 10, 20, 8);<br />
+<span style='color:#009ACD'>ShapeNode</span> subordinate =
+diagram.Factory.CreateShapeNode(10, 25, 20, 8);<br />
+<br />
+<span style='color:green'>// Create the group, using the first ShapeNode as a
+master</span><br />
+<span style='color:#009ACD'>Group</span> group =
+diagram.Factory.CreateGroup(master);<br />
+<br />
+<span style='color:green'>// Now attach the second ShapeNode to the newly
+created group</span><br />
+group.AttachToCorner(subordinate, 0);</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.HierarchyChart.vb" style="display: none;">
+<p><span style='color:green'>' This
+sample demonstrates how to create groups<br />
+<br />
+    ' Create two ShapeNode objects</span><br /><span style='color:blue'>Dim</span> master <span style='color:blue'>As</span>
+<span style='color:#009ACD'>ShapeNode</span> = diagram.Factory.CreateShapeNode(10, 10, 20, 8)<br /><span style='color:blue'>Dim</span> subordinate <span style='color:blue'>As</span>
+<span style='color:#009ACD'>ShapeNode</span> = diagram.Factory.CreateShapeNode(10,
+    25, 20, 8)<br />
+<br />
+<span style='color:green'>' Create the group, using the first ShapeNode as a
+master</span><br /><span style='color:blue'>Dim</span> group <span style='color:blue'>As</span>
+<span style='color:#009ACD'>Group</span> = diagram.Factory.CreateGroup(master)<br />
+<br />
+<span style='color:green'>' Now attach the second ShapeNode to the newly
+created group</span><br />
+group.AttachToCorner(subordinate, 0)</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.ChemistrySynthesisTree.cs" style="display: none;">
+<p><span style='color:green'>// This sample
+demonstrates how to<br />
+// assign styled text to a ShapeNode<br />
+<br />
+// Create a new ShapeNode</span><br />
+<span style='color:#009ACD'>ShapeNode</span> node =
+diagram.Factory.CreateShapeNode(10, 10, 40, 12);<br />
+    <br />
+<span style='color:green'>// Set the node's style to, say, rectangle</span><br />
+node.Shape = <span style='color:#009ACD'>Shapes</span>.Rectangle;<br />
+<br />
+<span style='color:green'>// In order to use styled texts, two properties<br />
+// of the node need to be set - EnableStyledText<br />
+// and PolygonalTextLayout</span><br />
+node.EnableStyledText = <span style='color:blue'>true</span>;<br />
+node.PolygonalTextLayout = <span style='color:blue'>true</span>;<br />
+<br />
+<span style='color:green'>// Now assign the formatted text to the node</span><br />
+node.Text = <span style='color:#a52a2a'>&quot;&lt;color=#ff0000&gt; HCl&lt;/color&gt;
++ NaOH = H&lt;sub&gt; 2&lt;/sub&gt; O + NaCl&quot;</span>;</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.ChemistrySynthesisTree.vb" style="display: none;">
+<p><span style='color:green'>' This sample
+demonstrates how to<br />
+    ' assign styled text to a ShapeNode<br />
+<br />
+    ' Create a new ShapeNode</span><br /><span style='color:blue'>Dim</span> node <span style='color:blue'>As</span> <span style='color:#009ACD'>ShapeNode</span> = diagram.Factory.CreateShapeNode(10, 10, 40, 12)<br />
+    <br />
+<span style='color:green'>' Set the node's style to, say, rectangle</span><br />
+node.Shape = <span style='color:#009ACD'>Shapes</span>.Rectangle<br />
+<br />
+<span style='color:green'>' In order to use styled texts, two properties<br />
+    ' of the node need to be set - EnableStyledText<br />
+    ' and PolygonalTextLayout</span><br />
+node.EnableStyledText = <span style='color:blue'>True</span><br />
+node.PolygonalTextLayout = <span style='color:blue'>True</span><br />
+<br />
+<span style='color:green'>' Now assign the formatted text to the node</span><br />
+node.Text = <span style='color:#a52a2a'>&quot;&lt;color=#ff0000&gt; HCl&lt;/color&gt;
++ NaOH = H&lt;sub&gt; 2&lt;/sub&gt; O + NaCl&quot;</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.ClassificationChart.cs" style="display: none;">
+<p><span style='color:green'>// This sample demonstrates how nodes
+can be<br />
+// linked together with links and how to<br />
+// enable expanding or collapsing nodes<br />
+<br />
+// Setting the default property NodesExpandable<br />
+// of the Diagram object indicates that all<br />
+// subsequently created shape nodes will be expandable</span><br />
+diagram.NodesExpandable
+= <span style='color:blue'>true</span>;<br />
+<br />
+<span style='color:green'>// Create two ShapeNode objects</span><br />
+<span style='color:#2B91AF'>ShapeNode</span> parent =
+diagram.Factory.CreateShapeNode(10, 10, 20, 8);<br />
+<span style='color:#2B91AF'>ShapeNode</span> child =
+diagram.Factory.CreateShapeNode(10, 25, 20, 8);<br />
+<br />
+<span style='color:green'>// Link the ShapeNode objects together by creating a new<br />
+// link from the parent ShapeNode to the child ShapeNode</span><br />
+diagram.Factory.CreateDiagramLink(parent, child);</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.ClassificationChart.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how nodes
+can be<br />
+    ' linked together with links and how to<br />
+    ' enable expanding or collapsing nodes<br />
+<br />
+    ' Setting the default property NodesExpandable<br />
+    ' of the Diagram object indicates that all<br />
+    ' subsequently created shape nodes will be expandable</span><br />
+diagram.NodesExpandable
+= <span style='color:blue'>True</span><br />
+<br />
+<span style='color:green'>' Create two ShapeNode objects</span><br /><span style='color:blue'>Dim</span> parent <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>ShapeNode</span> = diagram.Factory.CreateShapeNode(10, 10, 20, 8)<br /><span style='color:blue'>Dim</span> child <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>ShapeNode</span> = diagram.Factory.CreateShapeNode(10, 25, 20, 8)<br />
+<br />
+<span style='color:green'>' Link the ShapeNodes together by creating a new<br />
+    ' link from the parent ShapeNode to the child ShapeNode</span><br />
+diagram.Factory.CreateDiagramLink(parent, child)</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.GenealogyTree.cs" style="display: none;">
+<p><span style='color:green'>// This sample demonstrates how to apply<br />
+// custom drawing code to ShapeNode objects in FlowChart.NET<br />
+<br />
+// ... initialization ...<br />
+<br />
+// Attach new event handler to the Diagram.DrawNode<br />
+// event. All of the custom drawing should be placed<br />
+// in that handler</span><br />
+diagram.DrawNode
++= <span style='color:blue'>new</span> <span style='color:#2B91AF'>DrawNodeEventHandler</span>(OnDrawNode);<br />
+<br />
+<span style='color:green'>// Create a sample ShapeNode and enable custom
+drawing</span><br />
+<span style='color:#2B91AF'>ShapeNode</span> node =
+diagram.Factory.CreateShapeNode(10, 10, 40, 30);<br />
+node.CustomDraw = <span style='color:#2B91AF'>CustomDraw</span>.Additional;<br />
+<br />
+<span style='color:green'>// ... more initialization ...<br />
+<br />
+// Custom drawing event handler</span><br />
+<span style='color:blue'>private</span> <span style='color:blue'>void</span>
+OnDrawNode(<span style='color:blue'>object</span> sender, <span
+style='color:#2B91AF'>DrawNodeEventArgs</span> e)<br />
+{<br />
+    &nbsp; &nbsp; <span style='color:green'>// Draw big red ellipse in the center of the
+ShapeNode</span><br />
+<br />
+    &nbsp; &nbsp; System.Drawing.<span style='color:#2B91AF'>Pen</span> redPen = <span
+style='color:blue'>new</span> System.Drawing.<span style='color:#2B91AF'>Pen</span>(<span
+style='color:#2B91AF'>Color</span>.Red, 0.5f);<br />
+    <br />
+    &nbsp; &nbsp; <span style='color:#2B91AF'>RectangleF</span>
+nodeBounds = e.Bounds;<br />
+    &nbsp; &nbsp;
+nodeBounds.Inflate(-nodeBounds.Width / 4,
+-nodeBounds.Height / 4);<br />
+    &nbsp; &nbsp;
+e.Graphics.DrawEllipse(redPen,
+nodeBounds);<br />
+<br />
+    &nbsp; &nbsp; redPen.Dispose();<br />
+}</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.GenealogyTree.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to apply<br />
+    ' custom drawing code to ShapeNode objects in FlowChart.NET<br />
+<br />
+    ' ... initialization ...<br />
+<br />
+    ' Attach new event handler to the Diagram.DrawNode<br />
+    ' event. All of the custom drawing should be placed<br />
+    ' in that handler</span><br /><span style='color:blue'>AddHandler</span> diagram.DrawNode, <span style='color:blue'>
+        AddressOf</span> OnDrawNode<br />
+<br />
+<span style='color:green'>' Create a sample ShapeNode and enable custom
+drawing</span><br /><span style='color:blue'>Dim</span> node <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>ShapeNode</span> = diagram.Factory.CreateShapeNode(10, 10, 40, 30)<br />
+node.CustomDraw = <span style='color:#2B91AF'>CustomDraw</span>.Additional<br />
+<br />
+<span style='color:green'>' ... more initialization ...<br />
+<br />
+    ' Custom drawing event handler</span><br />
+<span style='color:blue'>Private</span> <span style='color:blue'>Sub</span> OnDrawNode(sender
+    <span style='color:blue'>As</span> <span style="color:#2b91af">Object</span>,
+    e <span style='color:blue'>As</span> <span
+style='color:#2B91AF'>DrawNodeEventArgs</span>)<br />
+<br />
+    &nbsp; &nbsp; <span style='color:green'>' Draw big red ellipse in the center of the
+ShapeNode</span><br />
+<br />
+    &nbsp; &nbsp; <span style='color:blue'>Dim</span> redPen <span style='color:blue'>
+        As</span> System.Drawing.<span style='color:#2B91AF'>Pen</span> = <span
+style='color:blue'>New</span> System.Drawing.<span style='color:#2B91AF'>Pen</span>(<span
+style='color:#2B91AF'>Color</span>.Red, 0.5f)<br />
+    <br />
+    &nbsp; &nbsp; <span style='color:blue'>Dim</span> nodeBounds <span style='color:blue'>
+        As</span> <span style='color:#2B91AF'>RectangleF</span> = e.Bounds<br />
+    &nbsp; &nbsp;
+nodeBounds.Inflate(-nodeBounds.Width / 4,
+-nodeBounds.Height / 4)<br />
+    &nbsp; &nbsp;
+e.Graphics.DrawEllipse(redPen, nodeBounds)<br />
+<br />
+    &nbsp; &nbsp; redPen.Dispose()<br />
+    <br />
+    <span style='color:blue'>End Sub</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.ErmDiagram.cs" style="display: none;">
+<p><span style='color:green'>// This sample demonstrates how to<br />
+// associate anchor patterns with table rows<br />
+<br />
+// Create a sample table first</span><br />
+<span style='color:#2B91AF'>TableNode</span> table = diagram.Factory.CreateTableNode(10,
+10, 40, 25);<br />
+<br />
+<span style='color:green'>// Modify the number of rows and columns</span><br />
+table.RowCount = 2;<br />
+table.ColumnCount = 3;<br />
+<br />
+<span style='color:green'>// Adjust the table columns</span><br />
+table.Columns[0].Width = 10;<br />
+table.Columns[1].Width = 20;<br />
+table.Columns[2].Width = 10;<br />
+table.Columns[0].ColumnStyle = <span style='color:#2B91AF'>ColumnStyle</span>.FixedWidth;<br />
+table.Columns[1].ColumnStyle = <span style='color:#2B91AF'>ColumnStyle</span>.AutoWidth;<br />
+table.Columns[2].ColumnStyle = <span style='color:#2B91AF'>ColumnStyle</span>.FixedWidth;<br />
+<br />
+<span style='color:green'>// Create an anchor pattern to be assigned to the
+table</span><br />
+<span style='color:#2B91AF'>AnchorPattern</span> pattern = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>AnchorPattern</span>(<br />
+    &nbsp; &nbsp; <span style='color:blue'>new</span> <span
+style='color:#2B91AF'>AnchorPoint</span>[]<br />
+    &nbsp; &nbsp; {<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>new</span> <span
+style='color:#2B91AF'>AnchorPoint</span>(50, 50, <span style='color:blue'>true</span>,
+<span style='color:blue'>false</span>, <span style='color:#2B91AF'>Color</span>.Blue,
+0),<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>new</span> <span
+style='color:#2B91AF'>AnchorPoint</span>(50, 50, <span style='color:blue'>false</span>,
+<span style='color:blue'>true</span>, <span style='color:#2B91AF'>Color</span>.Blue,
+2)<br />
+    &nbsp; &nbsp; });<br />
+<br />
+<span style='color:green'>// Set the newly created anchor<br />
+// pattern to be used for all rows</span><br />
+table.RowAnchorPattern = pattern;</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.ErmDiagram.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to<br />
+    ' associate anchor patterns with table rows<br />
+<br />
+    ' Create a sample table first</span><br /><span style='color:blue'>Dim</span> table <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>TableNode</span> = diagram.Factory.CreateTableNode(10, 10, 40, 25)<br />
+<br />
+<span style='color:green'>' Modify the number of rows and columns</span><br />
+table.RowCount = 2<br />
+table.ColumnCount = 3<br />
+<br />
+<span style='color:green'>' Adjust the table columns</span><br />
+    table.Columns(0).Width = 10<br />
+    table.Columns(1).Width = 20<br />
+    table.Columns(2).Width = 10<br />
+    table.Columns(0).ColumnStyle = <span style='color:#2B91AF'>ColumnStyle</span>.FixedWidth<br />
+    table.Columns(1).ColumnStyle = <span style='color:#2B91AF'>ColumnStyle</span>.AutoWidth<br />
+    table.Columns(2).ColumnStyle = <span style='color:#2B91AF'>ColumnStyle</span>.FixedWidth<br />
+<br />
+<span style='color:green'>' Create an anchor pattern to be assigned to the
+table</span><br /><span style='color:blue'>Dim</span> pattern <span style='color:blue'>As</span>
+    <span style='color:blue'>New</span>
+<span style='color:#2B91AF'>AnchorPattern</span>(
+    _<br />
+    &nbsp; &nbsp; <span style='color:blue'>New</span> <span
+style='color:#2B91AF'>AnchorPoint</span>() _<br />
+    &nbsp; &nbsp; { _<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>New</span> <span
+style='color:#2B91AF'>AnchorPoint</span>(50, 50, <span style='color:blue'>True</span>,
+<span style='color:blue'>False</span>, <span style='color:#2B91AF'>Color</span>.Blue,
+0), _<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>New</span> <span
+style='color:#2B91AF'>AnchorPoint</span>(50, 50, <span style='color:blue'>False</span>,
+<span style='color:blue'>True</span>, <span style='color:#2B91AF'>Color</span>.Blue,
+2) _<br />
+    &nbsp; &nbsp; })<br />
+<br />
+<span style='color:green'>' Set the newly created anchor<br />
+    ' pattern to be used for all rows</span><br />
+table.RowAnchorPattern = pattern</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.ClassHierarchyDiagram.cs" style="display: none;">
+<p><span style='color:green'>
+// This sample demonstrates how to<br />
+// enable scrolling of table rows<br />
+<br />
+// Create and setup a new table</span><br />
+<span style='color:#2B91AF'>TableNode</span> table =
+diagram.Factory.CreateTableNode(10, 10, 30, 45);<br />
+<br />
+table.RedimTable(1, 20);<br />
+<span style='color:blue'>for</span> (<span style='color:blue'>int</span> i = 0;
+i &lt; table.RowCount; i++)<br />
+    &nbsp; &nbsp; table[0, i].Text = <span style='color:
+#A31515'>&quot;Row&quot;</span> + i.ToString();<br />
+<br />
+<span style='color:green'>// Enable scrolling</span><br />
+table.Scrollable = <span style='color:blue'>true</span>;</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.ClassHierarchyDiagram.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to<br />
+    ' enable scrolling of table rows<br />
+<br />
+    ' Create and setup a new table</span><br /><span style='color:blue'>Dim</span> table <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>TableNode</span> = diagram.Factory.CreateTableNode(10, 10, 30, 45)<br />
+<br />
+table.RedimTable(1, 20)<br />
+    <span style='color:blue'>Dim</span> i <span style='color:blue'>As</span> <span style="color:#2b91af">Integer</span><br />
+<span style='color:blue'>For</span> i = 0 <span style='color:blue'>To</span> table.RowCount
+    - 1<br />
+    &nbsp; &nbsp; table(0, i).Text = <span style='color:
+#A31515'>&quot;Row&quot;</span> + i.ToString()<br />
+    <span style='color:blue'>Next</span><br />
+<br />
+<span style='color:green'>' Enable scrolling</span><br />
+table.Scrollable = <span style='color:blue'>True</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.DatabaseRelationshipDiagram.cs" style="display: none;">
+<p><span style='color:green'>// This sample demonstrates how to link
+tables<br />
+// programatically and how to set up links' heads<br />
+<br />
+// Create two related tables</span><br />
+<span style='color:#2B91AF'>TableNode</span> t1 =
+diagram.Factory.CreateTableNode(10, 10, 30, 35);<br />
+<span style='color:#2B91AF'>TableNode</span> t2 =
+diagram.Factory.CreateTableNode(70, 10, 30, 35);<br />
+<br />
+<span style='color:green'>// Setup tables</span><br />
+t1.RedimTable(1, 2);<br />
+t2.RedimTable(1, 2);<br />
+<br />
+<span style='color:green'>// Create a link which connects the tables</span><br />
+<span style='color:#2B91AF'>DiagramLink</span> link = diagram.Factory.CreateDiagramLink(t1,
+0, t2, 1);<br />
+<br />
+<span style='color:green'>// Set the link style to cascading</span><br />
+link.SegmentCount = 3;<br />
+link.Style = <span style='color:#2B91AF'>LinkStyle</span>.Cascading;<br />
+link.CascadeOrientation =<br />
+    &nbsp; &nbsp; MindFusion.Diagramming.<span
+style='color:#2B91AF'>Orientation</span>.Horizontal;<br />
+<br />
+<span style='color:green'>// Finally modify the link's heads</span><br />
+link.BaseShape = <span style='color:#2B91AF'>ArrowHead</span>.RevTriangle;<br />
+link.BaseShapeSize = 2;<br />
+link.HeadShape = <span style='color:#2B91AF'>ArrowHead</span>.Tetragon;<br />
+link.HeadShapeSize = 5;</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.DatabaseRelationshipDiagram.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to link
+tables<br />
+    ' programatically and how to set up links' heads<br />
+<br />
+    ' Create two related tables</span><br /><span style='color:blue'>Dim</span> t1 <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>TableNode</span> = diagram.Factory.CreateTableNode(10, 10, 30, 35)<br /><span style='color:blue'>Dim</span> t2 <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>TableNode</span> = diagram.Factory.CreateTableNode(70, 10, 30, 35)<br />
+<br />
+<span style='color:green'>' Setup tables</span><br />
+t1.RedimTable(1, 2)<br />
+t2.RedimTable(1, 2)<br />
+<br />
+<span style='color:green'>' Create a link which connects the tables</span><br /><span style='color:blue'>Dim</span> link <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>DiagramLink</span> = diagram.Factory.CreateDiagramLink(t1, 0, t2, 1)<br />
+<br />
+<span style='color:green'>' Set the link style to cascading</span><br />
+link.SegmentCount = 3<br />
+link.Style = <span style='color:#2B91AF'>LinkStyle</span>.Cascading<br />
+link.CascadeOrientation = _<br />
+    &nbsp; &nbsp; MindFusion.Diagramming.<span
+style='color:#2B91AF'>Orientation</span>.Horizontal<br />
+<br />
+<span style='color:green'>' Finally modify the link's heads</span><br />
+link.BaseShape = <span style='color:#2B91AF'>ArrowHead</span>.RevTriangle<br />
+link.BaseShapeSize = 2<br />
+link.HeadShape = <span style='color:#2B91AF'>ArrowHead</span>.Tetragon<br />
+link.HeadShapeSize = 5</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.SpanningCells.cs" style="display: none;">
+<p><span style='color:green'>
+// This sample demonstrates how to create<br />
+// spanning cells and header rows in a FlowChart.NET table<br />
+<br />
+// Create a table</span><br />
+<span style='color:#2B91AF'>TableNode</span> table =
+diagram.Factory.CreateTableNode(10, 10, 30, 40);<br />
+<br />
+<span style='color:green'>// Setup the number of rows and columns in the table</span><br />
+table.RedimTable(2, 5);<br />
+<br />
+<span style='color:green'>// Mark the first and the fourth rows as headers</span><br />
+table.Rows[0].Header = <span style='color:blue'>true</span>;<br />
+table.Rows[3].Header = <span style='color:blue'>true</span>;<br />
+<br />
+<span style='color:green'>// Span the cells in the header rows to cover the
+entire rows</span><br />
+table[0, 0].ColumnSpan = 2;<br />
+table[0, 0].Text = <span style='color:#A31515'>&quot;Header 1&quot;</span>;<br />
+table[0, 3].ColumnSpan = 2;<br />
+table[0, 3].Text = <span style='color:#A31515'>&quot;Header 2&quot;</span>;<br />
+<br />
+<span style='color:green'>// Span the cells from the second column below the
+first header row</span><br />
+table[1, 1].RowSpan = 2;<br />
+table[1, 1].Text = <span style='color:#A31515'>&quot;span&quot;</span>;<br />
+<br />
+<span style='color:green'>// Offset the header rows, so that the
+'expand/collapse'<br />
+// icon is positioned on the left</span><br />
+table.OffsetHeaderRows = <span style='color:blue'>true</span>;</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.SpanningCells.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to create<br />
+    ' spanning cells and header rows in a FlowChart.NET table<br />
+<br />
+    ' Create a table</span><br /><span style='color:blue'>Dim</span> table <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>TableNode</span>
+    = diagram.Factory.CreateTableNode(10, 10, 30, 40)<br />
+<br />
+<span style='color:green'>' Setup the number of rows and columns in the table</span><br />
+table.RedimTable(2, 5)<br />
+<br />
+<span style='color:green'>' Mark the first and the fourth rows as headers</span><br />
+    table.Rows(0).Header = <span style='color:blue'>True</span><br />
+    table.Rows(3).Header = <span style='color:blue'>True</span><br />
+<br />
+<span style='color:green'>' Span the cells in the header rows to cover the
+entire rows</span><br />
+    table(0, 0).ColumnSpan = 2<br />
+    table(0, 0).Text = <span style='color:#A31515'>&quot;Header 1&quot;</span><br />
+    table(0, 3).ColumnSpan = 2<br />
+    table(0, 3).Text = <span style='color:#A31515'>&quot;Header 2&quot;</span><br />
+<br />
+<span style='color:green'>' Span the cells from the second column below the
+first header row</span><br />
+    table(1, 1).RowSpan = 2<br />
+    table(1, 1).Text = <span style='color:#A31515'>&quot;span&quot;</span><br />
+<br />
+<span style='color:green'>' Offset the header rows, so that the
+'expand/collapse'<br />
+    ' icon is positioned on the left</span><br />
+table.OffsetHeaderRows = <span style='color:blue'>True</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="TablesPatient.cs" style="display: none;">
+<p><span style='color:green'>//
+This sample demonstrates how to create interactive<br />
+// ShapeNode objects, which behave much like buttons<br />
+<br />
+// Create a ShapeNode to be used as a button</span><br />
+<span style='color:#2B91AF'>ShapeNode</span> node =
+diagram.Factory.CreateShapeNode(10, 10, 20, 10);<br />
+node.Shape = <span style='color:#2B91AF'>Shapes</span>.Rectangle;<br />
+node.Text = <span style='color:#A31515'>&quot;Click me&quot;</span>;<br />
+node.Tag = <span style='color:#A31515'>&quot;button&quot;</span>;<br />
+<br />
+<span style='color:green'>// Associate an event handler with the<br />
+// Diagram.NodeClicked event</span><br />
+diagram.NodeClicked += <span style='color:blue'>new</span> <span
+style='color:#2B91AF'>NodeEventHandler</span>(OnNodeClicked);<br />
+<br />
+<span style='color:green'>// ...<br />
+<br />
+// NodeClicked event handler</span><br />
+<span style='color:blue'>private</span> <span style='color:blue'>void</span>
+OnNodeClicked(<span style='color:blue'>object</span> sender, <span
+style='color:#2B91AF'>NodeEventArgs</span> e)<br />
+{<br />
+    &nbsp; &nbsp; <span style='color:blue'>if</span> ((<span
+style='color:blue'>string</span>)e.Node.Tag == <span style='color:#A31515'>&quot;button&quot;</span>)<br />
+    &nbsp; &nbsp; {<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:green'>// The button-node has been clicked</span><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:#2B91AF'>MessageBox</span>.Show(<span
+style='color:#A31515'>&quot;Click!&quot;</span>);<br />
+    &nbsp; &nbsp; }<br />
+    }</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="TablesPatient.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to create interactive<br />
+    ' ShapeNode objects, which behave much like buttons<br />
+<br />
+    ' Create a ShapeNode to be used as a button</span><br /><span
+style='color:blue'>Dim</span> node <span
+style='color:blue'>As</span>
+<span style='color:#2B91AF'>ShapeNode</span> = diagram.Factory.CreateShapeNode(10, 10, 20, 10)<br />
+node.Shape = <span style='color:#2B91AF'>Shapes</span>.Rectangle<br />
+node.Text = <span style='color:#A31515'>&quot;Click me&quot;</span><br />
+node.Tag = <span style='color:#A31515'>&quot;button&quot;</span><br />
+<br />
+<span style='color:green'>' Associate an event handler with the<br />
+    ' Diagram.NodeClicked event</span><br /><span
+style='color:blue'>AddHandler</span> diagram.NodeClicked, <span style='color:blue'>
+    AddressOf</span> OnNodeClicked<br />
+<br />
+<span style='color:green'>' ...<br />
+<br />
+    ' NodeClicked event handler</span><br />
+<span style='color:blue'>Private</span> <span style='color:blue'>Sub</span> OnNodeClicked(sender
+    <span
+style='color:blue'>As</span> <span
+style='color:#2B91AF'>Object</span>,
+    e <span
+style='color:blue'>As</span> <span
+style='color:#2B91AF'>NodeEventArgs</span>)<br />
+<br />
+    &nbsp; &nbsp; <span style='color:blue'>If</span> <span
+style='color:blue'>CType</span>(e.Node.Tag,
+    <span style="color: #2b91af">String</span>) = <span style='color:#A31515'>&quot;button&quot;</span>
+    <span style='color:blue'>Then</span><br />
+    <br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:green'>' The button-node has been clicked</span><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:#2B91AF'>MessageBox</span>.Show(<span
+style='color:#A31515'>&quot;Click!&quot;</span>)<br />
+    <br />
+    &nbsp; &nbsp; <span style='color:blue'>End If</span><br />
+    <br />
+    <span style='color:blue'>End Sub</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="ControlHostingFormDesigner.cs" style="display: none;">
+<p><span style='color:green'>// This sample demonstrates how to host<br />
+// .NET Windows.Forms controls in diagram nodes<br />
+<br />
+// Create the controls to be hosted</span><br />
+<span style='color:#2B91AF'>TextBox</span> textBox = <span
+style='color:blue'>new</span> System.Windows.Forms.<span style='color:#2B91AF'>TextBox</span>();<br />
+<span style='color:#2B91AF'>Button</span> button = <span style='color:blue'>new</span>
+System.Windows.Forms.<span style='color:#2B91AF'>Button</span>();<br />
+    <br />
+<span style='color:green'>// Initialize the controls</span><br />
+textBox.Text = <span style='color:#A31515'>&quot;Hello, world!&quot;</span>;<br />
+button.Click += <span style='color:blue'>new</span> <span style='color:#2B91AF'>EventHandler</span>(OnClick);<br />
+button.Text = <span style='color:#A31515'>&quot;Show&quot;</span>;<br />
+<br />
+<span style='color:green'>// Create two ControlNode objects</span><br />
+<span style='color:#2B91AF'>ControlNode</span> editNode = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>ControlNode</span>();<br />
+editNode.Bounds = <span style='color:blue'>new</span> <span style='color:#2B91AF'>RectangleF</span>(10,
+10, 40, 8);<br />
+diagram.Nodes.Add(editNode);<br />
+<span style='color:#2B91AF'>ControlNode</span> buttonNode = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>ControlNode</span>();<br />
+buttonNode.Bounds = <span style='color:blue'>new</span> <span style='color:
+#2B91AF'>RectangleF</span>(10, 20, 40, 8);<br />
+diagram.Nodes.Add(buttonNode);<br />
+<br />
+<span style='color:green'>// Setup hosts</span><br />
+editNode.Control = textBox;<br />
+editNode.Tag = <span style='color:#A31515'>&quot;edit&quot;</span>;<br />
+buttonNode.Control = button;<br />
+<br />
+<span style='color:green'>// ...</span><br />
+<br />
+<span style='color:blue'>private</span> <span style='color:blue'>void</span>
+OnClick(<span style='color:blue'>object</span> sender, <span style='color:#2B91AF'>EventArgs</span>
+e)<br />
+{<br />
+    &nbsp; &nbsp; <span style='color:green'>// Show a message box with the text currently<br />
+    &nbsp; &nbsp; // displayed within the TextBox control</span><br />
+    &nbsp; &nbsp; <span style='color:#2B91AF'>ControlNode</span> host = (<span
+style='color:#2B91AF'>ControlNode</span>)diagram.FindNode(<span
+style='color:#A31515'>&quot;edit&quot;</span>);<br />
+    &nbsp; &nbsp; <span style='color:blue'>if</span> (host
+!= <span style='color:blue'>null</span>)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:#2B91AF'>MessageBox</span>.Show(host.Control.Text);<br />
+}</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="ControlHostingFormDesigner.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to host<br />
+    ' .NET Windows.Forms controls in diagram nodes<br />
+<br />
+    ' Create the controls to be hosted</span><br /><span
+style='color:blue'>Dim</span> textBox <span
+style='color:blue'>As</span>
+<span style='color:#2B91AF'>TextBox</span> = <span
+style='color:blue'>New</span> System.Windows.Forms.<span style='color:#2B91AF'>TextBox</span>()<br /><span
+style='color:blue'>Dim</span> button <span
+style='color:blue'>As</span>
+<span style='color:#2B91AF'>Button</span> = <span style='color:blue'>
+    New</span>
+System.Windows.Forms.<span style='color:#2B91AF'>Button</span>()<br />
+    <br />
+<span style='color:green'>' Initialize the controls</span><br />
+textBox.Text = <span style='color:#A31515'>&quot;Hello, world!&quot;</span><br /><span
+style='color:blue'>AddHandler</span> button.Click, <span style='color:blue'>AddressOf</span> OnClick<br />
+button.Text = <span style='color:#A31515'>&quot;Show&quot;</span><br />
+<br />
+<span style='color:green'>' Create two ControlNode objects</span><br /><span
+style='color:blue'>Dim</span> editNode <span
+style='color:blue'>As</span> <span style='color:blue'>New</span>
+<span style='color:#2B91AF'>ControlNode</span>()<br />
+editNode.Bounds = <span style='color:blue'>New</span> <span style='color:#2B91AF'>RectangleF</span>(10,
+10, 40, 8)<br />
+    diagram.Nodes.Add(editNode)<br /><span
+style='color:blue'>Dim</span> buttonNode <span
+style='color:blue'>As</span> <span style='color:blue'>New</span>
+<span style='color:#2B91AF'>ControlNode</span>()<br />
+buttonNode.Bounds = <span style='color:blue'>New</span> <span style='color:
+#2B91AF'>RectangleF</span>(10, 20, 40, 8)<br />
+    diagram.Nodes.Add(buttonNode)<br />
+<br />
+<span style='color:green'>' Setup hosts</span><br />
+editNode.Control = textBox<br />
+editNode.Tag = <span style='color:#A31515'>&quot;edit&quot;</span><br />
+buttonNode.Control = button<br />
+<br />
+<span style='color:green'>' ...</span><br />
+<br />
+<span style='color:blue'>Private</span> <span style='color:blue'>Overloads</span> <span style='color:blue'>Sub</span> OnClick(sender
+    <span
+style='color:blue'>As</span> <span style="color:#2b91af">Object</span>, e <span
+style='color:blue'>As</span> <span style='color:#2B91AF'>EventArgs</span>)<br />
+<br />
+    &nbsp; &nbsp; <span style='color:green'>' Show a message box with the text currently<br />
+    &nbsp; &nbsp; ' displayed within the TextBox control</span><br />
+    &nbsp; &nbsp; <span
+style='color:blue'>Dim</span> host <span
+style='color:blue'>
+        As</span> <span style='color:#2B91AF'>ControlNode</span> = <span
+style='color:blue'>
+            CType</span>(diagram.FindNode(<span
+style='color:#A31515'>&quot;edit&quot;</span>),
+    <span
+style='color:#2B91AF'>ControlNode</span>)<br />
+    &nbsp; &nbsp; <span style='color:blue'>If</span> <span
+style='color:blue'>Not</span>
+    host <span
+style='color:blue'>Is</span> <span style='color:blue'>Nothing</span>
+    <span
+style='color:blue'>Then</span><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:#2B91AF'>MessageBox</span>.Show(host.Control.Text)<br />
+    &nbsp; &nbsp; <span
+style='color:blue'>End If</span><br />
+    <br />
+    <span
+style='color:blue'>End Sub</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="ControlHostingPhotoAlbum.cs" style="display: none;">
+<p><span style='color:blue'>public</span> <span style='color:blue'>class</span> <span style='color:#2B91AF'>MyControl</span>
+: System.Windows.Forms.<span style='color:#2B91AF'>Panel</span><br />
+{<br />
+    &nbsp; &nbsp; <span style='color:blue'>public</span>
+MyControl()<br />
+    &nbsp; &nbsp; {<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>this</span>.Size
+= <span style='color:blue'>new</span> <span style='color:#2B91AF'>Size</span>(57,
+22);<br />
+<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; textBox = <span style='color:blue'>new</span>
+<span style='color:#2B91AF'>TextBox</span>();<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; button = <span style='color:blue'>new</span>
+<span style='color:#2B91AF'>Button</span>();<br />
+<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; textBox.Text = <span style='color:
+#A31515'>&quot;Text&quot;</span>;<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; textBox.Anchor = <span
+style='color:#2B91AF'>AnchorStyles</span>.Left | <span style='color:#2B91AF'>AnchorStyles</span>.Right
+|<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:#2B91AF'>AnchorStyles</span>.Top
+| <span style='color:#2B91AF'>AnchorStyles</span>.Bottom;<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; textBox.Multiline = <span
+style='color:blue'>true</span>;<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; textBox.Size = <span style='color:
+blue'>new</span> <span style='color:#2B91AF'>Size</span>(10, 20);<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; textBox.Location = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>Point</span>(1, 1);<br />
+<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; button.Text = <span style='color:#A31515'>&quot;Button&quot;</span>;<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; button.Anchor = <span
+style='color:#2B91AF'>AnchorStyles</span>.Right | <span style='color:#2B91AF'>AnchorStyles</span>.Top;<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; button.Click += <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>EventHandler</span>(OnClick);<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; button.Size = <span style='color:blue'>new</span>
+<span style='color:#2B91AF'>Size</span>(46, 20);<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; button.Location = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>Point</span>(11, 1);<br />
+<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>this</span>.Controls.Add(textBox);<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>this</span>.Controls.Add(button);<br />
+    &nbsp; &nbsp; }<br />
+<br />
+    &nbsp; &nbsp; <span style='color:blue'>private</span> <span
+style='color:blue'>void</span> OnClick(<span style='color:blue'>object</span>
+sender, <span style='color:#2B91AF'>EventArgs</span> e)<br />
+    &nbsp; &nbsp; {<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:#2B91AF'>MessageBox</span>.Show(textBox.Text);<br />
+    &nbsp; &nbsp; }<br />
+<br />
+    &nbsp; &nbsp; <span style='color:blue'>private</span> <span
+style='color:#2B91AF'>TextBox</span> textBox;<br />
+    &nbsp; &nbsp; <span style='color:blue'>private</span>
+<span style='color:#2B91AF'>Button</span> button;<br />
+}<br />
+<br />
+<span style='color:green'>// ...<br />
+<br />
+// Create a new diagram node and host an<br />
+// instance of the custom control in it</span><br />
+<span style='color:#2B91AF'>ControlNode</span> host = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>ControlNode</span>();<br />
+host.Bounds = <span style='color:blue'>new</span> <span style='color:#2B91AF'>RectangleF</span>(10,
+10, 40, 15);<br />
+host.Control = <span style='color:blue'>new</span> <span style='color:#2B91AF'>MyControl</span>();<br />
+diagram.Nodes.Add(host);<br />
+<br />
+diagramView.Behavior = <span style='color:#2B91AF'>Behavior</span>.LinkControls;<br />
+diagramView.DefaultControlType = <span style='color:blue'>typeof</span>(<span style='color:#2B91AF'>MyControl</span>);</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="ControlHostingPhotoAlbum.vb" style="display: none;">
+<p><span style='color:blue'>Public</span> <span style='color:blue'>Class</span> <span style='color:#2B91AF'>MyControl</span><br />
+    &nbsp; &nbsp; <span style='color:blue'>Inherits</span> System.Windows.Forms.<span style='color:#2B91AF'>Panel</span><br />
+<br />
+    &nbsp; &nbsp; <span style='color:blue'>Public</span> <span style='color:blue'>
+        Sub</span> <span style='color:blue'>New</span>()<br />
+    <br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>Me</span>.Size
+= <span style='color:blue'>New</span> <span style='color:#2B91AF'>Size</span>(57, 22)<br />
+<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; textBox = <span style='color:blue'>New</span>
+<span style='color:#2B91AF'>TextBox</span>()<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; button = <span style='color:blue'>New</span>
+<span style='color:#2B91AF'>Button</span>()<br />
+<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; textBox.Text = <span style='color:
+#A31515'>&quot;Text&quot;</span><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; textBox.Anchor = <span
+style='color:#2B91AF'>AnchorStyles</span>.Left + <span style='color:#2B91AF'>AnchorStyles</span>.Right
+    + _<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:#2B91AF'>AnchorStyles</span>.Top
+    + <span style='color:#2B91AF'>AnchorStyles</span>.Bottom<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; textBox.Multiline = <span
+style='color:blue'>True</span><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; textBox.Size = <span style='color:
+blue'>New</span> <span style='color:#2B91AF'>Size</span>(10, 20)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; textBox.Location = <span
+style='color:blue'>New</span> <span style='color:#2B91AF'>Point</span>(1, 1)<br />
+<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; button.Text = <span style='color:#A31515'>&quot;Button&quot;</span><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; button.Anchor = <span
+style='color:#2B91AF'>AnchorStyles</span>.Right + <span style='color:#2B91AF'>AnchorStyles</span>.Top<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>AddHandler</span>
+    button.Click, <span style='color:blue'>AddressOf</span> OnClick<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; button.Size = <span style='color:blue'>New</span>
+<span style='color:#2B91AF'>Size</span>(46, 20)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; button.Location = <span
+style='color:blue'>New</span> <span style='color:#2B91AF'>Point</span>(11, 1)<br />
+<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>Me</span>.Controls.Add(textBox)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>Me</span>.Controls.Add(button)<br />
+    <br />
+    &nbsp; &nbsp; <span style='color:blue'>End Sub</span><br />
+<br />
+    &nbsp; &nbsp; <span style='color:blue'>Private</span> <span
+style='color:blue'>Overloads</span> <span
+style='color:blue'>Sub</span> OnClick(sender <span style='color:blue'>As</span> <span style="color:#2b91af">
+            Object</span>, e <span
+style='color:blue'>As</span> <span style='color:#2B91AF'>EventArgs</span>)<br />
+    <br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:#2B91AF'>MessageBox</span>.Show(textBox.Text)<br />
+    <br />
+    &nbsp; &nbsp; <span
+style='color:blue'>End Sub</span><br />
+<br />
+    &nbsp; &nbsp; <span style='color:blue'>Private</span> textBox <span
+style='color:blue'>
+        As</span> <span
+style='color:#2B91AF'>TextBox</span><br />
+    &nbsp; &nbsp; <span style='color:blue'>Private</span> button <span
+style='color:blue'>
+        As</span>
+<span style='color:#2B91AF'>Button</span><br />
+    <br />
+    <span
+style='color:blue'>End Class</span><br />
+<br />
+<span style='color:green'>' ...<br />
+<br />
+    ' Create a new diagram node and host an<br />
+    ' instance of the custom control in it</span><br /><span
+style='color:blue'>Dim</span> host <span
+style='color:blue'>As</span> <span
+style='color:blue'>
+    New</span> <span style='color:#2B91AF'>ControlNode</span>()<br />
+host.Bounds = <span style='color:blue'>New</span> <span style='color:#2B91AF'>RectangleF</span>(10,
+10, 40, 15)<br />
+host.Control = <span style='color:blue'>New</span> <span style='color:#2B91AF'>MyControl</span>()<br />
+    diagram.Nodes.Add(host)<br />
+<br />
+diagramView.Behavior = <span style='color:#2B91AF'>Behavior</span>.LinkControls<br />
+diagramView.DefaultControlType = <span style="color: blue">GetType</span>(<span style='color:#2B91AF'>MyControl</span>)</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="ControlHostingControlDiagram.cs" style="display: none;">
+<p><span style='color:green'>// This
+sample demonstrates how to link<br />
+// control nodes programmatically<br />
+<br />
+// Create two control nodes</span><br />
+<span style='color:#2B91AF'>ControlNode</span> host1 = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>ControlNode</span>();<br />
+<span style='color:#2B91AF'>ControlNode</span> host2 = <span style='color:blue'>new</span>
+<span style='color:#2B91AF'>ControlNode</span>();<br />
+host1.Bounds = <span style='color:blue'>new</span> <span style='color:#2B91AF'>RectangleF</span>(10,
+10, 15, 10);<br />
+host2.Bounds = <span style='color:blue'>new</span> <span style='color:#2B91AF'>RectangleF</span>(45,
+15, 15, 10);<br />
+diagram.Nodes.Add(host1);<br />
+diagram.Nodes.Add(host2);<br />
+<br />
+<span style='color:green'>// Linking of control nodes is<br />
+// identical to that of ShapeNodes</span><br />
+diagram.Factory.CreateDiagramLink(host1, host2);</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="ControlHostingControlDiagram.vb" style="display: none;">
+<p><span style='color:green'>' This
+sample demonstrates how to link<br />
+    ' control nodes programmatically<br />
+<br />
+    ' Create two control nodes</span><br /><span
+style='color:blue'>Dim</span> host1 <span
+style='color:blue'>As</span> <span
+style='color:blue'>
+    New</span> <span style='color:#2B91AF'>ControlNode</span>()<br /><span
+style='color:blue'>Dim</span> host2 <span
+style='color:blue'>As</span> <span style='color:blue'>
+    New</span>
+<span style='color:#2B91AF'>ControlNode</span>()<br />
+host1.Bounds = <span style='color:blue'>New</span> <span style='color:#2B91AF'>RectangleF</span>(10,
+10, 15, 10)<br />
+host2.Bounds = <span style='color:blue'>New</span> <span style='color:#2B91AF'>RectangleF</span>(45,
+15, 15, 10)<br />
+    diagram.Nodes.Add(host1)<br />
+    diagram.Nodes.Add(host2)<br />
+<br />
+<span style='color:green'>' Linking of control nodes is<br />
+    ' identical to that of ShapeNodes</span><br />
+diagram.Factory.CreateDiagramLink(host1, host2)</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.Heads.cs" style="display: none;">
+<p><span style='color:green'>//
+This sample demonstrates the use of link heads<br />
+<br />
+// Create the two ShapeNode objects to be connected with a link</span><br />
+<span style='color:#2B91AF'>ShapeNode</span> startNode, endNode;<br />
+    startNode = diagram.Factory.CreateShapeNode(10, 10, 8, 8);<br />
+    endNode = diagram.Factory.CreateShapeNode(40, 10, 8, 8);<br />
+<br />
+<span style='color:green'>// Create the link</span><br />
+<span style='color:#2B91AF'>DiagramLink</span> link = diagram.Factory.CreateDiagramLink(startNode,
+    endNode);<br />
+<br />
+<span style='color:green'>// Modify the link's head</span><br />
+link.HeadShape = <span style='color:#2B91AF'>ArrowHead</span>.BowArrow;<br />
+link.HeadShapeSize = 6;<br />
+<br />
+<span style='color:green'>// Modify the link's base</span><br />
+link.BaseShape = <span style='color:#2B91AF'>ArrowHead</span>.Circle;<br />
+link.BaseShapeSize = 4;<br />
+<br />
+<span style='color:green'>// Modify the intermediate heads</span><br />
+link.IntermediateShape = <span style='color:#2B91AF'>ArrowHead</span>.PointerArrow;<br />
+link.IntermediateShapeSize = 3;<br />
+<br />
+<span style='color:green'>// Create cool pen for all heads</span><br />
+link.HeadPen.CompoundArray = <span style='color:blue'>new</span> <span
+style='color:blue'>float</span>[] { 0, 0.5f, 0.8f, 1 };<br />
+link.HeadPen.Width = 0.8f;</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.Heads.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates the use of link heads<br />
+<br />
+    ' Create the two ShapeNode objects to be connected with a link</span><br /><span style='color:blue'>Dim</span> startNode, endNode <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>ShapeNode</span><br />
+    startNode = diagram.Factory.CreateShapeNode(10, 10, 8, 8)<br />
+    endNode = diagram.Factory.CreateShapeNode(40, 10, 8, 8)<br />
+<br />
+<span style='color:green'>' Create the link</span><br /><span style='color:blue'>Dim</span> link <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>DiagramLink</span> = diagram.Factory.CreateDiagramLink(startNode, endNode)<br />
+<br />
+<span style='color:green'>' Modify the link's head</span><br />
+link.HeadShape = <span style='color:#2B91AF'>ArrowHead</span>.BowArrow<br />
+link.HeadShapeSize = 6<br />
+<br />
+<span style='color:green'>' Modify the link's base</span><br />
+link.BaseShape = <span style='color:#2B91AF'>ArrowHead</span>.Circle<br />
+link.BaseShapeSize = 4<br />
+<br />
+<span style='color:green'>' Modify the intermediate heads</span><br />
+link.IntermediateShape = <span style='color:#2B91AF'>ArrowHead</span>.PointerArrow<br />
+link.IntermediateShapeSize = 3<br />
+<br />
+<span style='color:green'>' Create cool pen for all heads</span><br />
+link.HeadPen.CompoundArray = <span style='color:blue'>New</span> <span
+style='color:blue'>Single</span>() { 0, 0.5f, 0.8f, 1 }<br />
+link.HeadPen.Width = 0.8f</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.Routing.cs" style="display: none;">
+<p><span style='color:green'>//
+This sample demonstrates how to route all<br />
+// links on a diagram with a single call</span><br />
+<br />
+diagram.RouteAllLinks();</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.Routing.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to route all<br />
+    ' links on a diagram with a single call</span><br />
+<br />
+    diagram.RouteAllLinks()</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.TextOrientation.cs" style="display: none;">
+<p><span style='color:green'>//
+This sample demonstrates how to modify<br />
+// the orientation of a link's text<br />
+<br />
+// Create two nodes and a link which connects them</span><br />
+<span style='color:#2B91AF'>ShapeNode</span> startNode =
+diagram.Factory.CreateShapeNode(10, 10, 8, 8);<br />
+<span style='color:#2B91AF'>ShapeNode</span> endNode = diagram.Factory.CreateShapeNode(60,
+25, 8, 8);<br />
+<span style='color:#2B91AF'>DiagramLink</span> link = diagram.Factory.CreateDiagramLink(startNode,
+    endNode);<br />
+<br />
+<span style='color:green'>// Set the text and font of the link</span><br />
+link.Text = <span style='color:#A31515'>&quot;some slanted text&quot;</span>;<br />
+link.Font = <span style='color:blue'>new</span> <span style='color:#2B91AF'>Font</span>(<span
+style='color:#A31515'>&quot;Arial&quot;</span>, 3, <span style='color:#2B91AF'>FontStyle</span>.Bold,&nbsp;
+<span style='color:#2B91AF'>GraphicsUnit</span>.World);<br />
+<br />
+<span style='color:green'>// Finally set the text orientation of the link</span><br />
+link.TextStyle = <span style='color:#2B91AF'>LinkTextStyle</span>.Rotate;</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.TextOrientation.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to modify<br />
+    ' the orientation of a link's text<br />
+<br />
+    ' Create two nodes and a link which connects them</span><br /><span style='color:blue'>Dim</span> startNode <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>ShapeNode</span> = diagram.Factory.CreateShapeNode(10,
+    10, 8, 8)<br /><span style='color:blue'>Dim</span> endNode <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>ShapeNode</span> = diagram.Factory.CreateShapeNode(60,
+    25, 8, 8)<br /><span style='color:blue'>Dim</span> link <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>DiagramLink</span> = diagram.Factory.CreateDiagramLink(startNode, endNode)<br />
+<br />
+<span style='color:green'>' Set the text and font of the link</span><br />
+link.Text = <span style='color:#A31515'>&quot;some slanted text&quot;</span><br />
+link.Font = <span style='color:blue'>New</span> <span style='color:#2B91AF'>Font</span>(<span
+style='color:#A31515'>&quot;Arial&quot;</span>, 3, <span style='color:#2B91AF'>FontStyle</span>.Bold,&nbsp;
+<span style='color:#2B91AF'>GraphicsUnit</span>.World)<br />
+<br />
+<span style='color:green'>' Finally set the text orientation of the link</span><br />
+link.TextStyle = <span style='color:#2B91AF'>LinkTextStyle</span>.Rotate</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.FormPreservation.cs" style="display: none;">
+<p><span style='color:green'>// This sample demonstrates how to create<br />
+// unconnected links programmatically,<br />
+// how to manipulate individual link points<br />
+// and how to 'tell' a link to preserve its contour<br />
+<br />
+// Create an unconnected link</span><br />
+<span style='color:#2B91AF'>DiagramLink</span> link =
+diagram.Factory.CreateDiagramLink(<br />
+    &nbsp; &nbsp; <span style='color:blue'>new</span> <span
+style='color:#2B91AF'>PointF</span>(10, 20), <span style='color:blue'>new</span>
+<span style='color:#2B91AF'>PointF</span>(50, 20));<br />
+link.Style = <span style='color:#2B91AF'>LinkStyle</span>.Polyline;<br />
+    link.SegmentCount = 4;<br />
+<br />
+<span style='color:green'>// Modify the control points</span><br />
+<span style='color:#2B91AF'>Random</span> g = <span style='color:blue'>new</span>
+<span style='color:#2B91AF'>Random</span>();<br />
+<span style='color:blue'>for</span> (<span style='color:blue'>int</span> i = 1;
+i &lt; link.ControlPoints.Count - 1; i++)<br />
+{<br />
+    &nbsp; &nbsp; <span style='color:#2B91AF'>PointF</span>
+point = link.ControlPoints[i];<br />
+    &nbsp; &nbsp; point.X += g.Next(-4, 4);<br />
+    &nbsp; &nbsp; point.Y += g.Next(-10, 10);<br />
+    &nbsp; &nbsp; link.ControlPoints[i] = point;<br />
+}<br />
+<br />
+<span style='color:green'>// After modifying the control points of a link<br />
+// it is necessary to invoke DiagramLink.UpdateFromPoints<br />
+// method to update the link's heads and various<br />
+// internal variables</span><br />
+link.UpdateFromPoints();<br />
+<br />
+<span style='color:green'>// Finally make the link persist its contour</span><br />
+link.RetainForm = <span style='color:blue'>true</span>;</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.FormPreservation.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to create<br />
+    ' unconnected links programmatically,<br />
+    ' how to manipulate individual link points<br />
+    ' and how to 'tell' a link to preserve its contour<br />
+<br />
+    ' Create an unconnected link</span><br /><span style='color:blue'>Dim</span> link <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>DiagramLink</span> = diagram.Factory.CreateDiagramLink( _<br />
+    &nbsp; &nbsp; <span style='color:blue'>New</span> <span
+style='color:#2B91AF'>PointF</span>(10, 20), <span style='color:blue'>New</span>
+<span style='color:#2B91AF'>PointF</span>(50, 20))<br />
+link.Style = <span style='color:#2B91AF'>LinkStyle</span>.Polyline<br />
+    link.SegmentCount = 4<br />
+<br />
+<span style='color:green'>' Modify the control points</span><br /><span style='color:blue'>Dim</span> g <span style='color:blue'>As</span> <span style='color:blue'>
+        New</span> <span style='color:#2B91AF'>Random</span>()<br />
+    <span style='color:blue'>Dim</span> i <span style='color:blue'>As</span> <span style='color:#2B91AF'>Integer</span><br />
+<span style='color:blue'>For</span> i = 1 <span style='color:blue'>To</span> link.ControlPoints.Count
+    - 2<br />
+<br />
+    &nbsp; &nbsp; <span style='color:blue'>Dim</span> point <span style='color:blue'>
+        As</span> <span style='color:#2B91AF'>PointF</span> = link.ControlPoints(i)<br />
+    &nbsp; &nbsp; point.X = point.X + g.Next(-4, 4)<br />
+    &nbsp; &nbsp; point.Y = point.Y + g.Next(-10, 10)<br />
+    &nbsp; &nbsp; link.ControlPoints(i) = point<br />
+    <br />
+    <span style='color:blue'>Next</span><br />
+<br />
+<span style='color:green'>' After modifying the control points of a link<br />
+    ' it is necessary to invoke DiagramLink.UpdateFromPoints<br />
+    ' method to update the link's heads and various<br />
+    ' internal variables</span><br />
+    link.UpdateFromPoints()<br />
+<br />
+<span style='color:green'>' Finally make the link persist its contour</span><br />
+link.RetainForm = <span style='color:blue'>True</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.CustomDrawLinks.cs" style="display: none;">
+<p><span style='color:green'>//
+This sample demonstrates how to perform<br />
+// custom drawing on a link<br />
+<br />
+// Create two nodes</span><br />
+<span style='color:#2B91AF'>ShapeNode</span> n1 =
+diagram.Factory.CreateShapeNode(10, 10, 10, 10);<br />
+<span style='color:#2B91AF'>ShapeNode</span> n2 =
+diagram.Factory.CreateShapeNode(30, 50, 10, 10);<br />
+<br />
+<span style='color:green'>// Link the nodes with a link</span><br />
+<span style='color:#2B91AF'>DiagramLink</span> link =
+diagram.Factory.CreateDiagramLink(n1, n2);<br />
+<br />
+link.Selected = <span style='color:blue'>false</span>;<br />
+<br />
+<span style='color:green'>// Mark the link as custom-drawn</span><br />
+link.CustomDraw = <span style='color:#2B91AF'>CustomDraw</span>.Additional;<br />
+<br />
+<span style='color:green'>// Handle the DrawLink event, which gets fired<br />
+// whenever the link is being drawn</span><br />
+diagram.DrawLink += <span style='color:blue'>new</span> <span
+style='color:#2B91AF'>DrawLinkEventHandler</span>(OnDrawLink);<br />
+<br />
+<span style='color:green'>// ...</span><br />
+<br />
+<span style='color:blue'>private</span> <span style='color:blue'>void</span>
+OnDrawLink(<span style='color:blue'>object</span> sender, <span
+style='color:#2B91AF'>DrawLinkEventArgs</span> e)<br />
+{<br />
+    &nbsp; &nbsp; <span style='color:green'>// Draw a small rectangle at the base of the link</span><br />
+    &nbsp; &nbsp; <span style='color:#2B91AF'>PointF</span> a =
+e.Link.ControlPoints[0];<br />
+    &nbsp; &nbsp; System.Drawing.<span style='color:#2B91AF'>Pen</span>
+pen = <span style='color:blue'>new</span> System.Drawing.<span
+style='color:#2B91AF'>Pen</span>(<span style='color:#2B91AF'>Color</span>.Black,
+0);<br />
+    &nbsp; &nbsp; e.Graphics.FillRectangle(<span
+style='color:#2B91AF'>Brushes</span>.Red, a.X - 1, a.Y - 1, 2, 2);<br />
+    &nbsp; &nbsp; e.Graphics.DrawRectangle(pen, a.X - 1, a.Y - 1, 2, 2);<br />
+<br />
+    &nbsp; &nbsp; pen.Dispose();<br />
+}</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.CustomDrawLinks.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to perform<br />
+    ' custom drawing on a link<br />
+<br />
+    ' Create two nodes</span><br /><span style='color:blue'>Dim</span> n1 <span style='color:blue'>As</span> <span style='color:#2B91AF'>ShapeNode</span> = diagram.Factory.CreateShapeNode(10, 10, 10, 10)<br /><span style='color:blue'>Dim</span> n2 <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>ShapeNode</span> = diagram.Factory.CreateShapeNode(30, 50, 10, 10)<br />
+<br />
+<span style='color:green'>' Link the nodes with a link</span><br /><span style='color:blue'>Dim</span> link <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>DiagramLink</span> =
+diagram.Factory.CreateDiagramLink(n1, n2)<br />
+<br />
+link.Selected = <span style='color:blue'>False</span><br />
+<br />
+<span style='color:green'>' Mark the link as custom-drawn</span><br />
+link.CustomDraw = <span style='color:#2B91AF'>CustomDraw</span>.Additional<br />
+<br />
+<span style='color:green'>' Handle the DrawLink event, which gets fired<br />
+    ' whenever the link is being drawn</span><br /><span style='color:blue'>AddHandler</span> diagram.DrawLink, <span style='color:blue'>
+        AddressOf</span> OnDrawLink<br />
+<br />
+<span style='color:green'>' ...</span><br />
+<br />
+<span style='color:blue'>Private</span> <span style='color:blue'>Sub</span> OnDrawLink(sender
+    <span style='color:blue'>As</span> <span
+style='color:#2B91AF'>Object</span>,
+    e <span style='color:blue'>As</span> <span
+style='color:#2B91AF'>DrawLinkEventArgs</span>)<br />
+<br />
+    &nbsp; &nbsp; <span style='color:green'>' Draw a small rectangle at the base of the link</span><br />
+    &nbsp; &nbsp; <span style='color:blue'>Dim</span> a <span style='color:blue'>
+        As</span> <span style='color:#2B91AF'>PointF</span> = e.Link.ControlPoints(0)<br />
+    &nbsp; &nbsp; <span style='color:blue'>Dim</span> pen <span style='color:blue'>
+        As</span> <span style='color:blue'>New</span> System.Drawing.<span
+style='color:#2B91AF'>Pen</span>(<span style='color:#2B91AF'>Color</span>.Black, 0)<br />
+    &nbsp; &nbsp; e.Graphics.FillRectangle(<span
+style='color:#2B91AF'>Brushes</span>.Red, a.X - 1, a.Y - 1, 2, 2)<br />
+    &nbsp; &nbsp; e.Graphics.DrawRectangle(pen, a.X - 1, a.Y - 1, 2, 2)<br />
+<br />
+    &nbsp; &nbsp; pen.Dispose()<br />
+    <br />
+    <span style='color:blue'>End Sub</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.TreeLayoutPage.cs" style="display: none;">
+<p><span style='color:green'>//
+This sample demonstrates how to<br />
+// apply tree layout to a diagram<br />
+<br />
+// Create the layouter object</span><br />
+<span style='color:#2B91AF'>TreeLayout</span> layout = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>TreeLayout</span>();<br />
+<br />
+<span style='color:green'>// Adjust the attributes of the layouter</span><br />
+layout.LinkStyle = <span style='color:#2B91AF'>TreeLayoutLinkType</span>.Rounded;<br />
+layout.Type = <span style='color:#2B91AF'>TreeLayoutType</span>.Centered;<br />
+layout.KeepRootPosition = <span style='color:blue'>true</span>;<br />
+<br />
+<span style='color:green'>// Load a sample diagram</span><br />
+diagram.LoadFromFile(<span
+style='color:#A31515'>&quot;14.fns&quot;</span>);<br /><br />
+<span style='color:green'>// Perform the actual arrangement</span><br />
+layout.Arrange(diagram);<br /><br />
+<span style='color:green'>// Fit contents within the document</span><br />
+diagram.ResizeToFitItems(5);</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.TreeLayoutPage.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to<br />
+    ' apply tree layout to a diagram<br />
+<br />
+    ' Create the layouter object</span><br /><span
+style='color:blue'>Dim</span> layout <span
+style='color:blue'>As</span> <span
+style='color:blue'>
+    New</span> <span style='color:#2B91AF'>TreeLayout</span>()<br />
+<br />
+<span style='color:green'>' Adjust the attributes of the layouter</span><br />
+layout.LinkStyle = <span style='color:#2B91AF'>TreeLayoutLinkType</span>.Rounded<br />
+layout.Type = <span style='color:#2B91AF'>TreeLayoutType</span>.Centered<br />
+layout.KeepRootPosition = <span style='color:blue'>True</span><br />
+<br />
+<span style='color:green'>' Load a sample diagram</span><br />
+diagram.LoadFromFile(<span
+style='color:#A31515'>&quot;14.fns&quot;</span>)<br /><br />
+<span style='color:green'>' Perform the actual arrangement</span><br />
+    layout.Arrange(diagram)<br /><br />
+<span style='color:green'>' Fit contents within the document</span><br />
+    diagram.ResizeToFitItems(5)</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.BigRadialLayoutPage.cs" style="display: none;">
+<p><span style='color:green'>// This sample demonstrates how to apply<br />
+// radial tree layout to hierarchical<br />
+// data structures (that is, trees)<br />
+<br />
+// Create the layouter object</span><br />
+<span style='color:#2B91AF'>TreeLayout</span> layout = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>TreeLayout</span>();<br />
+<br />
+<span style='color:green'>// Specify the type of tree layout to apply</span><br />
+layout.Type = <span style='color:#2B91AF'>TreeLayoutType</span>.Radial;<br />
+layout.LevelDistance = 15;<br />
+<br />
+<span style='color:green'>// Build a random tree diagram</span><br />
+<span style='color:#2B91AF'>ShapeNode</span> root =
+diagram.Factory.CreateShapeNode(0, 0, 7.5f, 7.5f);<br />
+BuildBranch(root, <span style='color:blue'>new</span> <span style='color:#2B91AF'>Random</span>(),
+10);<br />
+<br />
+<span style='color:green'>// Perform the actual arrangement</span><br />
+layout.Arrange(diagram);<br />
+<br />
+<span style='color:green'>// ...</span><br />
+<br />
+<span style='color:blue'>private</span> <span style='color:blue'>void</span>
+BuildBranch(<span style='color:#2B91AF'>ShapeNode</span> parent, <span
+style='color:#2B91AF'>Random</span> g, <span style='color:blue'>int</span>
+maxSteps)<br />
+{<br />
+    &nbsp; &nbsp; <span style='color:blue'>if</span>
+(maxSteps &lt; 2)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>return</span>;<br />
+<br />
+    &nbsp; &nbsp; <span style='color:blue'>int</span> steps
+= g.Next(2, maxSteps);<br />
+    &nbsp; &nbsp; <span style='color:blue'>for</span>
+(<span style='color:blue'>int</span> i = 0; i &lt; steps; i++)<br />
+    &nbsp; &nbsp; {<br />
+    &nbsp; &nbsp; &nbsp; &nbsp;
+<span style='color:green'>// Create new node and link
+    it to its parent</span><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:#2B91AF'>ShapeNode</span> child =
+diagram.Factory.CreateShapeNode(0, 0, 7.5f, 7.5f);<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; diagram.Factory.CreateDiagramLink(parent, child);<br />
+<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:green'>// Continue building recursively</span><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; BuildBranch(child, g, steps - g.Next(1, 2));<br />
+    &nbsp; &nbsp; }<br />
+}</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.BigRadialLayoutPage.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to apply<br />
+    ' radial tree layout to hierarchical<br />
+    ' data structures (that is, trees)<br />
+<br />
+    ' Create the layouter object</span><br /><span
+style='color:blue'>Dim</span> layout <span
+style='color:blue'>As</span> <span
+style='color:blue'>
+    New</span> <span style='color:#2B91AF'>TreeLayout</span>()<br />
+<br />
+<span style='color:green'>' Specify the type of tree layout to apply</span><br />
+layout.Type = <span style='color:#2B91AF'>TreeLayoutType</span>.Radial<br />
+layout.LevelDistance = 15<br />
+<br />
+<span style='color:green'>' Build a random tree diagram</span><br /><span
+style='color:blue'>Dim</span> root <span
+style='color:blue'>As</span>
+<span style='color:#2B91AF'>ShapeNode</span> = diagram.Factory.CreateShapeNode(0, 0, 7.5f, 7.5f)<br />
+BuildBranch(root, <span style='color:blue'>new</span> <span style='color:#2B91AF'>Random</span>(),
+    10)<br />
+<br />
+<span style='color:green'>' Perform the actual arrangement</span><br />
+    layout.Arrange(diagram)<br />
+<br />
+<span style='color:green'>' ...</span><br />
+<br />
+<span style='color:blue'>Private</span> <span style='color:blue'>Sub</span> BuildBranch(parent
+    <span
+style='color:blue'>As</span> <span style='color:#2B91AF'>ShapeNode</span>,
+    g <span
+style='color:blue'>As</span> <span
+style='color:#2B91AF'>Random</span>,
+    maxSteps <span
+style='color:blue'>As</span> <span
+style='color:#2B91AF'>Integer</span>)<br />
+<br />
+    &nbsp; &nbsp; <span style='color:blue'>If</span> maxSteps &lt; 2 <span
+style='color:blue'>
+        Then</span><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>Return</span><br />
+    &nbsp; &nbsp; <span
+style='color:blue'>End If</span><br />
+<br />
+    &nbsp; &nbsp; <span
+style='color:blue'>Dim</span> steps <span
+style='color:blue'>
+        As</span> <span style='color:#2B91AF'>Integer</span> = g.Next(2, maxSteps)<br />
+    &nbsp; &nbsp; <span
+style='color:blue'>Dim</span> i <span
+style='color:blue'>As</span>
+    <span style='color:#2B91AF'>Integer</span><br />
+    &nbsp; &nbsp; <span style='color:blue'>For</span> i = 0 <span style='color:blue'>
+        To</span> steps - 1<br />
+    <br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:green'>' Create new node and link
+    it to its parent</span><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>Dim</span> child
+    <span style='color:blue'>As</span> <span style='color:#2B91AF'>ShapeNode</span> = diagram.Factory.CreateShapeNode(0, 0, 7.5f, 7.5f)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; diagram.Factory.CreateDiagramLink(parent, child)<br />
+<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:green'>' Continue building recursively</span><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; BuildBranch(child, g, steps - g.Next(1, 2))<br />
+    <br />
+    &nbsp; &nbsp; <span style='color:blue'>Next</span><br />
+    <br /><span style='color:blue'>End Sub</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.SpringLayoutPage.cs" style="display: none;">
+<p><span style='color:green'>//
+This sample demonstrates how to<br />
+// apply spring layout to a graph<br />
+<br />
+// Create the layouter object</span><br />
+<span style='color:#2B91AF'>SpringLayout</span> layout = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>SpringLayout</span>();<br />
+<br />
+<span style='color:green'>// Adjust the attributes of the layouter</span><br />
+layout.IterationCount = 500;<br />
+layout.MinimizeCrossings = <span style='color:blue'>true</span>;<br />
+<br />
+<span style='color:green'>// Load a sample diagram</span><br />
+diagram.LoadFromFile(<span
+style='color:#A31515'>&quot;15.fns&quot;</span>);<br /><br />
+<span style='color:green'>// Perform the actual arrangement</span><br />
+layout.Arrange(diagram);<br /><br />
+<span style='color:green'>// Fit contents within the document</span><br />
+diagram.ResizeToFitItems(5);</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.SpringLayoutPage.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to<br />
+    ' apply spring layout to a graph<br />
+<br />
+    ' Create the layouter object</span><br /><span style='color:blue'>Dim</span> layout <span style='color:blue'>As</span> <span
+style='color:blue'>New</span> <span style='color:#2B91AF'>SpringLayout</span>()<br />
+<br />
+<span style='color:green'>' Adjust the attributes of the layouter</span><br />
+layout.IterationCount = 500<br />
+layout.MinimizeCrossings = <span style='color:blue'>True</span><br />
+<br />
+<span style='color:green'>' Load a sample diagram</span><br />
+diagram.LoadFromFile(<span
+style='color:#A31515'>&quot;15.fns&quot;</span>)<br /><br />
+<span style='color:green'>' Perform the actual arrangement</span><br />
+    layout.Arrange(diagram)<br /><br />
+<span style='color:green'>' Fit contents within the document</span><br />
+    diagram.ResizeToFitItems(5)</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.LayeredLayoutPage.cs" style="display: none;">
+<p><span style='color:green'>// This sample demonstrates the simplest way<br />
+// to apply layered layout to a graph<br />
+<br />
+// Create the layouter object</span><br />
+<span style='color:#2B91AF'>LayeredLayout</span> layout = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>LayeredLayout</span>();<br /><br />
+<span style='color:green'>// Load a sample diagram</span><br />
+diagram.LoadFromFile(<span
+style='color:#A31515'>&quot;25.fns&quot;</span>);<br /><br />
+<span style='color:green'>// Perform the actual arrangement</span><br />
+layout.Arrange(diagram);<br /><br />
+<span style='color:green'>// Fit contents within the document</span><br />
+diagram.ResizeToFitItems(5);</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.LayeredLayoutPage.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates the simplest way<br />
+    ' to apply layered layout to a graph<br />
+<br />
+    ' Create the layouter object</span><br /><span
+style='color:blue'>Dim</span> layout <span
+style='color:blue'>As</span> <span
+style='color:blue'>
+    New</span> <span style='color:#2B91AF'>LayeredLayout</span>()<br /><br />
+<span style='color:green'>' Load a sample diagram</span><br />
+diagram.LoadFromFile(<span
+style='color:#A31515'>&quot;25.fns&quot;</span>)<br /><br />
+<span style='color:green'>' Perform the actual arrangement</span><br />
+    layout.Arrange(diagram)<br /><br />
+<span style='color:green'>' Fit contents within the document</span><br />
+    diagram.ResizeToFitItems(5)</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.GridLayoutPage.cs" style="display: none;">
+<p><span style='color:green'>//
+This sample demonstrates how to<br />
+// apply grid layout to a graph<br />
+<br />
+// Create the layouter object</span><br />
+<span style='color:#2B91AF'>GridLayout</span> layout = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>GridLayout</span>();<br />
+<br />
+<span style='color:green'>// Adjust the attributes of the layouter</span><br />
+layout.Iterations = 1000;<br />
+layout.GridSize = 20;<br />
+<br />
+<span style='color:green'>// Load a sample diagram</span><br />
+diagram.LoadFromFile(<span
+style='color:#A31515'>&quot;27.fns&quot;</span>);<br /><br />
+<span style='color:green'>// Perform the actual arrangement</span><br />
+layout.Arrange(diagram);<br /><br />
+<span style='color:green'>// Fit contents within the document</span><br />
+diagram.ResizeToFitItems(5);</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.GridLayoutPage.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to<br />
+    ' apply grid layout to a graph<br />
+<br />
+    ' Create the layouter object</span><br /><span
+style='color:blue'>Dim</span> layout <span
+style='color:blue'>As</span> <span
+style='color:blue'>
+    New</span> <span style='color:#2B91AF'>GridLayout</span>()<br />
+<br />
+<span style='color:green'>' Adjust the attributes of the layouter</span><br />
+layout.Iterations = 1000<br />
+layout.GridSize = 20<br />
+<br />
+<span style='color:green'>' Load a sample diagram</span><br />
+diagram.LoadFromFile(<span
+style='color:#A31515'>&quot;27.fns&quot;</span>)<br /><br />
+<span style='color:green'>' Perform the actual arrangement</span><br />
+    layout.Arrange(diagram)<br /><br />
+<span style='color:green'>' Fit contents within the document</span><br />
+    diagram.ResizeToFitItems(5)</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.ClusteredLayoutPage.cs" style="display: none;">
+<p><span style='color:green'>//
+This sample demonstrates how to<br />
+// apply clustered spring layout to a graph<br />
+<br />
+// Create the layouter object</span><br />
+<span style='color:#2B91AF'>SpringLayout</span> layout = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>SpringLayout</span>();<br />
+<br />
+<span style='color:green'>// Adjust the attributes of the layouter</span><br />
+layout.IterationCount = 200;<br />
+layout.EnableClusters = <span style='color:blue'>true</span>;<br />
+layout.NodeDistance = 8;<br />
+layout.RepulsionFactor = 1;<br />
+layout.MinimizeCrossings = <span style='color:blue'>false</span>;<br />
+<br />
+<span style='color:green'>// Load a sample diagram</span><br />
+diagram.LoadFromFile(<span
+style='color:#A31515'>&quot;28.fns&quot;</span>);<br /><br />
+<span style='color:green'>// Perform the actual arrangement</span><br />
+layout.Arrange(diagram);<br /><br />
+<span style='color:green'>// Fit contents within the document</span><br />
+diagram.ResizeToFitItems(5);</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.ClusteredLayoutPage.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to<br />
+    ' apply clustered spring layout to a graph<br />
+<br />
+    ' Create the layouter object</span><br /><span
+style='color:blue'>Dim</span> layout <span
+style='color:blue'>As</span> <span
+style='color:blue'>
+    New</span> <span style='color:#2B91AF'>SpringLayout</span>()<br />
+<br />
+<span style='color:green'>' Adjust the attributes of the layouter</span><br />
+layout.IterationCount = 200<br />
+layout.EnableClusters = <span style='color:blue'>True</span><br />
+layout.NodeDistance = 8<br />
+layout.RepulsionFactor = 1<br />
+layout.MinimizeCrossings = <span style='color:blue'>False</span><br />
+<br />
+<span style='color:green'>' Load a sample diagram</span><br />
+diagram.LoadFromFile(<span
+style='color:#A31515'>&quot;28.fns&quot;</span>)<br /><br />
+<span style='color:green'>' Perform the actual arrangement</span><br />
+    layout.Arrange(diagram)<br /><br />
+<span style='color:green'>' Fit contents within the document</span><br />
+    diagram.ResizeToFitItems(5)</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.BasicOperations.cs" style="display: none;">
+<p><span style='color:green'>//
+This sample demonstrates how to access<br />
+// all successors (either direct or indirect) of a node</span><br />
+<br />
+<span style='color:green'>// Load a sample diagram</span><br />
+diagram.LoadFromFile(<span
+style='color:#A31515'>&quot;10.fns&quot;</span>);<br /><br />
+<span style='color:green'>// Check if there is an active node in the diagram</span><br />
+<span style='color:blue'>if</span> (!(diagram.ActiveItem <span
+style='color:blue'>is</span> <span style='color:#2B91AF'>ShapeNode</span>))<br />
+    &nbsp; &nbsp; <span style='color:blue'>return</span>;<br />
+<br />
+<span style='color:green'>// A list where the successor nodes will be stored</span><br />
+<span style='color:#2B91AF'>ArrayList</span> successors = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>ArrayList</span>();<br />
+    <br />
+<span style='color:green'>// A temporary queue containing nodes which are yet
+to be visited</span><br />
+<span style='color:#2B91AF'>Queue</span> remaining = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>Queue</span>();<br />
+<br />
+remaining.Enqueue(diagram.ActiveItem <span style='color:blue'>as</span> <span
+style='color:#2B91AF'>ShapeNode</span>);<br />
+<br />
+<span style='color:blue'>while</span> (remaining.Count &gt; 0)<br />
+{<br />
+    &nbsp; &nbsp; <span style='color:#2B91AF'>ShapeNode</span>
+node = remaining.Dequeue() <span style='color:blue'>as</span> <span
+style='color:#2B91AF'>ShapeNode</span>;<br />
+<br />
+    &nbsp; &nbsp; <span style='color:green'>// Traverse all outgoing links and add their<br />
+    &nbsp; &nbsp; // destination nodes to the successor list</span><br />
+    &nbsp; &nbsp; <span style='color:blue'>foreach</span> (<span style='color:#2B91AF'>DiagramLink</span>
+link <span style='color:blue'>in</span> node.OutgoingLinks)<br />
+    &nbsp; &nbsp; {<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>if</span>
+(!successors.Contains(link.Destination))<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    successors.Add(link.Destination);<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    remaining.Enqueue(link.Destination);<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+    &nbsp; &nbsp; }<br />
+}<br />
+<br />
+<span style='color:green'>// Color the successor nodes</span><br />
+<span style='color:blue'>foreach</span> (<span style='color:#2B91AF'>ShapeNode</span>
+node <span style='color:blue'>in</span> successors)<br />
+    &nbsp; &nbsp; node.Brush = <span style='color:blue'>new</span>
+MindFusion.Drawing.<span style='color:#2B91AF'>SolidBrush</span>(<span style='color:#2B91AF'>Color</span>.LightGreen);</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.BasicOperations.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to access<br />
+    ' all successors (either direct or indirect) of a node</span><br />
+<br />
+<span style='color:green'>' Load a sample diagram</span><br />
+diagram.LoadFromFile(<span
+style='color:#A31515'>&quot;10.fns&quot;</span>)<br /><br />
+<span style='color:green'>' Check if there is an active node in the diagram</span><br />
+<span style='color:blue'>If</span> <span style='color:blue'>Not</span> <span style='color:blue'>
+    TypeOf</span> diagram.ActiveItem <span
+style='color:blue'>Is</span> <span style='color:#2B91AF'>ShapeNode</span>
+    <span style='color:blue'>Then</span><br />
+    &nbsp; &nbsp; <span style='color:blue'>Return</span><br />
+<br /><span style='color:blue'>End If</span><br />
+<span style='color:green'>' A list where the successor nodes will be stored</span><br /><span style='color:blue'>Dim</span> successors <span style='color:blue'>As</span>
+    <span
+style='color:blue'>New</span> <span style='color:#2B91AF'>ArrayList</span>()<br />
+    <br />
+<span style='color:green'>' A temporary queue containing nodes which are yet
+to be visited</span><br /><span style='color:blue'>Dim</span> remaining <span style='color:blue'>As</span>
+    <span
+style='color:blue'>New</span> <span style='color:#2B91AF'>Queue</span>()<br />
+<br />
+    remaining.Enqueue(<span style='color:blue'>CType</span>(diagram.ActiveItem, <span
+style='color:#2B91AF'>ShapeNode</span>))<br />
+<br />
+<span style='color:blue'>While</span> remaining.Count &gt; 0<br />
+<br />
+    &nbsp; &nbsp; <span style='color:blue'>Dim</span> node <span style='color:blue'>
+        As</span> <span style='color:#2B91AF'>ShapeNode</span> = <span style='color:blue'>
+            CType</span>(remaining.Dequeue(), <span
+style='color:#2B91AF'>ShapeNode</span>)<br />
+<br />
+    &nbsp; &nbsp; <span style='color:green'>' Traverse all outgoing links and add their<br />
+    &nbsp; &nbsp; ' destination nodes to the successor list</span><br />
+    &nbsp; &nbsp; <span style='color:blue'>For Each</span> link <span style='color:blue'>
+        As</span> <span style='color:#2B91AF'>DiagramLink</span>
+<span style='color:blue'>In</span> node.OutgoingLinks<br />
+    <br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>If</span> <span style='color:blue'>Not</span> successors.Contains(link.Destination) <span style='color:blue'>
+            Then</span><br />
+    <br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; successors.Add(link.Destination)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; remaining.Enqueue(link.Destination)<br />
+    <br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>End If</span><br />
+    <br />&nbsp; &nbsp; <span style='color:blue'>Next</span><br />
+    <br /><span style='color:blue'>End While</span><br />
+<br />
+<span style='color:green'>' Color the successor nodes</span><br />
+<span style='color:blue'>For Each</span> node <span style='color:blue'>As</span> <span style='color:#2B91AF'>ShapeNode</span>
+<span style='color:blue'>in</span> successors<br />
+    &nbsp; &nbsp; node.Brush = <span style='color:blue'>New</span>
+MindFusion.Drawing.<span style='color:#2B91AF'>SolidBrush</span>(<span style='color:#2B91AF'>Color</span>.LightGreen)<br />
+    <span style='color:blue'>Next</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.PathfindingPage.cs" style="display: none;">
+<p><span style='color:green'>//
+This sample demonstrates how easy it is<br />
+// to find paths in FlowChart.NET graphs</span><br />
+    <br />
+<span style='color:green'>// Load a sample diagram</span><br />
+diagram.LoadFromFile(<span
+style='color:#A31515'>&quot;5.fns&quot;</span>);<br /><br />
+<span style='color:green'>// Make sure there are at least two nodes in the diagram</span><br />
+<span style='color:blue'>if</span> (diagram.Nodes.Count &lt;
+2)<br />
+    &nbsp; &nbsp; <span style='color:blue'>return</span>;<br />
+<br />
+<span style='color:green'>// Use the MindFusion.Diagramming.PathFinder
+class<br />
+// to find paths and cycles in any graph</span><br />
+<span style='color:#2B91AF'>PathFinder</span> pathFinder = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>PathFinder</span>(diagram);<br />
+<span
+style='color:#2B91AF'>
+Path</span> p = pathFinder.FindShortestPath(diagram.Nodes[0],<br />
+    &nbsp; &nbsp; diagram.Nodes[diagram.Nodes.Count - 1]);<br />
+<br />
+<span style='color:green'>// If the returned reference is null, no path<br />
+// has been found</span><br />
+<span style='color:blue'>if</span> (p == <span style='color:blue'>null</span>)<br />
+{<br />
+    &nbsp; &nbsp; <span style='color:#2B91AF'>MessageBox</span>.Show(<span
+style='color:#A31515'>&quot;No path found!&quot;</span>);<br />
+    &nbsp; &nbsp; <span style='color:blue'>return</span>;<br />
+}<br />
+<br />
+<span style='color:green'>// Color the path</span><br />
+<span style='color:blue'>foreach</span> (<span style='color:#2B91AF'>ShapeNode</span>
+node <span style='color:blue'>in</span> p.Nodes)<br />
+{<br />
+    &nbsp; &nbsp; node.Brush = <span style='color:blue'>new</span>
+MindFusion.Drawing.<span style='color:#2B91AF'>SolidBrush</span>(<span style='color:#2B91AF'>Color</span>.Yellow);<br />
+    &nbsp; &nbsp; node.Pen = <span style='color:blue'>new</span>
+MindFusion.Drawing.<span style='color:#2B91AF'>Pen</span>(<span style='color:#2B91AF'>Color</span>.Red);<br />
+}<br />
+<br />
+<span style='color:blue'>foreach</span> (<span style='color:#2B91AF'>DiagramLink</span>
+link <span style='color:blue'>in</span> p.Links)<br />
+    &nbsp; &nbsp; link.Pen = <span style='color:blue'>new</span>
+MindFusion.Drawing.<span style='color:#2B91AF'>Pen</span>(<span style='color:#2B91AF'>Color</span>.Red);</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.PathfindingPage.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how easy it is<br />
+    ' to find paths in FlowChart.NET graphs</span><br />
+    <br />
+<span style='color:green'>' Load a sample diagram</span><br />
+diagram.LoadFromFile(<span
+style='color:#A31515'>&quot;5.fns&quot;</span>)<br /><br />
+<span style='color:green'>' Make sure there are at least two nodes in the diagram</span><br />
+<span style='color:blue'>If</span> diagram.Nodes.Count &lt; 2 <span style='color:blue'>
+    Then</span><br />
+    &nbsp; &nbsp; &nbsp; <span style='color:blue'>Return</span><br />
+    <span style='color:blue'>End If</span><br />
+<br />
+<span style='color:green'>' Use the MindFusion.Diagramming.PathFinder
+class<br />
+    ' to find paths and cycles in any graph</span><br /><span style='color:blue'>Dim</span> pathFinder <span style='color:blue'>As</span>
+    <span
+style='color:blue'>New</span> <span style='color:#2B91AF'>PathFinder</span>(diagram)<br /><span style='color:blue'>Dim</span> p <span style='color:blue'>As</span>
+<span
+style='color:#2B91AF'>
+Path</span> = pathFinder.FindShortestPath(diagram.Nodes(0), _<br />
+    &nbsp; &nbsp; diagram.Nodes(diagram.Nodes.Count - 1))<br />
+<br />
+<span style='color:green'>' If the returned reference is Nothing, no path<br />
+    ' has been found</span><br />
+<span style='color:blue'>If</span> p <span style='color:blue'>Is</span> <span style='color:blue'>
+    Nothing</span> <span style='color:blue'>Then</span><br />
+<br />
+    &nbsp; &nbsp; <span style='color:#2B91AF'>MessageBox</span>.Show(<span
+style='color:#A31515'>&quot;No path found!&quot;</span>)<br />
+    &nbsp; &nbsp; <span style='color:blue'>Return</span><br />
+    <br />
+    <span style='color:blue'>End If</span><br />
+<br />
+<span style='color:green'>' Color the path</span><br />
+<span style='color:blue'>For Each</span> node <span style='color:blue'>As</span> <span style='color:#2B91AF'>ShapeNode</span>
+<span style='color:blue'>In</span> p.Nodes<br />
+<br />
+    &nbsp; &nbsp; node.Brush = <span style='color:blue'>New</span>
+MindFusion.Drawing.<span style='color:#2B91AF'>SolidBrush</span>(<span style='color:#2B91AF'>Color</span>.Yellow)<br />
+    &nbsp; &nbsp; node.Pen = <span style='color:blue'>New</span>
+MindFusion.Drawing.<span style='color:#2B91AF'>Pen</span>(<span style='color:#2B91AF'>Color</span>.Red)<br />
+    <br />
+    <span style='color:blue'>Next</span><br />
+<br />
+<span style='color:blue'>For Each</span> link <span style='color:blue'>As</span> <span style='color:#2B91AF'>DiagramLink</span>
+<span style='color:blue'>In</span> p.Links<br />
+    &nbsp; &nbsp; link.Pen = <span style='color:blue'>New</span>
+MindFusion.Drawing.<span style='color:#2B91AF'>Pen</span>(<span style='color:#2B91AF'>Color</span>.Red)<br />
+    <span style='color:blue'>Next</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.Rotation.cs" style="display: none;">
+<p><span style='color:green'>//
+This sample demonstrates how to rotate<br />
+// nodes at arbitrary angles<br />
+<br />
+// Create a ShapeNode</span><br />
+<span style='color:#2B91AF'>ShapeNode</span> node =
+diagram.Factory.CreateShapeNode(10, 10, 25, 25);<br />
+<br />
+<span style='color:green'>
+// Only ShapeNode objects can be rotated</span><br />
+node.Shape = <span style='color:#2B91AF'>Shapes</span>.Decision;<br />
+<br />
+<span style='color:green'>// Rotate the node now at 30 degrees</span><br />
+node.RotationAngle = 30;<br />
+<br />
+<span style='color:green'>
+// Set some text in the node and make the text rotate as well</span><br />
+node.Text = <span style='color:#A31515'>&quot;Rotated node&quot;</span>;<br />
+node.Font = <span style='color:blue'>new</span> <span style='color:#2B91AF'>Font</span>(<span
+style='color:#A31515'>&quot;Arial&quot;</span>, 12, <span style='color:#2B91AF'>FontStyle</span>.Bold);<br />
+node.RotateText = <span style='color:blue'>true</span>;</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.Rotation.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to rotate<br />
+    ' nodes at arbitrary angles<br />
+<br />
+    ' Create a ShapeNode</span><br /><span style='color:blue'>Dim</span> node <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>ShapeNode</span> = diagram.Factory.CreateShapeNode(10, 10, 25, 25)<br />
+<br />
+<span style='color:green'>' Only ShapeNode objects can be rotated</span><br />
+node.Shape = <span style='color:#2B91AF'>Shapes</span>.Decision<br />
+<br />
+<span style='color:green'>' Rotate the node now at 30 degrees</span><br />
+node.RotationAngle = 30<br />
+<br />
+<span style='color:green'>' Set some text in the node and make the text rotate as well</span><br />
+node.Text = <span style='color:#A31515'>&quot;Rotated node&quot;</span><br />
+node.Font = <span style='color:blue'>New</span> <span style='color:#2B91AF'>Font</span>(<span
+style='color:#A31515'>&quot;Arial&quot;</span>, 12, <span style='color:#2B91AF'>FontStyle</span>.Bold)<br />
+node.RotateText = <span style='color:blue'>True</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.Grouping.cs" style="display: none;">
+<p><span style='color:green'>//
+This sample demonstrates how to proportionally attach<br />
+// nodes to each other using FlowChart.NET groups<br />
+<br />
+// Create a TableNode and a ShapeNode</span><br />
+<span style='color:#2B91AF'>TableNode</span> master =
+diagram.Factory.CreateTableNode(10, 10, 20, 40);<br />
+<span style='color:#2B91AF'>ShapeNode</span> subordinate =
+diagram.Factory.CreateShapeNode(10, 50, 20, 8);<br />
+<br />
+<span style='color:green'>// Create a group, using the table as a master</span><br />
+<span style='color:#2B91AF'>Group</span> group =
+diagram.Factory.CreateGroup(master);<br />
+<br />
+<span style='color:green'>// Attach the box to the newly created group</span><br />
+group.AttachProportional(subordinate, 0, 100, 100, 120);</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.Grouping.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to proportionally attach<br />
+    ' nodes to each other using FlowChart.NET groups<br />
+<br />
+    ' Create a TableNode and a ShapeNode</span><br /><span style='color:blue'>Dim</span> master <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>TableNode</span> = diagram.Factory.CreateTableNode(10, 10, 20, 40)<br /><span style='color:blue'>Dim</span> subordinate <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>ShapeNode</span> = diagram.Factory.CreateShapeNode(10,
+    50, 20, 8)<br />
+<br />
+<span style='color:green'>' Create a group, using the table as a master</span><br /><span style='color:blue'>Dim</span> group <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>Group</span> = diagram.Factory.CreateGroup(master)<br />
+<br />
+<span style='color:green'>' Attach the box to the newly created group</span><br />
+group.AttachProportional(subordinate, 0, 100, 100, 120)</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.DragAndDrop.cs" style="display: none;">
+<p><span style='color:green'>//
+Don't forget that in order to use FlowChart.NET<br />
+// as a target of a drag-and-drop operation<br />
+// you need to explicitly specify so</span><br />
+    <br />
+diagramView.AllowDrop
+= <span style='color:blue'>true</span>;</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.DragAndDrop.vb" style="display: none;">
+<p><span style='color:green'>' Don't forget that in order to use FlowChart.NET<br />
+    ' as a target of a drag-and-drop operation<br />
+    ' you need to explicitly specify so</span><br />
+    <br />
+diagramView.AllowDrop
+= <span style='color:blue'>True</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.NodeShapes.cs" style="display: none;">
+<p><span style='color:green'>//
+This sample illustrates how to define<br />
+// your own node shapes via the Shape class<br />
+<br />
+// Create a new shape objects</span><br />
+<span style='color:#2B91AF'>Shape</span> shape = <span
+style='color:blue'>new</span> <span style='color:#2B91AF'>Shape</span>(<br />
+    &nbsp; &nbsp; <span style='color:blue'>new</span> <span
+style='color:#2B91AF'>ElementTemplate</span>[]<br />
+    &nbsp; &nbsp; {<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>new</span> <span
+style='color:#2B91AF'>ArcTemplate</span>(0, 0, 100, 100, 0, 360)<br />
+    &nbsp; &nbsp; },<br />
+    &nbsp; &nbsp; <span style='color:blue'>new</span> <span
+style='color:#2B91AF'>ElementTemplate</span>[]<br />
+    &nbsp; &nbsp; {<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>new</span> <span
+style='color:#2B91AF'>ArcTemplate</span>(25, 30, 15, 15, 180, 180),<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>new</span>
+<span style='color:#2B91AF'>ArcTemplate</span>(60, 30, 15, 15, 180, 180),<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>new</span>
+<span style='color:#2B91AF'>ArcTemplate</span>(30, 60, 40, 15, 0, 180)<br />
+    &nbsp; &nbsp; },<br />
+    &nbsp; &nbsp; <span style='color:blue'>null</span>,<br />
+    &nbsp; &nbsp; System.Drawing.Drawing2D.<span
+style='color:#2B91AF'>FillMode</span>.Winding,<br />
+    &nbsp; &nbsp; <span style='color:#A31515'>&quot;Happy&quot;</span>);<br />
+<br />
+<span style='color:green'>// Create a node and assign the shape to it</span><br />
+<span style='color:#2B91AF'>ShapeNode</span> node =
+diagram.Factory.CreateShapeNode(10, 10, 30, 20);<br />
+node.Shape = <span style='color:#2B91AF'>Shape</span>.FromId(<span
+style='color:#A31515'>&quot;Happy&quot;</span>);</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.NodeShapes.vb" style="display: none;">
+<p><span style='color:green'>' This sample illustrates how to define<br />
+    ' your own node shapes via the Shape class<br />
+<br />
+    ' Create a new shape objects</span><br /><span
+style='color:blue'>Dim</span> shape <span
+style='color:blue'>As</span> <span
+style='color:blue'>
+    New</span> <span style='color:#2B91AF'>Shape</span>( _<br />
+    &nbsp; &nbsp; <span style='color:blue'>New</span> <span
+style='color:#2B91AF'>ElementTemplate</span>() _<br />
+    &nbsp; &nbsp; { _<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>New</span> <span
+style='color:#2B91AF'>ArcTemplate</span>(0, 0, 100, 100, 0, 360) _<br />
+    &nbsp; &nbsp; }, _<br />
+    &nbsp; &nbsp; <span style='color:blue'>New</span> <span
+style='color:#2B91AF'>ElementTemplate</span>() _<br />
+    &nbsp; &nbsp; { _<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>New</span> <span
+style='color:#2B91AF'>ArcTemplate</span>(25, 30, 15, 15, 180, 180), _<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>New</span>
+<span style='color:#2B91AF'>ArcTemplate</span>(60, 30, 15, 15, 180, 180), _<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>New</span>
+<span style='color:#2B91AF'>ArcTemplate</span>(30, 60, 40, 15, 0, 180) _<br />
+    &nbsp; &nbsp; }, _<br />
+    &nbsp; &nbsp; <span style='color:blue'>Nothing</span>, _<br />
+    &nbsp; &nbsp; System.Drawing.Drawing2D.<span
+style='color:#2B91AF'>FillMode</span>.Winding, _<br />
+    &nbsp; &nbsp; <span style='color:#A31515'>&quot;Happy&quot;</span>)<br />
+<br />
+<span style='color:green'>' Create a node and assign the shape to it</span><br /><span
+style='color:blue'>Dim</span> node <span
+style='color:blue'>As</span>
+<span style='color:#2B91AF'>ShapeNode</span> = diagram.Factory.CreateShapeNode(10, 10, 30, 20)<br />
+node.Shape = <span style='color:#2B91AF'>Shape</span>.FromId(<span
+style='color:#A31515'>&quot;Happy&quot;</span>)</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="MiscOwnerDraw.cs" style="display: none;">
+<p><span style='color:green'>// This sample demonstrates a way to implement<br />
+// visual effects using custom drawing<br />
+<br />
+// Create a custom-drawn ShapeNode</span><br />
+<span style='color:#2B91AF'>ShapeNode</span> box =
+diagram.Factory.CreateShapeNode(10, 10, 30, 30);<br />
+box.CustomDraw = <span style='color:#2B91AF'>CustomDraw</span>.Additional;<br />
+<br />
+<span style='color:green'>// Associate event handler</span><br />
+diagram.DrawNode += <span style='color:blue'>new</span> <span
+style='color:#2B91AF'>DrawNodeEventHandler</span>(OnDrawNode);<br />
+<br />
+<span style='color:green'>// ...</span><br />
+<br />
+<span style='color:blue'>private</span> <span style='color:blue'>void</span>
+OnDrawNode(<span style='color:blue'>object</span> sender, <span
+style='color:#2B91AF'>DrawNodeEventArgs</span> e)<br />
+{<br />
+    &nbsp; &nbsp; <span style='color:#2B91AF'>RectangleF</span>
+rc = e.Bounds;<br />
+<br />
+    &nbsp; &nbsp; rc.X += 5;<br />
+    &nbsp; &nbsp; rc.Width -= 5;<br />
+<br />
+    &nbsp; &nbsp; <span style='color:blue'>for</span>
+(<span style='color:blue'>int</span> i = 0; i &lt; 10; i++)<br />
+    &nbsp; &nbsp; {<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; System.Drawing.<span style='color:
+#2B91AF'>Brush</span> brush =<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>new</span>
+System.Drawing.<span style='color:#2B91AF'>SolidBrush</span>(<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:#2B91AF'>Color</span>.FromArgb(255
+- i * 25, <span style='color:#2B91AF'>Color</span>.Red));<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; System.Drawing.<span style='color:
+#2B91AF'>Pen</span> pen =<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>new</span>
+System.Drawing.<span style='color:#2B91AF'>Pen</span>(<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:#2B91AF'>Color</span>.FromArgb((255
+- i * 25) / 2, <span style='color:#2B91AF'>Color</span>.Black), 0.9f);<br />
+<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; e.Graphics.FillEllipse(brush, rc);<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; e.Graphics.DrawEllipse(pen, rc);<br />
+<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; rc.Offset(-0.5f, 0);<br />
+<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; brush.Dispose();<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; pen.Dispose();<br />
+    &nbsp; &nbsp; }<br />
+}</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="MiscOwnerDraw.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates a way to implement<br />
+    ' visual effects using custom drawing<br />
+<br />
+    ' Create a custom-drawn ShapeNode</span><br /><span style='color:blue'>Dim</span> box <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>ShapeNode</span> = diagram.Factory.CreateShapeNode(10, 10, 30, 30)<br />
+box.CustomDraw = <span style='color:#2B91AF'>CustomDraw</span>.Additional<br />
+<br />
+<span style='color:green'>' Associate event handler</span><br /><span style='color:blue'>AddHandler</span> diagram.DrawNode, <span style='color:blue'>
+        AddressOf</span> OnDrawNode<br />
+<br />
+<span style='color:green'>' ...</span><br />
+<br />
+<span style='color:blue'>Private</span> <span style='color:blue'>Sub</span> OnDrawNode(sender
+    <span style='color:blue'>As</span> <span
+style='color:#2B91AF'>Object</span>,
+    e <span style='color:blue'>As</span> <span
+style='color:#2B91AF'>DrawNodeEventArgs</span>)<br />
+<br />
+    &nbsp; &nbsp; <span style='color:blue'>Dim</span> rc <span style='color:blue'>
+        As</span> <span style='color:#2B91AF'>RectangleF</span> = e.Bounds<br />
+<br />
+    &nbsp; &nbsp; rc.X += 5<br />
+    &nbsp; &nbsp; rc.Width -= 5<br />
+<br />
+    &nbsp; &nbsp; <span style='color:blue'>For</span> i <span style='color:blue'>
+        As</span> <span style='color:#2B91AF'>Integer</span> = 0 to 10<br />
+    <br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>Dim</span> brush
+    <span style='color:blue'>As</span> <span style='color:blue'>New</span>
+System.Drawing.<span style='color:#2B91AF'>SolidBrush</span>( _<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:#2B91AF'>Color</span>.FromArgb(255
+- i * 25, <span style='color:#2B91AF'>Color</span>.Red))<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>Dim</span> pen
+    <span style='color:blue'>As</span> <span style='color:blue'>New</span>
+System.Drawing.<span style='color:#2B91AF'>Pen</span>( _<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:#2B91AF'>Color</span>.FromArgb((255
+- i * 25) / 2, <span style='color:#2B91AF'>Color</span>.Black), 0.9f)<br />
+<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; e.Graphics.FillEllipse(brush, rc)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; e.Graphics.DrawEllipse(pen, rc)<br />
+<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; rc.Offset(-0.5f, 0)<br />
+<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; brush.Dispose()<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; pen.Dispose()<br />
+    <br />
+    &nbsp; &nbsp; <span style='color:blue'>Next</span><br />
+    <br />
+    <span style='color:blue'>End Sub</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.ReadyDiagram.cs" style="display: none;">
+<p><span style='color:green'>//
+This sample demonstrates how to set<br />
+// transparent icons on FlowChart.NET nodes<br />
+<br />
+// Create new ShapeNode</span><br />
+<span style='color:#2B91AF'>ShapeNode</span> node = diagram.Factory.CreateShapeNode(10,
+10, 12, 12);<span style='color:green'><br />
+<br />
+// Assign one of the standard system icons to the node</span><br />
+System.IO.<span style='color:#2B91AF'>MemoryStream</span> s = <span
+style='color:blue'>new</span> System.IO.<span style='color:#2B91AF'>MemoryStream</span>();<br />
+<span style='color:#2B91AF'>SystemIcons</span>.Information.Save(s);<br />
+node.Image = <span style='color:#2B91AF'>Image</span>.FromStream(s);<br />
+node.ImageAlign = MindFusion.Drawing.<span style='color:#2B91AF'>ImageAlign</span>.Stretch;<br />
+<br />
+<span
+style='color:green'>
+// Make the node transparent,<br />
+// so that only the icon is visible</span><br />
+node.Transparent = <span style='color:blue'>true</span>;</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.ReadyDiagram.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to set<br />
+    ' transparent icons on FlowChart.NET nodes<br />
+<br />
+    ' Create new ShapeNode</span><br /><span style='color:blue'>Dim</span> node <span style='color:blue'>As</span>
+<span style='color:#2B91AF'>ShapeNode</span> = diagram.Factory.CreateShapeNode(10, 10, 12, 12)<br />
+<br />
+<span style='color:green'>' Assign one of the standard system icons to the node</span><br /><span style='color:blue'>Dim</span> s <span style='color:blue'>As</span> <span
+style='color:blue'>
+        New</span> System.IO.<span style='color:#2B91AF'>MemoryStream</span>()<br />
+<span style='color:#2B91AF'>SystemIcons</span>.Information.Save(s)<br />
+node.Image = <span style='color:#2B91AF'>Image</span>.FromStream(s)<br />
+node.ImageAlign = MindFusion.Drawing.<span style='color:#2B91AF'>ImageAlign</span>.Stretch<br />
+<br />
+<span
+style='color:green'>' Make the node transparent,<br />
+    ' so that only the icon is visible</span><br />
+node.Transparent = <span style='color:blue'>True</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.NetSample.cs" style="display: none;">
+<p><span style='color:green'>//
+This sample demonstrates how to override<br />
+// the standard FlowChart.NET item drawing<br />
+// behavior through event handling<br />
+<br />
+// Disable interactive node creation</span><br />
+diagramView.Behavior
+= <span style='color:#2B91AF'>Behavior</span>.Modify;<span style='color:green'><br />
+<br />
+// Then create new event handler and associate<br />
+// it with the Diagram.DoubleClicked event</span><br />
+diagram.DoubleClicked += <span style='color:blue'>new</span> <span
+style='color:#2B91AF'>DiagramEventHandler</span>(OnDoubleClicked);<br />
+<br />
+<span style='color:green'>
+// Doing so we would create new nodes<br />
+// when the document is double-clicked<br />
+// rather than when the user click-and-drags<br />
+// with the mouse</span><br />
+<br />
+
+<span style='color:green'>// ...<br />
+<br />
+// Double-click event handler</span><br />
+<span style='color:blue'>private</span> <span style='color:blue'>void</span>
+OnDoubleClicked(<span style='color:blue'>object</span> sender, <span
+style='color:#2B91AF'>DiagramEventArgs</span> e)<br />
+{<br />
+    &nbsp; &nbsp; <span style='color:green'>// Create new ShapeNode</span><br />
+    &nbsp; &nbsp; diagram.Factory.CreateShapeNode(e.MousePosition.X - 5,<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; e.MousePosition.Y - 5, 10, 10);<br />
+}</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="FCDemo.NetSample.vb" style="display: none;">
+<p><span style='color:green'>' This sample demonstrates how to override<br />
+    ' the standard FlowChart.NET item drawing<br />
+    ' behavior through event handling<br />
+<br />
+    ' Disable interactive node creation</span><br />
+diagramView.Behavior
+= <span style='color:#2B91AF'>Behavior</span>.Modify<br />
+<br />
+<span style='color:green'>' Then create new event handler and associate<br />
+    ' it with the Diagram.DoubleClicked event</span><br /><span style='color:blue'>AddHandler</span> diagram.DoubleClicked, <span style='color:blue'>
+        AddressOf</span> OnDoubleClicked<br />
+<br />
+<span style='color:green'>' Doing so we would create new nodes<br />
+    ' when the document is double-clicked<br />
+    ' rather than when the user click-and-drags<br />
+    ' with the mouse</span><br />
+<br />
+
+<span style='color:green'>' ...<br />
+<br />
+    ' Double-click event handler</span><br />
+<span style='color:blue'>Private</span> <span style='color:blue'>Sub</span> OnDoubleClicked(sender
+    <span style='color:blue'>As</span> <span
+style='color:#2B91AF'>Object</span>,
+    e <span style='color:blue'>As</span> <span
+style='color:#2B91AF'>DiagramEventArgs</span>)<br />
+<br />
+    &nbsp; &nbsp; <span style='color:green'>' Create new ShapeNode</span><br />
+    &nbsp; &nbsp; diagram.Factory.CreateShapeNode(e.MousePosition.X - 5, _<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; e.MousePosition.Y - 5, 10, 10)<br />
+    <br />
+    <span style='color:blue'>End Sub</span></p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="Xml.cs" style="display: none;">
+<p><span style='color:green'>// The sample illustrates the method used<br />
+// in this step to visualize XML contents<br />
+<br />
+// Load the XML document, assuming that<br />
+// the path is a valid path to a XML file</span><br />
+System.Xml.<span style='color:#2B91AF'>XmlDocument</span> doc = <span
+style='color:blue'>new</span> System.Xml.<span style='color:#2B91AF'>XmlDocument</span>();<br />
+doc.Load(path);<br />
+<br />
+<span style='color:green'>// Set the link style</span><br />
+diagram.LinkStyle = <span style='color:#2B91AF'>LinkStyle</span>.Cascading;<br />
+diagram.LinkSegments = 2;<br />
+diagram.LinkCascadeOrientation = MindFusion.Diagramming.<span style='color:#2B91AF'>Orientation</span>.Vertical;<br />
+<br />
+<span
+style='color:green'>// Process the XML document</span><br />
+<span style='color:blue'>int</span> yIndent = 10;<br />
+Process(10, <span style='color:blue'>ref</span> yIndent, <span
+style='color:blue'>null</span>, doc);<br />
+<br />
+<span style='color:green'>// ...</span><br />
+<br />
+<span style='color:blue'>private</span> <span style='color:blue'>void</span>
+Process(<span style='color:blue'>int</span> xIndent, <span style='color:blue'>ref</span>
+<span style='color:blue'>int</span> yIndent,<br />
+    &nbsp; &nbsp; <span style='color:#2B91AF'>ShapeNode</span>
+parent, System.Xml.<span style='color:#2B91AF'>XmlNode</span> node)<br />
+{<br />
+    &nbsp; &nbsp; <span style='color:blue'>if</span> (node
+== <span style='color:blue'>null</span>)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>return</span>;<br />
+<br />
+    &nbsp; &nbsp; <span
+style='color:green'>// Create a child node for this node</span><br />
+    &nbsp; &nbsp; <span style='color:#2B91AF'>ShapeNode</span> childNode =
+diagram.Factory.CreateShapeNode(xIndent, yIndent, 20, 5);<br />
+    &nbsp; &nbsp; <span style='color:blue'>if</span>
+(node.NodeType == System.Xml.<span style='color:#2B91AF'>XmlNodeType</span>.Text)<br />
+    &nbsp; &nbsp; {<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; childNode.Text =
+node.Value.ToString();<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; childNode.Brush = <span
+style='color:blue'>new</span> MindFusion.Drawing.<span style='color:#2B91AF'>SolidBrush</span>(<span
+style='color:#2B91AF'>Color</span>.LightYellow);<br />
+    &nbsp; &nbsp; }<br />
+    &nbsp; &nbsp; <span style='color:blue'>else</span><br />
+    &nbsp; &nbsp; {<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; childNode.Text = node.Name;<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; childNode.Brush = <span
+style='color:blue'>new</span> MindFusion.Drawing.<span style='color:#2B91AF'>SolidBrush</span>(<span
+style='color:#2B91AF'>Color</span>.BurlyWood);<br />
+    &nbsp; &nbsp; }<br />
+<br />
+    &nbsp; &nbsp; yIndent += 8;<br />
+<br />
+    &nbsp; &nbsp; <span style='color:green'>// Link this child node with its parent</span><br />
+    &nbsp; &nbsp; <span style='color:blue'>if</span> (parent != <span
+style='color:blue'>null</span>)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; diagram.Factory.CreateDiagramLink(parent,
+childNode);<br />
+<br />
+    &nbsp; &nbsp; <span style='color:green'>// Process the children</span><br />
+    &nbsp; &nbsp; <span style='color:blue'>foreach</span> (System.Xml.<span
+style='color:#2B91AF'>XmlNode</span> child <span style='color:blue'>in</span>
+node.ChildNodes)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; Process(xIndent + 25, <span
+style='color:blue'>ref</span> yIndent, childNode, child);<br />
+}</p>
+</div>
+
+<hr style="display: none;" />
+
+<div id="Xml.vb" style="display: none;">
+<p><span style='color:green'>' The sample illustrates the method used<br />
+    ' in this step to visualize XML contents<br />
+<br />
+    ' Load the XML document, assuming that<br />
+    ' the path is a valid path to a XML file</span><br /><span style='color:blue'>Dim</span> doc <span style='color:blue'>As</span> <span
+style='color:blue'>New</span> System.Xml.<span style='color:#2B91AF'>XmlDocument</span>()<br />
+    doc.Load(path)<br />
+<br />
+<span style='color:green'>' Set the link style</span><br />
+diagram.LinkStyle = <span style='color:#2B91AF'>LinkStyle</span>.Cascading<br />
+diagram.LinkSegments = 2<br />
+diagram.LinkCascadeOrientation = MindFusion.Diagramming.<span style='color:#2B91AF'>Orientation</span>.Vertical<br />
+<br />
+<span
+style='color:green'>' Process the XML document</span><br /><span style='color:blue'>Dim</span> yIndent <span style='color:blue'>As</span>
+    <span style='color:#2B91AF'>Integer</span> = 10<br />
+Process(10, yIndent, <span
+style='color:blue'>Nothing</span>, doc)<br />
+<br />
+<span style='color:green'>' ...</span><br />
+<br />
+<span style='color:blue'>Private</span> <span style='color:blue'>Sub</span> Process(xIndent
+    <span style='color:blue'>As</span> <span style='color:#2B91AF'>Integer</span>,
+    <span style='color:blue'>ByRef</span> yIndent <span style='color:blue'>As</span>
+    <span style='color:#2B91AF'>Integer</span>, _<br />
+    &nbsp; &nbsp; parent <span style='color:blue'>
+        As</span> <span style='color:#2B91AF'>ShapeNode</span>, node <span style='color:blue'>As</span> System.Xml.<span style='color:#2B91AF'>XmlNode</span>)<br />
+<br />
+    &nbsp; &nbsp; <span style='color:blue'>If</span> node <span style='color:blue'>
+        Is</span> <span style='color:blue'>Nothing</span> <span style='color:blue'>Then</span><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:blue'>Return</span><br />
+    &nbsp; &nbsp; <span style='color:blue'>End If</span><br />
+<br />
+    &nbsp; &nbsp; <span
+style='color:green'>' Create a child node for this node</span><br />
+    &nbsp; &nbsp; <span style='color:blue'>Dim</span> childNode <span style='color:blue'>
+        As</span> <span style='color:#2B91AF'>ShapeNode</span> = diagram.Factory.CreateShapeNode(xIndent,
+    yIndent, 20, 5)<br />
+    &nbsp; &nbsp; <span style='color:blue'>If</span> node.NodeType = System.Xml.<span style='color:#2B91AF'>XmlNodeType</span>.Text
+    <span style='color:blue'>Then</span><br />
+    <br />
+    &nbsp; &nbsp; &nbsp; &nbsp; childNode.Text = node.Value.ToString()<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; childNode.Brush = <span
+style='color:blue'>New</span> MindFusion.Drawing.<span style='color:#2B91AF'>SolidBrush</span>(<span
+style='color:#2B91AF'>Color</span>.LightYellow)<br />
+    <br />
+    &nbsp; &nbsp; <span style='color:blue'>Else</span><br />
+    <br />
+    &nbsp; &nbsp; &nbsp; &nbsp; childNode.Text = node.Name<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; childNode.Brush = <span
+style='color:blue'>New</span> MindFusion.Drawing.<span style='color:#2B91AF'>SolidBrush</span>(<span
+style='color:#2B91AF'>Color</span>.BurlyWood)<br />
+    <br />
+    &nbsp; &nbsp; <span style='color:blue'>End If</span><br />
+<br />
+    &nbsp; &nbsp; yIndent += 8<br />
+<br />
+    &nbsp; &nbsp; <span style='color:green'>' Link this child node with its parent</span><br />
+    &nbsp; &nbsp; <span style='color:blue'>If</span> <span style='color:blue'>Not</span>
+    parent <span style='color:blue'>Is</span> <span
+style='color:blue'>Nothing</span>
+    <span style='color:blue'>Then</span><br />
+    &nbsp; &nbsp; &nbsp; &nbsp; diagram.Factory.CreateDiagramLink(parent, childNode)<br />
+    &nbsp; &nbsp; <span style='color:blue'>End If</span><br />
+<br />
+    &nbsp; &nbsp; <span style='color:green'>' Process the children</span><br />
+    &nbsp; &nbsp; <span style='color:blue'>For Each</span> child <span style='color:blue'>
+        As</span> System.Xml.<span
+style='color:#2B91AF'>XmlNode</span> <span style='color:blue'>
+    In</span> node.ChildNodes<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; Process(xIndent + 25, yIndent, childNode, child)<br />
+    &nbsp; &nbsp; <span style='color:blue'>Next</span><br />
+    <br />
+    <span style='color:blue'>End Sub</span></p>
+</div>
+
+</div>
+
+</body>
+</html>

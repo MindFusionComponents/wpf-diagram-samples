@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<Theme Version="1">
+  <Style TargetType="std:Diagram" Class="std:DiagramStyle" Version="1">
+    <Property Name="BackBrush">
+      <Value Type="100">
+        <Brush Type="Gradient">
+          <Angle>90</Angle>
+          <Color1>#FFFFFFFF</Color1>
+          <Color2>#FFFFFFFF</Color2>
+          <ColorBlend>
+            <Positions>
+              <Pos>0</Pos>
+              <Pos>0.5</Pos>
+              <Pos>1</Pos>
+            </Positions>
+            <Colors>
+              <Color>#FFBABABC</Color>
+              <Color>#FFCCCCCC</Color>
+              <Color>#FFBABABC</Color>
+            </Colors>
+          </ColorBlend>
+        </Brush>
+      </Value>
+    </Property>
+    <Property Name="NodeEffects">
+      <Value Type="105">
+        <List>
+          <Item>
+            <Value Type="103">
+              <Effect Class="std:SmoothShadowEffect" Version="1" />
+            </Value>
+          </Item>
+          <Item>
+            <Value Type="103">
+              <Effect Class="std:GlassEffect" Version="1">
+                <Type>2</Type>
+                <GlowColor>#FFC8C8C8</GlowColor>
+                <UsePenAsGlow>False</UsePenAsGlow>
+                <ReflectionColor>#FFFFFFFF</ReflectionColor>
+              </Effect>
+            </Value>
+          </Item>
+        </List>
+      </Value>
+    </Property>
+  </Style>
+  <Style TargetType="std:DiagramLink" Class="std:DiagramLinkStyle" Version="1">
+    <Property Name="FontFamily">
+      <Value Type="1">Arial</Value>
+    </Property>
+    <Property Name="FontSize">
+      <Value Type="11">11</Value>
+    </Property>
+    <Property Name="Brush">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#FF39D512</Color>
+        </Brush>
+      </Value>
+    </Property>
+    <Property Name="Stroke">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#FF272C3F</Color>
+        </Brush>
+      </Value>
+    </Property>
+    <Property Name="ShadowBrush">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#28000000</Color>
+        </Brush>
+      </Value>
+    </Property>
+  </Style>
+  <Style TargetType="std:ShapeNode" Class="std:ShapeNodeStyle" Version="1">
+    <Property Name="FontFamily">
+      <Value Type="1">Arial</Value>
+    </Property>
+    <Property Name="FontSize">
+      <Value Type="11">11</Value>
+    </Property>
+    <Property Name="Brush">
+      <Value Type="100">
+        <Brush Type="Gradient">
+          <Angle>90</Angle>
+          <Color1>#FFFFFFFF</Color1>
+          <Color2>#FFFFFFFF</Color2>
+          <ColorBlend>
+            <Positions>
+              <Pos>0</Pos>
+              <Pos>0.4</Pos>
+              <Pos>0.6</Pos>
+              <Pos>1</Pos>
+            </Positions>
+            <Colors>
+              <Color>#FFA1A1A1</Color>
+              <Color>#FF909090</Color>
+              <Color>#FF555555</Color>
+              <Color>#FF858585</Color>
+            </Colors>
+          </ColorBlend>
+        </Brush>
+      </Value>
+    </Property>
+    <Property Name="Stroke">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#FF272C3F</Color>
+        </Brush>
+      </Value>
+    </Property>
+    <Property Name="ShadowBrush">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#28000000</Color>
+        </Brush>
+      </Value>
+    </Property>
+    <Property Name="TextBrush">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#FFFFFFFF</Color>
+        </Brush>
+      </Value>
+    </Property>
+  </Style>
+  <Style TargetType="std:TableNode" Class="std:TableNodeStyle" Version="1">
+    <Property Name="FontFamily">
+      <Value Type="1">Arial</Value>
+    </Property>
+    <Property Name="FontSize">
+      <Value Type="11">11</Value>
+    </Property>
+    <Property Name="Brush">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#FF858585</Color>
+        </Brush>
+      </Value>
+    </Property>
+    <Property Name="Stroke">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#FF272C3F</Color>
+        </Brush>
+      </Value>
+    </Property>
+    <Property Name="ShadowBrush">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#28000000</Color>
+        </Brush>
+      </Value>
+    </Property>
+    <Property Name="TextBrush">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#FFFFFFFF</Color>
+        </Brush>
+      </Value>
+    </Property>
+    <Property Name="CellTextBrush">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#FFFFFFFF</Color>
+        </Brush>
+      </Value>
+    </Property>
+    <Property Name="CaptionBackBrush">
+      <Value Type="100">
+        <Brush Type="Gradient">
+          <Angle>90</Angle>
+          <Color1>#FFFFFFFF</Color1>
+          <Color2>#FFFFFFFF</Color2>
+          <ColorBlend>
+            <Positions>
+              <Pos>0</Pos>
+              <Pos>0.4</Pos>
+              <Pos>0.6</Pos>
+              <Pos>1</Pos>
+            </Positions>
+            <Colors>
+              <Color>#FFA1A1A1</Color>
+              <Color>#FF909090</Color>
+              <Color>#FF555555</Color>
+              <Color>#FF858585</Color>
+            </Colors>
+          </ColorBlend>
+        </Brush>
+      </Value>
+    </Property>
+  </Style>
+  <Style TargetType="std:TreeViewNode" Class="std:TreeViewNodeStyle" Version="1">
+    <Property Name="FontFamily">
+      <Value Type="1">Arial</Value>
+    </Property>
+    <Property Name="FontSize">
+			<Value Type="11">11</Value>
+		</Property>
+		<Property Name="Brush">
+			<Value Type="100">
+				<Brush Type="Solid">
+					<Color>#FF858585</Color>
+				</Brush>
+			</Value>
+		</Property>
+		<Property Name="Stroke">
+			<Value Type="100">
+				<Brush Type="Solid">
+					<Color>#FF272C3F</Color>
+				</Brush>
+			</Value>
+		</Property>
+		<Property Name="ShadowBrush">
+			<Value Type="100">
+				<Brush Type="Solid">
+					<Color>#28000000</Color>
+				</Brush>
+			</Value>
+		</Property>
+		<Property Name="TextBrush">
+			<Value Type="100">
+				<Brush Type="Solid">
+					<Color>#FFFFFFFF</Color>
+				</Brush>
+			</Value>
+		</Property>
+	</Style>
+	<Style TargetType="std:ContainerNode" Class="std:ContainerNodeStyle" Version="1">
+		<Property Name="FontFamily">
+			<Value Type="1">Arial</Value>
+		</Property>
+		<Property Name="FontSize">
+			<Value Type="11">11</Value>
+    </Property>
+    <Property Name="Stroke">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#FF272C3F</Color>
+        </Brush>
+      </Value>
+    </Property>
+    <Property Name="ShadowBrush">
+      <Value Type="100">
+        <Brush Type="Solid">
+          <Color>#28000000</Color>
+        </Brush>
+      </Value>
+    </Property>
+  </Style>
+</Theme>
