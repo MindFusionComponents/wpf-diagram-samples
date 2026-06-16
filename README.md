@@ -20,8 +20,8 @@ This repository contains over **40 individual sample applications**, covering a 
 ## 🛠️ Getting Started
 
 ### Prerequisites
-*   **IDE:** Visual Studio 2019, 2022, or newer.
-*   **Framework:** .NET Framework 4.8 SDK/Runtime.
+*   **IDE:** Visual Studio 2022, 2026, or newer.
+*   **Framework:** .NET Framework 8 SDK/Runtime.
 *   **Package Manager:** NuGet (integrated natively into Visual Studio).
 
 ### How to Build & Run
