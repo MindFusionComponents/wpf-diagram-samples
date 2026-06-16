@@ -40,9 +40,6 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 			document.LoadXml(Properties.Resources.Diagram);
 			diagram.LoadFromXml(document);
 
-			foreach (var node in diagram.Nodes)
-				node.ClearValue(ShapeNode.BrushProperty);
-
 			foreach (var link in diagram.Links)
 			{
 				var dx = link.EndPoint.X - link.StartPoint.X;
@@ -56,7 +53,6 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 
 			diagram.NodeCreated += (s, e) =>
 				{
-					e.Node.ClearValue(ShapeNode.BrushProperty);
 					e.Node.EnabledHandles = AdjustmentHandles.All;
 					e.Node.TextAlignment = TextAlignment.Center;
 					e.Node.TextVerticalAlignment = AlignmentY.Center;
@@ -461,9 +457,6 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 
 			diagram.RoutingOptions.TriggerRerouting |= RerouteLinks.WhileCreating;
 			diagram.RouteLinks = true;
-
-			originalShapeNodeStyle = diagram.ShapeNodeStyle;
-			originalDiagramLinkStyle = diagram.DiagramLinkStyle;
 		}
 
 		void mIDelete_Click(object sender, RoutedEventArgs e)
@@ -474,7 +467,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 			diagram.Items.Remove(diagram.ActiveItem);
 		}
 
-		void InitConnectorListItems(Connector c)
+		private void InitConnectorListItems(Connector c)
 		{
 			Grid sp = new Grid();
 			//sp.Background = Brushes.White;
@@ -492,14 +485,10 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 
 			var drawingVisual = new DrawingVisual();
 			var drawingContext = drawingVisual.RenderOpen();
-			var defaultStroke = GetStyleValue(
-				diagram.DiagramLinkStyle, DiagramLink.StrokeProperty) as Brush;
-			var defaultBrush = GetStyleValue(
-				diagram.DiagramLinkStyle, DiagramLink.BrushProperty) as Brush;
-			drawingContext.DrawLine(
-				new Pen(defaultStroke, 1), new Point(1, 8), new Point(16, 8));
-			DiagramLink.DrawArrowhead(
-				drawingContext, new Pen(defaultStroke, 1), defaultBrush,
+			var defaultStroke = GetStyleValue(diagram.DiagramLinkStyle, DiagramLink.StrokeProperty) as Brush;
+			var defaultBrush = GetStyleValue(diagram.DiagramLinkStyle, DiagramLink.BrushProperty) as Brush;
+			drawingContext.DrawLine(new Pen(defaultStroke, 1), new Point(1, 8), new Point(16, 8));
+			DiagramLink.DrawArrowhead(drawingContext, new Pen(defaultStroke, 1), defaultBrush,
 				c.Head, new Point(50, 0), new Point(16, 8), new Point(1, 8), 12);
 			drawingContext.Close();
 
@@ -529,18 +518,18 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 				this.visual = visual;
 			}
 
-			DrawingVisual visual;
+			private DrawingVisual visual;
 		}
 
 		Node[] _nodes = null;
 		Connector[] _connectors = null;
 
-		void mIFNew_Click(object sender, RoutedEventArgs e)
+		private void mIFNew_Click(object sender, RoutedEventArgs e)
 		{
 			diagram.ClearAll();
 		}
 
-		void mIFOpen_Click(object sender, RoutedEventArgs e)
+		private void mIFOpen_Click(object sender, RoutedEventArgs e)
 		{
 			if (openFileDialog.ShowDialog() == true)
 			{
@@ -555,7 +544,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 			}
 		}
 
-		void mIFSave_Click(object sender, RoutedEventArgs e)
+		private void mIFSave_Click(object sender, RoutedEventArgs e)
 		{
 			if (saveFileDialog.ShowDialog() == true)
 			{
@@ -563,7 +552,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 			}
 		}
 
-		void mIFPreview_Click(object sender, RoutedEventArgs e)
+		private void mIFPreview_Click(object sender, RoutedEventArgs e)
 		{
 			if (diagram.Items.Count == 0)
 				return;
@@ -576,7 +565,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 			diagram.PrintPreview();
 		}
 
-		void mIFPrint_Click(object sender, RoutedEventArgs e)
+		private void mIFPrint_Click(object sender, RoutedEventArgs e)
 		{
 			if (diagram.Items.Count == 0)
 				return;
@@ -589,7 +578,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 			diagram.Print();
 		}
 
-		void mIExit_Click(object sender, RoutedEventArgs e)
+		private void mIExit_Click(object sender, RoutedEventArgs e)
 		{
 			this.Close();
 		}
@@ -597,7 +586,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 		OpenFileDialog openFileDialog = new OpenFileDialog();
 		SaveFileDialog saveFileDialog = new SaveFileDialog();
 
-		void mIEdit_Click(object sender, RoutedEventArgs e)
+		private void mIEdit_Click(object sender, RoutedEventArgs e)
 		{
 			if (diagram.UndoManager.History.NextUndo != null)
 			{
@@ -621,12 +610,12 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 			}
 		}
 
-		void mIEUndo_Click(object sender, RoutedEventArgs e)
+		private void mIEUndo_Click(object sender, RoutedEventArgs e)
 		{
 			diagram.UndoManager.Undo();
 		}
 
-		void mIERedo_Click(object sender, RoutedEventArgs e)
+		private void mIERedo_Click(object sender, RoutedEventArgs e)
 		{
 			diagram.UndoManager.Redo();
 		}
@@ -635,13 +624,13 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 
 		NodeProps _selected;
 
-		void diagram_NodeDeactivated(object sender, NodeEventArgs e)
+		private void diagram_NodeDeactivated(object sender, NodeEventArgs e)
 		{
 			_propertyGrid.SelectedObject = null;
 			_selected = null;
 		}
 
-		void diagram_LinkClicked(object sender, LinkEventArgs e)
+		private void diagram_LinkClicked(object sender, LinkEventArgs e)
 		{
 			if (e.MouseButton != MouseButton.Right)
 				return;
@@ -655,7 +644,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 			//	Show(diagram, pt);
 		}
 
-		void diagram_NodeClicked(object sender, NodeEventArgs e)
+		private void diagram_NodeClicked(object sender, NodeEventArgs e)
 		{
 			if (e.MouseButton != MouseButton.Right)
 				return;
@@ -670,7 +659,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 
 		ContextMenu _contextMenu;
 
-		void diagram_NodeActivated(object sender, NodeEventArgs e)
+		private void diagram_NodeActivated(object sender, NodeEventArgs e)
 		{
 			_selected = new NodeProps();
 			_selected.Text = e.Node.Text;
@@ -679,7 +668,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 			_propertyGrid.SelectedObject = _selected;
 		}
 
-		void _propertyGrid_PropertyValueChanged(object s, System.Windows.Forms.PropertyValueChangedEventArgs e)
+		private void _propertyGrid_PropertyValueChanged(object s, System.Windows.Forms.PropertyValueChangedEventArgs e)
 		{
 			if (diagram.Selection.Nodes.Count == 0)
 				return;
@@ -701,16 +690,14 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 			b.Selected = true;
 		}
 
-		void mITOptions_Click(object sender, RoutedEventArgs e)
+		private void mITOptions_Click(object sender, RoutedEventArgs e)
 		{
 			OptionsDialog dlg = new OptionsDialog();
 
 			dlg.ShowGrid = diagram.ShowGrid;
 			dlg.BackBrush = diagram.BackBrush as SolidColorBrush;
-			dlg.NodeBrush = GetStyleValue(
-				diagram.ShapeNodeStyle, ShapeNode.BrushProperty) as SolidColorBrush;
-			dlg.ConnectorBrush = GetStyleValue(
-				diagram.DiagramLinkStyle, DiagramLink.BrushProperty) as SolidColorBrush;
+			dlg.NodeBrush = GetStyleValue(diagram.ShapeNodeStyle, ShapeNode.BrushProperty) as SolidColorBrush;
+			dlg.ConnectorBrush = GetStyleValue(diagram.DiagramLinkStyle, DiagramLink.BrushProperty) as SolidColorBrush;
 			dlg.AnchorBrush = _anchorBrush;
 
 			dlg.ShowAnchors = diagram.ShowAnchors != ShowAnchors.Never;
@@ -732,17 +719,16 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 
 			if (dlg.ShowDialog() == true)
 			{
+				Style shapeNodeStyle = new Style();
+				Style linkStyle = new Style();
+
 				diagram.ShowGrid = dlg.ShowGrid;
 				diagram.BackBrush = (SolidColorBrush)dlg.BackBrush;
-
-				var shapeNodeStyle = new Style(typeof(ShapeNode), originalShapeNodeStyle);
 				shapeNodeStyle.Setters.Add(new Setter(ShapeNode.BrushProperty, dlg.NodeBrush));
+				linkStyle.Setters.Add(new Setter(DiagramLink.BrushProperty, dlg.ConnectorBrush));
+				linkStyle.Setters.Add(new Setter(DiagramLink.StrokeProperty, Brushes.Black));
 				diagram.ShapeNodeStyle = shapeNodeStyle;
-
-				var diagramLinkStyle = new Style(typeof(DiagramLink), originalDiagramLinkStyle);
-				diagramLinkStyle.Setters.Add(new Setter(DiagramLink.BrushProperty, dlg.ConnectorBrush));
-				diagram.DiagramLinkStyle = diagramLinkStyle;
-
+				diagram.DiagramLinkStyle = linkStyle;
 				_anchorBrush = (SolidColorBrush)dlg.AnchorBrush;
 
 				diagram.ShowAnchors = dlg.ShowAnchors ?
@@ -765,7 +751,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 			}
 		}
 
-		object GetStyleValue(Style style, DependencyProperty property)
+		private object GetStyleValue(Style style, DependencyProperty property)
 		{
 			foreach (Setter setter in style.Setters)
 			{
@@ -776,7 +762,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 			return null;
 		}
 
-		void diagram_DragOver(object sender, DragEventArgs e)
+		private void diagram_DragOver(object sender, DragEventArgs e)
 		{
 			if (e.Data.GetDataPresent(typeof(DraggedItem)))
 			{
@@ -788,7 +774,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 			}
 		}
 
-		void diagram_Drop(object sender, DragEventArgs e)
+		private void diagram_Drop(object sender, DragEventArgs e)
 		{
 			AnchorPattern ap = null;
 
@@ -827,6 +813,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 					node.Bounds = new Rect(node.Bounds.Left - 25, node.Bounds.Top - 20, 50, 40);
 				}
 
+
 				foreach (AnchorPoint point in ap.Points)
 				{
 					point.MarkStyle = _anchorStyle;
@@ -836,7 +823,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 			}
 		}
 
-		class NodeProps
+		private class NodeProps
 		{
 			[Category("Properties")]
 			[Description("The text displayed within the node.")]
@@ -854,12 +841,12 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 				set { _brush = value; }
 			}
 
-			string _text;
-			Brush _brush;
+			private string _text;
+			private Brush _brush;
 		}
 
 
-		class Node
+		private class Node
 		{
 			public Node(AnchorPattern anchor,
 				string shapeId)
@@ -878,11 +865,11 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 				get { return _template; }
 			}
 
-			AnchorPattern _anchor;
-			string _template;
+			private AnchorPattern _anchor;
+			private string _template;
 		}
 
-		class Connector
+		private class Connector
 		{
 			public Connector(Shape head, string name)
 			{
@@ -900,11 +887,11 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 				get { return _name; }
 			}
 
-			Shape _head;
-			string _name;
+			private Shape _head;
+			private string _name;
 		}
 
-		void _connectorTypeCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		private void _connectorTypeCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 			switch (_connectorTypeCombo.SelectedIndex)
 			{
@@ -921,7 +908,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 			}
 		}
 
-		void _connectorList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		private void _connectorList_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 			int si = _connectorList.SelectedIndex;
 			if (si < 0 || si >= _connectors.Length)
@@ -931,10 +918,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.FlowCharter
 		}
 
 
-		SolidColorBrush _anchorBrush = Brushes.Red;
-		MarkStyle _anchorStyle = MarkStyle.Circle;
-
-		Style originalShapeNodeStyle;
-		Style originalDiagramLinkStyle;
+		private SolidColorBrush _anchorBrush = Brushes.Red;
+		private MarkStyle _anchorStyle = MarkStyle.Circle;
 	}
 }

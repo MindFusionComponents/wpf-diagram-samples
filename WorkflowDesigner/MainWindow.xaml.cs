@@ -226,7 +226,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.WorkflowDesigner
 
             LayoutDiagram();
 
-			diagramView.BeginEdit(newActivity);
+            diagramView.BeginEdit(newActivity);
         }
 
         private void CreateIfElse(DiagramLink link)

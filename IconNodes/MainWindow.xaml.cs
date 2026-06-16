@@ -28,7 +28,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.IconNodes
 
 			// Let users draw IconNode objects
 			diagram.CustomNodeType = typeof(IconNode);
-			diagramView.Behavior = Behavior.Custom;
+			diagramView.Behavior = MindFusion.Diagramming.Wpf.Behavior.Custom;
 
 			// Show some info about this sample
 			ShapeNode info = new ShapeNode();

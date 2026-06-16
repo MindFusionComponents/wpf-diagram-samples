@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (c) 2026, MindFusion LLC - Bulgaria.
+// Copyright (c) 2022, MindFusion LLC - Bulgaria.
 //
 
 using System;

@@ -86,33 +86,31 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.TreeLayout
 
 		private void diagram_DragOver(object sender, DragEventArgs e)
 		{
-			// we have the screen point of the mouse, but need it in diagram coordinates
-			var viewPoint = e.GetPosition(diagramView);
-			var diagramPoint = diagramView.ViewToDiagram(viewPoint);
+			// we have the screen point of the mouse, but need it in document C.S.
+			Point p = e.GetPosition(diagramView);
+			Point pt = diagramView.ViewToDiagram(p);
 
 			// allow drag and drop if there is a box
-			var node = diagram.GetNodeAt(diagramPoint) as ShapeNode;
-			if (node != null)
+			ShapeNode box = diagram.GetNodeAt(pt) as ShapeNode;
+			if (box != null)
 				e.Effects = DragDropEffects.Copy;
 			else
 				e.Effects = DragDropEffects.None;
-			e.Handled = true;
 		}
 
 		private void diagram_Drop(object sender, DragEventArgs e)
 		{
 			e.Handled = true;
 
-			// we have the screen point of the mouse, but need it in diagram coordinates
-			var viewPoint = e.GetPosition(diagramView);
-			var diagramPoint = diagramView.ViewToDiagram(viewPoint);
+			Point p = e.GetPosition(diagramView);
+			Point pt = diagramView.ViewToDiagram(p);
 
 			// allow drag and drop if there is a box
-			var node = diagram.GetNodeAt(diagramPoint) as ShapeNode;
+			var node = diagram.GetNodeAt(pt) as ShapeNode;
 			if (node != null)
 			{
 				// add a child to the tree
-				var newNode = AddChild(node);
+				ShapeNode newNode = AddChild(node);
 				newNode.TextAlignment = TextAlignment.Right;
 
 				// show the node tag

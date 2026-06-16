@@ -1,704 +1,307 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3E2601D8-8B4E-4AD3-BA5A-0E363C193B2F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MindFusion.Diagramming.Wpf.Samples.CS.Demo</RootNamespace>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
     <AssemblyName>Demo</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <WarningLevel>4</WarningLevel>
+    <RootNamespace>MindFusion.Diagramming.Wpf.Samples.CS.Demo</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputPath>Files\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>true</UseVSHostingProcess>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>Files\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core"></Reference>
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml.Linq"></Reference>
-    <Reference Include="System.Data.DataSetExtensions"></Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="UIAutomationProvider"></Reference>
-    <Reference Include="WindowsBase"></Reference>
-    <Reference Include="PresentationCore"></Reference>
-    <Reference Include="PresentationFramework"></Reference>
-    <Reference Include="WindowsFormsIntegration"></Reference>
+    <Compile Remove="Files\VisioStencils\**" />
+    <EmbeddedResource Remove="Files\VisioStencils\**" />
+    <None Remove="Files\VisioStencils\**" />
+    <Page Remove="Files\VisioStencils\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Files\Antlr3.Runtime.dll" />
+    <None Remove="Files\BasicOperations.xml" />
+    <None Remove="Files\Chemical synthesis tree.xml" />
+    <None Remove="Files\CircularLayout.xml" />
+    <None Remove="Files\Class-hierarchy.xml" />
+    <None Remove="Files\Classification chart.xml" />
+    <None Remove="Files\ClusteredLayout.xml" />
+    <None Remove="Files\Containers.xml" />
+    <None Remove="Files\CustomDrawLinks.xml" />
+    <None Remove="Files\DatabaseRelationshipDiagram.xml" />
+    <None Remove="Files\Demo.exe" />
+    <None Remove="Files\Demo.exe.config" />
+    <None Remove="Files\Demo.pdb" />
+    <None Remove="Files\Demo.vshost.exe" />
+    <None Remove="Files\Demo.vshost.exe.config" />
+    <None Remove="Files\Demo.vshost.exe.manifest" />
+    <None Remove="Files\Dialogue chart.xml" />
+    <None Remove="Files\Drag and drop.xml" />
+    <None Remove="Files\dummy1.png" />
+    <None Remove="Files\dummy2.png" />
+    <None Remove="Files\dummy3.png" />
+    <None Remove="Files\ERM.xml" />
+    <None Remove="Files\FCDemo.exe" />
+    <None Remove="Files\FCDemo.pdb" />
+    <None Remove="Files\FCDemo.vshost.exe.manifest" />
+    <None Remove="Files\Flowchart.xml" />
+    <None Remove="Files\FormPreservation.xml" />
+    <None Remove="Files\Genealogy tree.xml" />
+    <None Remove="Files\GridLayout.xml" />
+    <None Remove="Files\Grouping.xml" />
+    <None Remove="Files\Heads.xml" />
+    <None Remove="Files\Hierarchy chart.xml" />
+    <None Remove="Files\JavaScriptParser.dll" />
+    <None Remove="Files\LaneDiagram.xml" />
+    <None Remove="Files\LayeredLayout.xml" />
+    <None Remove="Files\method.png" />
+    <None Remove="Files\MindFusion.Barcodes.dll" />
+    <None Remove="Files\MindFusion.Common.dll" />
+    <None Remove="Files\MindFusion.Common.Wpf.dll" />
+    <None Remove="Files\MindFusion.Diagramming.Wpf.dll" />
+    <None Remove="Files\MindFusion.Diagramming.Wpf.pdb" />
+    <None Remove="Files\MindFusion.Diagramming.Wpf.xml" />
+    <None Remove="Files\MindFusion.Graphs.dll" />
+    <None Remove="Files\MindFusion.htm" />
+    <None Remove="Files\MindFusion.Licensing.dll" />
+    <None Remove="Files\MindFusion.Scripting.dll" />
+    <None Remove="Files\MindFusion.UI.Wpf.dll" />
+    <None Remove="Files\MindFusion.Vsx.dll" />
+    <None Remove="Files\NetIco.ico" />
+    <None Remove="Files\OneWayLayout.xml" />
+    <None Remove="Files\OrthogonalLayoutDiagram.xml" />
+    <None Remove="Files\Overview.xml" />
+    <None Remove="Files\Owner-draw objects.xml" />
+    <None Remove="Files\Pathfinding.xml" />
+    <None Remove="Files\People.xml" />
+    <None Remove="Files\plus.bmp" />
+    <None Remove="Files\property.png" />
+    <None Remove="Files\Purchase.htm" />
+    <None Remove="Files\Ready diagram.xml" />
+    <None Remove="Files\Resources\gender0.png" />
+    <None Remove="Files\Resources\gender1.png" />
+    <None Remove="Files\Resources\img0.png" />
+    <None Remove="Files\Resources\img1.png" />
+    <None Remove="Files\Resources\img2.png" />
+    <None Remove="Files\Resources\img3.png" />
+    <None Remove="Files\Resources\img4.png" />
+    <None Remove="Files\Rotation.xml" />
+    <None Remove="Files\Rotation2.xml" />
+    <None Remove="Files\Routing.xml" />
+    <None Remove="Files\Sources.htm" />
+    <None Remove="Files\Sources_.htm" />
+    <None Remove="Files\SpanningCells.xml" />
+    <None Remove="Files\SpringLayout.xml" />
+    <None Remove="Files\TextOrientation.xml" />
+    <None Remove="Files\Texts.txt" />
+    <None Remove="Files\Thumbs.db" />
+    <None Remove="Files\TopologicalLayout.xml" />
+    <None Remove="Files\TreeLayout.xml" />
+    <None Remove="Files\TreeViewNodes.xml" />
+    <None Remove="Files\_cs_Purchase.htm" />
+    <None Remove="Files\_swreg_Purchase.htm" />
+    <None Remove="Files\_wpfpkg_swreg_Purchase.htm" />
+    <None Remove="Images\alphaIcon.png" />
+    <None Remove="Images\categoryesIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="MindFusion.Diagramming.Wpf" Version="4.3.1" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Page Include="Automatic layouts\CircularLayoutPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Automatic layouts\OneWayLayoutPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Automatic layouts\OrthogonalLayoutPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Automatic layouts\TopologicalLayoutPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="SpecialNodes\Containers.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Dialog windows\AboutWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Dialog windows\AddEntityWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Dialog windows\AddFieldWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Dialog windows\AddTableWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Dialog windows\AddTreeViewItemForm.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Dialog windows\ClassInfoWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Miscellaneous features\DragAndDrop.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Graph management\PathfindingPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Miscellaneous features\Grouping.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Miscellaneous features\NodeShapes.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Miscellaneous features\Themes.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Network sample\NetSample.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Overview\OverviewPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Network sample\ReadyDiagram.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="OverviewWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Resources.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Miscellaneous features\Rotation.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="SpecialNodes\SvgNodes.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="SpecialNodes\TreeViewNodes.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="SpecialNodes\VisioNodes.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="TableNode-related diagrams\SpanningCells.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="TableNode-related diagrams\DatabaseRelationshipDiagram.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="TableNode-related diagrams\ClassHierarchyDiagram.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Dialog windows\AddPersonWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Automatic layouts\AnnealingLayoutPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Graph management\BasicOperations.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Automatic layouts\BigRadialLayoutPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="FlowChart diagrams\ChemicalSynthesisTree.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="FlowChart diagrams\ClassificationChart.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Automatic layouts\ClusteredLayoutPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Links\CustomDrawLinks.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="FlowChart diagrams\DialogueChart.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="TableNode-related diagrams\ErmDiagram.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="FlowChart diagrams\FlowChart.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Control hosting\FormDesigner.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Links\FormPreservation.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="FlowChart diagrams\GenealogyTree.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Automatic layouts\GridLayoutPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Links\Arrowheads.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="FlowChart diagrams\HierarchyChart.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="FlowChart diagrams\LaneDiagram.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Automatic layouts\LayeredLayoutPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="MainWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ProgressForm.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Links\Routing.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Automatic layouts\SpringLayoutPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Links\TextOrientation.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Dialog windows\TourForm.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Automatic layouts\TreeLayoutPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Generic.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="VisualXMLSample\VisualXMLSample.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <PackageReference Include="System.Drawing.Common" Version="8.0.4" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Automatic layouts\CircularLayoutPage.xaml.cs">
-      <DependentUpon>CircularLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Automatic layouts\OneWayLayoutPage.xaml.cs">
-      <DependentUpon>OneWayLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Automatic layouts\OrthogonalLayoutPage.xaml.cs">
-      <DependentUpon>OrthogonalLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Automatic layouts\TopologicalLayoutPage.xaml.cs">
-      <DependentUpon>TopologicalLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="BoolToVisibilityConverter.cs" />
-    <Compile Include="ImageDragData.cs" />
-    <Compile Include="SpecialNodes\Containers.xaml.cs">
-      <DependentUpon>Containers.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Dialog windows\AboutWindow.xaml.cs">
-      <DependentUpon>AboutWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Convert.cs" />
-    <Compile Include="Dialog windows\AddEntityWindow.xaml.cs">
-      <DependentUpon>AddEntityWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Dialog windows\AddFieldWindow.xaml.cs">
-      <DependentUpon>AddFieldWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Dialog windows\AddTableWindow.xaml.cs">
-      <DependentUpon>AddTableWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Dialog windows\AddTreeViewItemForm.xaml.cs">
-      <DependentUpon>AddTreeViewItemForm.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Dialog windows\ClassInfoWindow.xaml.cs">
-      <DependentUpon>ClassInfoWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FilterBasePropertiesTypeConverter.cs" />
-    <Compile Include="Miscellaneous features\DragAndDrop.xaml.cs">
-      <DependentUpon>DragAndDrop.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Graph management\PathfindingPage.xaml.cs">
-      <DependentUpon>PathfindingPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ImagePainter.cs" />
-    <Compile Include="Miscellaneous features\Grouping.xaml.cs">
-      <DependentUpon>Grouping.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ImageAlignment.cs" />
-    <Compile Include="Miscellaneous features\NodeShapes.xaml.cs">
-      <DependentUpon>NodeShapes.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Miscellaneous features\Themes.xaml.cs">
-      <DependentUpon>Themes.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Network sample\NetSample.xaml.cs">
-      <DependentUpon>NetSample.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Overview\OverviewPage.xaml.cs">
-      <DependentUpon>OverviewPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Network sample\ReadyDiagram.xaml.cs">
-      <DependentUpon>ReadyDiagram.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="OverviewWindow.xaml.cs">
-      <DependentUpon>OverviewWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PictureControl.cs" />
-    <Compile Include="Miscellaneous features\Rotation.xaml.cs">
-      <DependentUpon>Rotation.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SourceCodeViewer\CodeColoring\AspxTokenizer.cs" />
-    <Compile Include="SourceCodeViewer\CodeColoring\CPlusPlusTokenizer.cs" />
-    <Compile Include="SourceCodeViewer\CodeColoring\CSharpTokenizer.cs" />
-    <Compile Include="SourceCodeViewer\CodeColoring\CssTokenizer.cs" />
-    <Compile Include="SourceCodeViewer\CodeColoring\DelphiTokenizer.cs" />
-    <Compile Include="SourceCodeViewer\CodeColoring\JavaScriptTokenizer.cs" />
-    <Compile Include="SourceCodeViewer\CodeColoring\Token.cs" />
-    <Compile Include="SourceCodeViewer\CodeColoring\Tokenizer.cs" />
-    <Compile Include="SourceCodeViewer\CodeColoring\TokenType.cs" />
-    <Compile Include="SourceCodeViewer\CodeColoring\VisualBasicTokenizer.cs" />
-    <Compile Include="SourceCodeViewer\CodeColoring\XamlTokenizer.cs" />
-    <Compile Include="SourceCodeViewer\SourceCodeViewer.cs" />
-    <Compile Include="SpecialNodes\SvgNodes.xaml.cs">
-      <DependentUpon>SvgNodes.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SpecialNodes\TreeViewNodes.xaml.cs">
-      <DependentUpon>TreeViewNodes.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SpecialNodes\VisioNodes.xaml.cs">
-      <DependentUpon>VisioNodes.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TableNode-related diagrams\SpanningCells.xaml.cs">
-      <DependentUpon>SpanningCells.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TableNode-related diagrams\DatabaseRelationshipDiagram.xaml.cs">
-      <DependentUpon>DatabaseRelationshipDiagram.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TableNode-related diagrams\ClassHierarchyDiagram.xaml.cs">
-      <DependentUpon>ClassHierarchyDiagram.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Dialog windows\AddPersonWindow.xaml.cs">
-      <DependentUpon>AddPersonWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Automatic layouts\AnnealingLayoutPage.xaml.cs">
-      <DependentUpon>AnnealingLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Graph management\BasicOperations.xaml.cs">
-      <DependentUpon>BasicOperations.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Automatic layouts\BigRadialLayoutPage.xaml.cs">
-      <DependentUpon>BigRadialLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FlowChart diagrams\ChemicalSynthesisTree.xaml.cs">
-      <DependentUpon>ChemicalSynthesisTree.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FlowChart diagrams\ClassificationChart.xaml.cs">
-      <DependentUpon>ClassificationChart.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Automatic layouts\ClusteredLayoutPage.xaml.cs">
-      <DependentUpon>ClusteredLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Links\CustomDrawLinks.xaml.cs">
-      <DependentUpon>CustomDrawLinks.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FlowChart diagrams\DialogueChart.xaml.cs">
-      <DependentUpon>DialogueChart.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TableNode-related diagrams\ErmDiagram.xaml.cs">
-      <DependentUpon>ErmDiagram.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FlowChart diagrams\FlowChart.xaml.cs">
-      <DependentUpon>FlowChart.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Control hosting\FormDesigner.xaml.cs">
-      <DependentUpon>FormDesigner.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Links\FormPreservation.xaml.cs">
-      <DependentUpon>FormPreservation.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FlowChart diagrams\GenealogyTree.xaml.cs">
-      <DependentUpon>GenealogyTree.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Automatic layouts\GridLayoutPage.xaml.cs">
-      <DependentUpon>GridLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Links\Arrowheads.xaml.cs">
-      <DependentUpon>Arrowheads.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FlowChart diagrams\HierarchyChart.xaml.cs">
-      <DependentUpon>HierarchyChart.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FlowChart diagrams\LaneDiagram.xaml.cs">
-      <DependentUpon>LaneDiagram.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Automatic layouts\LayeredLayoutPage.xaml.cs">
-      <DependentUpon>LayeredLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ProgressForm.xaml.cs">
-      <DependentUpon>ProgressForm.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="Resource.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resource.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Links\Routing.xaml.cs">
-      <DependentUpon>Routing.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Automatic layouts\SpringLayoutPage.xaml.cs">
-      <DependentUpon>SpringLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Links\TextOrientation.xaml.cs">
-      <DependentUpon>TextOrientation.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Dialog windows\TourForm.xaml.cs">
-      <DependentUpon>TourForm.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Automatic layouts\TreeLayoutPage.xaml.cs">
-      <DependentUpon>TreeLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ThemeItem.cs" />
-    <Compile Include="VisualXMLSample\VisualXMLSample.xaml.cs">
-      <DependentUpon>VisualXMLSample.xaml</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resource.resx">
-      <SubType>Designer</SubType>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <AppDesigner Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup></ItemGroup>
-  <ItemGroup>
-    <Resource Include="Files\Resources\0.png" />
-    <Resource Include="Files\Resources\1.png" />
-    <Resource Include="Files\Resources\2.png" />
-    <Resource Include="Files\Resources\3.png" />
-    <Resource Include="Files\Resources\4.png" />
-    <Resource Include="Files\Resources\5.png" />
-    <Resource Include="Files\Resources\6.png" />
-    <Resource Include="Files\Resources\7.png" />
-    <Resource Include="Files\Resources\8.png" />
-    <Resource Include="Files\Resources\backgroundImage.bmp" />
-    <Resource Include="Files\Resources\backgroundImage3.png" />
-    <Resource Include="Files\Resources\del.bmp" />
-    <Resource Include="Files\Resources\down.bmp" />
-    <Resource Include="Files\Resources\dragPicture.Image.bmp" />
-    <Resource Include="Files\Resources\image0.png" />
-    <Resource Include="Files\Resources\image1.png" />
-    <Resource Include="Files\Resources\image2.png" />
-    <Resource Include="Files\Resources\image3.png" />
-    <Resource Include="Files\Resources\image4.png" />
-    <Resource Include="Files\Resources\image5.png" />
-    <Resource Include="Files\Resources\image6.png" />
-    <Resource Include="Files\Resources\plus.bmp" />
-    <Resource Include="Files\Resources\up.bmp" />
-    <Resource Include="Files\Resources\_picture1.png" />
-    <Resource Include="Files\Resources\_picture10.png" />
-    <Resource Include="Files\Resources\_picture11.png" />
-    <Resource Include="Files\Resources\_picture12.png" />
-    <Resource Include="Files\Resources\_picture13.png" />
-    <Resource Include="Files\Resources\_picture14.png" />
-    <Resource Include="Files\Resources\_picture2.png" />
-    <Resource Include="Files\Resources\_picture3.png" />
-    <Resource Include="Files\Resources\_picture4.png" />
-    <Resource Include="Files\Resources\_picture5.png" />
-    <Resource Include="Files\Resources\_picture6.png" />
-    <Resource Include="Files\Resources\_picture7.png" />
-    <Resource Include="Files\Resources\_picture8.png" />
-    <Resource Include="Files\Resources\_picture9.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Files\Resources\cs.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Files\Resources\diagram.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Files\Texts.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Files\Resources\TreeIcons\1.png" />
-    <Resource Include="Files\Resources\TreeIcons\2.png" />
-    <Resource Include="Files\Resources\TreeIcons\3.png" />
-    <Resource Include="Files\Resources\TreeIcons\4.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="Files\Resources\0.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\3.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\4.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\5.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\6.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\7.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\8.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\backgroundImage.bmp">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\backgroundImage3.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\del.bmp">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\down.bmp">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\dragPicture.Image.bmp">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\gender0.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\gender1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\image0.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\image1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\image2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\image3.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\image4.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\image5.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\image6.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\img0.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\img1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\img2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\img3.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\img4.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\plus.bmp">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\up.bmp">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\_picture1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\_picture10.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\_picture11.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\_picture12.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\_picture13.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\_picture14.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\_picture2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\_picture3.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\_picture4.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\_picture5.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\_picture6.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\_picture7.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\_picture8.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\_picture9.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\cs.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\diagram.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\TreeIcons\1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\TreeIcons\2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\TreeIcons\3.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Resources\TreeIcons\4.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="App.ico" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="Images\alphaIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\categoryesIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="NetIco.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Files\Themes\Aqua.xml" />
-    <Resource Include="Files\Themes\Emerald.xml" />
-    <Resource Include="Files\Themes\Ruby.xml" />
-    <Resource Include="Files\Themes\Slate.xml" />
-    <Resource Include="Files\Themes\Vista.xml" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="Files\Themes\Aqua.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Themes\Emerald.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Themes\Ruby.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Themes\Slate.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Themes\Vista.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Files\Sources.xml" />
+    <Resource Include="Images\topicplus.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\bookclosed.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\bookopen.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\topic.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\left.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\right.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\topicplus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\bookclosed.png" />
-    <Resource Include="Images\bookopen.png" />
-    <Resource Include="Images\topic.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\left.png" />
-    <Resource Include="Images\right.png" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

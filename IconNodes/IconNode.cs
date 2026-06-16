@@ -30,7 +30,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.IconNodes
 
 		public override void Draw(DrawingContext graphics, RenderOptions options)
 		{
-			Size imageSize = new Size(icon.Width, icon.Height);
+			var imageSize = new Size(icon.Width, icon.Height);
 			Size textSize = Parent.MeasureString(label, this, short.MaxValue);
 
 			// draw the icon centered at the top
@@ -48,7 +48,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.IconNodes
 
 		private Size CalculateSize()
 		{
-			Size imageSize = new Size(icon.Width, icon.Height);
+			var imageSize = new Size(icon.Width, icon.Height);
 
 			Size textSize = Parent.MeasureString(label, this, 10000);
 

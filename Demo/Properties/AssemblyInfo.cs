@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (c) 2026, MindFusion LLC - Bulgaria.
+// Copyright (c) 2022, MindFusion LLC - Bulgaria.
 //
 
 using System.Reflection;
@@ -17,7 +17,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MindFusion LLC")]
 [assembly: AssemblyProduct("MindFusion.Diagramming for WPF")]
-[assembly: AssemblyCopyright("Copyright 2025, MindFusion LLC.")]
+[assembly: AssemblyCopyright("Copyright 2022, MindFusion LLC.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
